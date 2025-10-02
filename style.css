@@ -1,0 +1,219 @@
+html,
+body {
+     padding-top: 50px;
+     padding-bottom: 25px;
+     scroll-behavior: smooth;
+     font-family: 'Courier New', Courier, monospace;
+     background-color: black;
+}
+
+
+
+
+
+
+
+
+a {
+     text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+main {
+     display: flex;
+     flex-direction: column;
+     max-width: 85%;
+     width: 900px;
+     margin: auto;
+     background-color: black;
+     padding: 20px;
+     color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+img {
+     vertical-align: middle;
+}
+
+
+
+
+
+
+#navbar {
+     width: 100%;
+     height: 50px;
+     background-color: black;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     display: row;
+     align-content: center;
+     text-align: center;
+}
+
+#navbar a {
+     margin: auto;
+     color: greenyellow;
+     padding-left: 1px;
+     padding-right: 1px;
+     vertical-align: middle;
+     font-size: 18px;
+     text-decoration: none;
+}
+
+
+
+
+
+.module img {
+     width: 35px;
+     height: 35px;
+     padding-right: 2px;
+}
+
+
+
+.module a {
+     color: greenyellow;
+     text-decoration: none;
+}
+
+
+
+.logotype {
+     text-align: center;
+}
+
+.logotype img {
+     width: 100px;
+     height: 100px;
+     background-color: greenyellow;
+     border-radius: 50%;
+     vertical-align: middle;
+     margin-bottom: 5px;
+
+}
+
+
+
+
+.module h2 {
+     font-size: 24px;
+     color: greenyellow;
+}
+
+
+
+h1 {
+     color: greenyellow;
+     font-size: 21px;
+}
+
+
+.about {
+     padding-bottom: 45px;
+     text-align: center;
+
+
+
+}
+
+.about p {
+     font-size: 20px;
+     color: whitesmoke;
+}
+
+.about a {
+     color: greenyellow;
+     text-decoration: none;
+     font-size: 20px;
+}
+
+
+
+
+.maps a {
+     text-decoration: none;
+     color: greenyellow;
+     font-size: 20px;
+}
+
+
+footer {
+     width: 900px;
+     max-width: 85%;
+     margin: auto;
+     font-size: 20px;
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: whitesmoke;
+}
+
+footer a {
+     color: greenyellow;
+     font-size: 20px;
+}
+
+
+footer p {
+     font-size: 20px;
+     color: whitesmoke;
+}
+
+
+
+
+
+.subcategories {
+     font-size: 20px;
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.3s ease-out;
+     margin-left: 2px;
+     /* espaço à esquerda da lista */
+     padding-left: 20px;
+     /* garante espaço para números */
+     list-style-type: decimal;
+     /* força números */
+     color: whitesmoke;
+     /* opcional, cor dos números */
+}
+
+.subcategories.show {
+     max-height: 2500px;
+     /* ajusta conforme a quantidade de itens */
+}
+
+
+.subcategories {
+     list-style-position: outside;
+     /* números fora da caixa da lista */
+}
+
+
+
+.toggle {
+     cursor: pointer;
+     user-select: none;
+     /* evita que o texto seja selecionado ao clicar */
+     font-size: 24px;
+     color: greenyellow;
+}
