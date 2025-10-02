@@ -130,7 +130,6 @@ h1 {
 
 .about {
      padding-bottom: 45px;
-     text-align: center;
 
 
 
@@ -198,7 +197,7 @@ footer p {
 }
 
 .subcategories.show {
-     max-height: 2500px;
+     max-height: 3500px;
      /* ajusta conforme a quantidade de itens */
 }
 
