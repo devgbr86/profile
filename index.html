@@ -5,460 +5,460 @@
      <meta charset="UTF-8" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-     <!-- SEO Básico -->
-     <title>JScodemap - Central de Recursos JS</title>
+     <title>@codemaps - Central de Recursos</title>
      <meta name="description"
-          content="Javacodemap: Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
-     <meta name="author" content="Javacodemap">
-
-     <!-- Favicon -->
+          content="@codemaps: Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
+     <meta name="author" content="@codemaps">
+     <meta name="robots" content="index, follow">
+     <meta name="theme-color" content="#000000">
      <link rel="icon" type="image/svg+xml" href="./img/code-fav.svg" />
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="style.css" />
+     <style>
+          /* ===== GLOBAL ===== */
+          * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+          }
 
-     <!-- Open Graph (Facebook, LinkedIn etc.) -->
-     <meta property="og:title" content="Javacodemap">
-     <meta property="og:description"
-          content="Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
-     <meta property="og:image" content="https://liberdev.netlify.app/img/logo-profile.png">
-     <meta property="og:url" content="https://liberdev.netlify.app">
-     <meta property="og:type" content="website">
-     <meta property="og:locale" content="pt_BR">
-     <meta property="og:site_name" content="Javacodemap">
+          html {
+               scroll-behavior: smooth;
+          }
 
-     <!-- Twitter Card -->
-     <meta name="twitter:card" content="summary_large_image">
-     <meta name="twitter:title" content="Javacodemap">
-     <meta name="twitter:description"
-          content="Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
-     <meta name="twitter:image" content="https://liberdev.netlify.app/img/logo-profile.png">
-     <meta name="twitter:site" content="@devcaffe">
+          body {
+               margin: 0;
+               padding-top: 50px;
+               padding-bottom: 25px;
+               background: #000;
+               font-family: 'Courier New', monospace;
+               color: whitesmoke;
+               font-size: 20px;
+               line-height: 1.6;
+               overflow-x: hidden;
+          }
+
+          body::before {
+               content: '';
+               position: fixed;
+               inset: 0;
+               background: radial-gradient(ellipse at top, rgba(255, 140, 0, 0.1) 0%, transparent 50%),
+                    radial-gradient(ellipse at bottom, rgba(50, 205, 50, 0.08) 0%, transparent 50%);
+               z-index: 0;
+               pointer-events: none;
+          }
+
+          a {
+               color: greenyellow;
+               text-decoration: none;
+               word-break: break-word;
+               transition: all 0.3s ease;
+          }
+
+          a:hover,
+          a:focus-visible {
+               text-shadow: 0 0 10px rgba(173, 255, 47, 0.5);
+               outline: none;
+          }
+
+          a:focus-visible {
+               outline: 2px solid greenyellow;
+               outline-offset: 4px;
+          }
+
+          main {
+               width: 900px;
+               max-width: 85%;
+               margin: auto;
+               display: flex;
+               flex-direction: column;
+               gap: 2rem;
+               z-index: 1;
+               position: relative;
+          }
+
+          /* ===== NAVBAR ===== */
+          #navbar {
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 50px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background: rgba(0, 0, 0, 0.9);
+               border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+               backdrop-filter: blur(10px);
+               box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+               z-index: 1000;
+          }
+
+          #navbar a {
+               margin: 0 0.5rem;
+               padding: 0.25rem 0.75rem;
+               border-radius: 4px;
+               transition: background 0.3s ease, transform 0.2s ease;
+          }
+
+          #navbar a:hover,
+          #navbar a:focus-visible {
+               background: rgba(173, 255, 47, 0.1);
+               transform: scale(1.05);
+          }
+
+          /* ===== LOGO ===== */
+          .logotype {
+               text-align: center;
+               padding: 2rem 0 1rem;
+          }
+
+          .logotype img {
+               width: 90px;
+               height: 90px;
+               border-radius: 50%;
+               background: linear-gradient(135deg, #ff4dd2, #00b3ff);
+               box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
+               transition: transform 0.3s ease, box-shadow 0.3s ease;
+               display: block;
+               margin: 0 auto;
+          }
+
+          .logotype img:hover {
+               transform: scale(1.1) rotate(5deg);
+               box-shadow: 0 12px 32px rgba(138, 43, 226, 0.5);
+          }
+
+          .logotype div {
+               margin-top: 1rem;
+               font-size: 1.2rem;
+               font-weight: 600;
+               text-align: center;
+          }
+
+          .hero-title {
+               text-align: center;
+               font-size: clamp(2rem, 6vw, 3.2rem);
+               font-weight: 800;
+               line-height: 1.1;
+               margin-bottom: 1.5rem;
+          }
+
+          .gradient-text {
+               background: linear-gradient(135deg, #ff4dd2, #00b3ff);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               background-clip: text;
+               display: inline-block;
+               background-size: 200% 200%;
+               animation: gradient-shift 6s ease infinite;
+          }
+
+          @keyframes gradient-shift {
+
+               0%,
+               100% {
+                    background-position: 0% 50%;
+               }
+
+               50% {
+                    background-position: 100% 50%;
+               }
+          }
+
+          /* ===== MODULES ===== */
+          .module {
+               background: rgba(255, 255, 255, 0.03);
+               border: 1px solid rgba(255, 140, 0, 0.25);
+               border-radius: 12px;
+               padding: 1.75rem;
+               backdrop-filter: blur(10px);
+               transition: all 0.3s ease;
+          }
+
+          .module:hover {
+               background: rgba(255, 255, 255, 0.05);
+               transform: translateY(-2px);
+               box-shadow: 0 8px 24px rgba(255, 140, 0, 0.15);
+          }
+
+          .module h2 {
+               font-size: 22px;
+               margin-top: 0;
+               margin-bottom: 1rem;
+               color: #ffa500;
+          }
+
+          .module h2:not(:first-child) {
+               margin-top: 2rem;
+          }
+
+          .module p {
+               margin-bottom: 1rem;
+          }
+
+          .module p:last-of-type {
+               margin-bottom: 0;
+          }
+
+          #intro {
+               background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(50, 205, 50, 0.1));
+               border: 1px solid rgba(255, 140, 0, 0.3);
+          }
+
+          #intro p {
+               margin-bottom: 1.5rem;
+          }
+
+          .btn-container {
+               text-align: center;
+               margin: 1.5rem 0;
+          }
+
+          .btn {
+               background-color: greenyellow;
+               color: black;
+               font-size: 22px;
+               font-weight: 615;
+               padding: 18px 40px;
+               text-transform: uppercase;
+               border-radius: 8px;
+               display: inline-block;
+               text-align: center;
+               text-decoration: none;
+               transition: all 0.3s ease;
+               box-shadow: 0 4px 12px rgba(173, 255, 47, 0.3);
+               cursor: pointer;
+          }
+
+          .btn:hover,
+          .btn:focus-visible {
+               background-color: #c0ff00;
+               transform: translateY(-2px);
+               box-shadow: 0 6px 20px rgba(173, 255, 47, 0.5);
+               text-shadow: none;
+          }
+
+          .btn:active {
+               transform: translateY(0);
+               box-shadow: 0 2px 8px rgba(173, 255, 47, 0.3);
+          }
+
+          /* ===== FOOTER ===== */
+          footer {
+               width: 900px;
+               max-width: 85%;
+               margin: auto;
+               border-top: 1px solid rgba(255, 140, 0, 0.2);
+               padding: 3rem 0;
+          }
+
+          #contato a {
+               display: block;
+               margin: 0.5rem 0;
+               padding: 0.75rem 1.25rem;
+               border: 1px solid rgba(173, 255, 47, 0.2);
+               border-radius: 8px;
+               color: greenyellow;
+               overflow-wrap: anywhere;
+               word-break: break-word;
+               white-space: normal;
+               text-align: center;
+               transition: all 0.3s ease;
+          }
+
+          #contato a:hover,
+          #contato a:focus-visible {
+               background: rgba(173, 255, 47, 0.1);
+               border-color: rgba(173, 255, 47, 0.4);
+               transform: translateX(4px);
+          }
+
+          /* ===== RESPONSIVIDADE ===== */
+          @media (max-width: 768px) {
+               body {
+                    font-size: 18px;
+               }
+
+               .hero-title {
+                    font-size: clamp(1.8rem, 8vw, 2.8rem);
+               }
+
+               .module {
+                    padding: 1.5rem;
+               }
+
+               .btn {
+                    font-size: 20px;
+                    padding: 16px 35px;
+               }
+
+               #navbar a {
+                    font-size: 16px;
+                    padding: 0.2rem 0.5rem;
+               }
+          }
+
+          @media (max-width: 480px) {
+               body {
+                    font-size: 16px;
+                    padding-top: 50px;
+               }
+
+               main,
+               footer {
+                    max-width: 90%;
+               }
+
+               .logotype img {
+                    width: 75px;
+                    height: 75px;
+               }
+
+               .module {
+                    padding: 1.25rem;
+               }
+
+               .module h2 {
+                    font-size: 20px;
+               }
+
+               .btn {
+                    font-size: 18px;
+                    padding: 14px 30px;
+                    width: 100%;
+               }
+
+               #navbar {
+                    font-size: 14px;
+               }
+
+               #contato a {
+                    padding: 0.6rem 1rem;
+                    font-size: 16px;
+               }
+          }
+
+          /* ===== ACESSIBILIDADE ===== */
+          @media (prefers-reduced-motion: reduce) {
+
+               *,
+               *::before,
+               *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                    scroll-behavior: auto !important;
+               }
+          }
+
+          /* ===== PERFORMANCE - Animação suave apenas quando visível ===== */
+          @media (prefers-reduced-motion: no-preference) {
+               .module {
+                    animation: fadeIn 0.6s ease-out;
+               }
+          }
+
+          @keyframes fadeIn {
+               from {
+                    opacity: 0;
+                    transform: translateY(20px);
+               }
+
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+
+          /* ===== LOADING OPTIMIZATION ===== */
+          img {
+               display: block;
+          }
+     </style>
 </head>
 
-
 <body>
-
-     <nav id="navbar">
-          <a href="index.html">@CODEMAPS</a>
-
+     <nav id="navbar" role="navigation" aria-label="Navegação principal">
+          |
+          <a href="index.html" aria-label="Ir para Home">Home</a>
+          |
+          <a href="#contato" aria-label="Ir para Contato">Contato</a>
+          |
      </nav>
 
      <main>
           <div class="logotype">
-               <img alt="Logo" src="./img/logo-profile.png">
+               <img alt="Logo do Codemaps com gradiente vibrante" src="./img/logo-profile.png" loading="lazy" width="90"
+                    height="90">
+               <div>@codemaps</div>
           </div>
 
+          <h1 class="hero-title">
+               Programação <span class="gradient-text">e Estruturas de Dados</span>
+          </h1>
 
+          <section class="module" id="intro">
+               <p>Conteúdo exclusivo para programadores e desenvolvedores: Mapas de JavaScript do básico ao avançado,
+                    Fundamentos de Java e POO, Estruturas de Dados avançadas, Projetos Front-end/Back-end, Git, DevOps e
+                    Práticas essenciais.</p>
+               <div class="btn-container">
+                    <a href="https://codemaps.substack.com" target="_blank" rel="noopener noreferrer" class="btn"
+                         aria-label="Inscreva-se na newsletter do Codemaps">
+                         Inscreva-se
+                    </a>
+               </div>
+          </section>
 
-          <section class="about" style="padding-bottom: 45px;">
-
-
-               <h1>
-
-
-
-
-               </h1>
-
-
-
-               <p> Meu nome é Guilherme Ribeiro. Publico conteúdo educativo
-                    sobre programação, tecnologia, Java, JavaScript e temas relacionados.
-                    Os Roadmaps abaixo apresentam os principais tópicos
-                    de forma progressiva, com links e referências.
-                    <a href="https://codemaps.substack.com/">
-                         <img src="./img/sub.svg">Inscreva-se</a>
-                    para receber guias e tutoriais.
+          <section class="module">
+               <h2>Fundamentos e Estruturas de Dados</h2>
+               <p>
+                    Mergulhe no coração da programação e da ciência da computação, explorando desde conceitos
+                    fundamentais de lógica e algoritmos até a análise de complexidade de programas. Você vai compreender
+                    como variáveis, tipos de dados, estruturas de controle e funções interagem para criar soluções
+                    eficientes. Além disso, estudaremos a fundo as estruturas de dados clássicas, incluindo listas,
+                    pilhas, filas, árvores e grafos, e como aplicá-las para resolver problemas do mundo real de forma
+                    inteligente e escalável.
                </p>
-          </section>
 
+               <h2>Projetos Java e JS</h2>
+               <p>
+                    Transforme teoria em prática desenvolvendo projetos reais que refletem desafios profissionais. Crie
+                    aplicações desktop em Java, explore simulações e automações complexas, e desenvolva web apps em
+                    JavaScript, consumindo APIs externas e construindo interfaces dinâmicas. Você também aprenderá a
+                    integrar front-end e back-end, lidar com bancos de dados e autenticação de usuários, aplicando boas
+                    práticas de modularidade, código limpo e reutilização de componentes. Cada projeto é desenhado para
+                    reforçar o aprendizado e fornecer experiência prática que se destaca em portfólios.
+               </p>
 
+               <h2>Git e Versionamento</h2>
+               <p>
+                    Domine o controle de versão profissional usando Git e mantenha seu código organizado e colaborativo.
+                    Aprenda a criar e gerenciar repositórios locais e remotos, trabalhar com branches, realizar merges e
+                    resolver conflitos de forma segura. Descubra como manter históricos claros, aplicar boas práticas de
+                    commits e versionamento semântico, e colaborar de maneira eficiente em equipes de desenvolvimento.
+                    Com essas habilidades, você estará preparado para qualquer ambiente de trabalho ou projeto complexo.
+               </p>
 
-
-
-
-
-          <section class="module" aria-labelledby="jsroadmap">
-               <h2 id="jsroadmap" class="toggle"><img src="./img/index.svg" alt="">JavaScript Roadmap</h2>
-
-               <div class="subcategories">
-                    <p>
-                         O <strong>JavaScript</strong> é uma das linguagens mais populares do mundo, criada em 1995
-                         por
-                         <em>Brendan Eich</em>. Inicialmente chamada de <em>Mocha</em> e depois
-                         <em>LiveScript</em>, ganhou o nome
-                         JavaScript para aproveitar a popularidade do Java. Sua proposta é trazer dinamismo e
-                         interatividade às páginas web.
-                    </p>
-
-                    <p>
-                         Desde então, JavaScript evoluiu: <strong>Node.js</strong> permite rodar JS no servidor, e
-                         o padrão
-                         <strong>ECMAScript 6 (ES6)</strong> trouxe recursos modernos como <em>let/const</em>,
-                         <em>arrow functions</em>,
-                         <em>classes</em> e <em>modules</em>. Frameworks e bibliotecas como <strong>React, Angular
-                              e Vue</strong> consolidaram
-                         JavaScript no desenvolvimento moderno.
-                    </p>
-
-                    <h3>Recursos de Aprendizado</h3>
-                    <ul>
-                         <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN
-                                   Web Docs</a></li>
-                         <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools</a></li>
-                         <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
-                         <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">História do
-                                   JavaScript</a></li>
-                    </ul>
-
-                    <h3>Ferramentas & IDEs</h3>
-                    <ul>
-                         <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-                         <li><a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a></li>
-                         <li><a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a></li>
-                         <li><strong>Gerenciadores e Build Tools:</strong>
-                              <ul>
-                                   <li><a href="https://www.npmjs.com/" target="_blank">npm</a></li>
-                                   <li><a href="https://yarnpkg.com/" target="_blank">Yarn</a></li>
-                                   <li><a href="https://webpack.js.org/" target="_blank">Webpack</a></li>
-                              </ul>
-                         </li>
-                    </ul>
-
-                    <h3>Comunidades & Tutoriais</h3>
-                    <ul>
-                         <li><a href="https://stackoverflow.com/questions/tagged/javascript" target="_blank">Stack
-                                   Overflow</a></li>
-                         <li><a href="https://www.reddit.com/r/javascript/" target="_blank">Reddit r/javascript</a>
-                         </li>
-                         <li><a href="https://dev.to/t/javascript" target="_blank">Dev.to</a></li>
-                         <li><strong>Cursos e vídeos:</strong>
-                              <ul>
-                                   <li><a href="https://www.udemy.com/courses/search/?q=javascript"
-                                             target="_blank">Udemy</a></li>
-                                   <li><a href="https://www.youtube.com/results?search_query=javascript+tutorial"
-                                             target="_blank">YouTube</a></li>
-                              </ul>
-                         </li>
-                         <li><a href="https://www.cheatography.com/tag/javascript/" target="_blank">Cheat
-                                   Sheets</a></li>
-                         <li><a href="https://github.com/topics/javascript" target="_blank">Projetos GitHub</a>
-                         </li>
-                    </ul>
-
-                    <h3>Downloads</h3>
-                    <ul>
-                         <li><a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
-                         <li><a href="https://deno.land/" target="_blank">Deno</a></li>
-                         <li>Ferramentas auxiliares: npm, Yarn, Babel, Webpack</li>
-                    </ul>
-
-                    <h3>Roadmap de Aprendizado</h3>
-                    <ol>
-                         <li>
-                              <strong>Lógica de Programação</strong>
-                              <ul>
-                                   <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">Introdução ao
-                                             JS</a></li>
-                                   <li><a href="https://www.codecademy.com/learn/introduction-to-javascript"
-                                             target="_blank">Variáveis, tipos e operadores</a></li>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
-                                             target="_blank">Controle de fluxo</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Programação Orientada a Objetos</strong>
-                              <ul>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects"
-                                             target="_blank">Objetos</a></li>
-                                   <li><a href="https://javascript.info/class-inheritance" target="_blank">Classes
-                                             e Herança</a></li>
-                                   <li><a href="https://www.geeksforgeeks.org/polymorphism-in-javascript/"
-                                             target="_blank">Polimorfismo</a></li>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
-                                             target="_blank">Abstração e Interfaces</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Estruturas Avançadas e APIs</strong>
-                              <ul>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
-                                             target="_blank">Arrays, Map/Set</a></li>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous"
-                                             target="_blank">Programação Assíncrona</a></li>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-                                             target="_blank">APIs (Fetch)</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>JavaScript para Web</strong>
-                              <ul>
-                                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
-                                             target="_blank">Manipulação do DOM</a></li>
-                                   <li><a href="https://react.dev/" target="_blank">React</a></li>
-                                   <li><a href="https://vuejs.org/" target="_blank">Vue.js</a></li>
-                                   <li><a href="https://angular.io/" target="_blank">Angular</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Backend e Integrações</strong>
-                              <ul>
-                                   <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js</a></li>
-                                   <li><a href="https://expressjs.com/" target="_blank">Express.js</a></li>
-                                   <li><a href="https://mongoosejs.com/" target="_blank">MongoDB (Mongoose)</a>
-                                   </li>
-                                   <li><a href="https://sequelize.org/" target="_blank">ORM com SQL (Sequelize)</a>
-                                   </li>
-                                   <li><a href="https://www.baeldung.com/spring-boot-rest-api" target="_blank">APIs
-                                             REST</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Projetos e Prática</strong>
-                              <ul>
-                                   <li><a href="https://github.com/topics/javascript" target="_blank">Projetos Open
-                                             Source</a></li>
-                                   <li><a href="https://exercism.org/tracks/javascript" target="_blank">Exercícios
-                                             práticos</a></li>
-                                   <li><a href="https://roadmap.sh/javascript" target="_blank">Roadmap.sh</a></li>
-                              </ul>
-                         </li>
-                    </ol>
+               <div class="btn-container">
+                    <a href="https://codemaps.substack.com" target="_blank" rel="noopener noreferrer" class="btn"
+                         aria-label="Inscreva-se na newsletter do Codemaps">
+                         Inscreva-se
+                    </a>
                </div>
           </section>
-
-
-
-
-
-
-
-
-
-          <section class="module" aria-labelledby="jaroadmap">
-               <h2 id="jaroadmap" class="toggle"><img src="./img/index.svg" alt="">Java Roadmap</h2>
-
-               <div class="subcategories">
-                    <p>
-                         O <strong>Java</strong> é uma das linguagens mais utilizadas do mundo, criada em 1991 no
-                         <em>Projeto Green</em>
-                         da Sun Microsystems e lançada oficialmente em 1995. Voltada a aplicações <strong>Web,
-                              Mobile, Desktop e Backend</strong>,
-                         Java evoluiu com recursos como <strong>Generics, Metadata, Project Jigsaw</strong> e
-                         atualmente mantém versões LTS modernas.
-                    </p>
-
-                    <h3>Recursos de Aprendizado</h3>
-                    <ul>
-                         <li><a href="https://www.oracle.com/java/technologies/javase-jdk11-doc-downloads.html"
-                                   target="_blank">Introdução oficial do Java</a></li>
-                         <li><a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">TutorialsPoint</a>
-                         </li>
-                         <li><a href="https://www.w3schools.com/java/" target="_blank">W3Schools</a></li>
-                         <li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)"
-                                   target="_blank">História do Java</a></li>
-                    </ul>
-
-                    <h3>Ferramentas & IDEs</h3>
-                    <ul>
-                         <li><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a></li>
-                         <li><a href="https://www.eclipse.org/" target="_blank">Eclipse</a></li>
-                         <li><a href="https://netbeans.apache.org/" target="_blank">NetBeans</a></li>
-                         <li><strong>Gerenciadores de build:</strong>
-                              <ul>
-                                   <li><a href="https://maven.apache.org/" target="_blank">Maven</a></li>
-                                   <li><a href="https://gradle.org/" target="_blank">Gradle</a></li>
-                              </ul>
-                         </li>
-                    </ul>
-
-                    <h3>Comunidades & Tutoriais</h3>
-                    <ul>
-                         <li><a href="https://stackoverflow.com/questions/tagged/java" target="_blank">Stack
-                                   Overflow</a></li>
-                         <li><a href="https://www.reddit.com/r/java/" target="_blank">Reddit r/java</a></li>
-                         <li><a href="https://dev.to/t/java" target="_blank">Dev.to</a></li>
-                         <li><strong>Cursos e vídeos:</strong>
-                              <ul>
-                                   <li><a href="https://www.udemy.com/courses/search/?q=java" target="_blank">Udemy</a>
-                                   </li>
-                                   <li><a href="https://www.youtube.com/results?search_query=java+tutorial"
-                                             target="_blank">YouTube</a></li>
-                              </ul>
-                         </li>
-                         <li><a href="https://www.cheatography.com/tag/java/" target="_blank">Cheat Sheets</a></li>
-                         <li><a href="https://github.com/topics/java" target="_blank">Projetos GitHub</a></li>
-                    </ul>
-
-                    <h3>Downloads</h3>
-                    <ul>
-                         <li><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">JDK
-                                   Oficial (Oracle)</a></li>
-                         <li><a href="https://openjdk.org/" target="_blank">OpenJDK</a></li>
-                         <li>Ferramentas auxiliares: JavaFX, Maven, Gradle</li>
-                    </ul>
-
-                    <h3>Roadmap de Aprendizado</h3>
-                    <ol>
-                         <li>
-                              <strong>Lógica de Programação</strong>
-                              <ul>
-                                   <li><a href="https://www.w3schools.com/java/java_intro.asp"
-                                             target="_blank">Introdução ao Java</a></li>
-                                   <li><a href="https://www.codecademy.com/learn/learn-java" target="_blank">Variáveis,
-                                             tipos e operadores</a></li>
-                                   <li><a href="https://www.geeksforgeeks.org/java-loops/" target="_blank">Controle
-                                             de fluxo</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Programação Orientada a Objetos</strong>
-                              <ul>
-                                   <li><a href="https://www.tutorialspoint.com/java/java_object_classes.htm"
-                                             target="_blank">Classes e Objetos</a></li>
-                                   <li><a href="https://www.geeksforgeeks.org/inheritance-in-java/"
-                                             target="_blank">Herança</a></li>
-                                   <li><a href="https://www.baeldung.com/java-polymorphism"
-                                             target="_blank">Polimorfismo</a></li>
-                                   <li><a href="https://www.geeksforgeeks.org/abstraction-in-java-2/"
-                                             target="_blank">Abstração e Interfaces</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Estruturas Avançadas e APIs</strong>
-                              <ul>
-                                   <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html"
-                                             target="_blank">Coleções (List, Set, Map)</a></li>
-                                   <li><a href="https://www.javatpoint.com/java-exception-handling"
-                                             target="_blank">Tratamento de Exceções</a></li>
-                                   <li><a href="https://www.baeldung.com/java-io" target="_blank">Trabalhando com
-                                             Arquivos (I/O)</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Java para Web</strong>
-                              <ul>
-                                   <li><a href="https://www.javatpoint.com/servlet-tutorial" target="_blank">Servlets e
-                                             JSP</a></li>
-                                   <li><a href="https://spring.io/guides" target="_blank">Spring Framework</a></li>
-                                   <li><a href="https://www.baeldung.com/spring-boot" target="_blank">Spring
-                                             Boot</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Backend e Banco de Dados</strong>
-                              <ul>
-                                   <li><a href="https://www.baeldung.com/hibernate-5-spring" target="_blank">Hibernate /
-                                             JPA</a></li>
-                                   <li><a href="https://www.postgresqltutorial.com/" target="_blank">Banco de Dados
-                                             (PostgreSQL/MySQL)</a></li>
-                                   <li><a href="https://www.baeldung.com/spring-boot-rest-api" target="_blank">APIs
-                                             REST com Spring Boot</a></li>
-                              </ul>
-                         </li>
-                         <li>
-                              <strong>Projetos e Prática</strong>
-                              <ul>
-                                   <li><a href="https://github.com/topics/java" target="_blank">Projetos Open
-                                             Source</a></li>
-                                   <li><a href="https://exercism.org/tracks/java" target="_blank">Exercícios
-                                             práticos (Exercism)</a></li>
-                                   <li><a href="https://roadmap.sh/java" target="_blank">Roadmap.sh</a></li>
-                              </ul>
-                         </li>
-                    </ol>
-               </div>
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      </main>
 
      <footer>
-
-          <section class="sub" style="text-align: center;">
-
-               <a href="https://codemaps.substack.com/">
-                    <img src="./img/sub.svg">Inscreva-se</a>
-               para receber guias e tutoriais.
-
+          <section id="contato" class="module">
+               <h2>Contato</h2>
+               <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visite o perfil do GitHub do Codemaps">GitHub</a>
+               <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Conecte-se no LinkedIn com o Codemaps">LinkedIn</a>
+               <a href="mailto:topverbs@gmail.com"
+                    aria-label="Envie um email para topverbs@gmail.com">topverbs@gmail.com</a>
           </section>
-
-
-
-          <section class="contato" style="text-align: center;">
-
-               <p>
-                    <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
-                         aria-label="Perfil GitHub">
-                         GitHub
-                    </a>
-
-               </p>
-               <p>
-
-                    <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
-                         aria-label="Perfil LinkedIn">
-                         LinkedIn
-                    </a>
-
-               </p>
-               <p>
-
-
-                    <a href="mailto:topverbs@gmail.com" aria-label="Enviar email">
-                         topverbs@gmail.com
-                    </a>
-               </p>
-
-
-          </section>
-
-
-
-
-
-
-
      </footer>
-
-     <script>
-
-
-          document.querySelectorAll('.toggle').forEach(title => {
-               title.addEventListener('click', () => {
-                    const list = title.nextElementSibling;
-                    list.classList.toggle('show');
-               });
-          });
-
-
-
-     </script>
-
 </body>
 
 </html>
