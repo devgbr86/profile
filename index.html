@@ -5,10 +5,10 @@
      <meta charset="UTF-8" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>@codemaps - Central de Recursos</title>
+     <title>@devcaffe - Central de Recursos</title>
      <meta name="description"
-          content="@codemaps: Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
-     <meta name="author" content="@codemaps">
+          content="@devcaffe: Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
+     <meta name="author" content="@devcaffe">
      <meta name="robots" content="index, follow">
      <meta name="theme-color" content="#000000">
      <link rel="icon" type="image/svg+xml" href="./img/code-fav.svg" />
@@ -63,6 +63,7 @@
           a:focus-visible {
                outline: 2px solid greenyellow;
                outline-offset: 4px;
+               border-radius: 4px;
           }
 
           main {
@@ -86,7 +87,7 @@
                display: flex;
                justify-content: center;
                align-items: center;
-               background: rgba(0, 0, 0, 0.9);
+               background: rgba(0, 0, 0, 0.95);
                border-bottom: 1px solid rgba(255, 165, 0, 0.2);
                backdrop-filter: blur(10px);
                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -98,6 +99,7 @@
                padding: 0.25rem 0.75rem;
                border-radius: 4px;
                transition: background 0.3s ease, transform 0.2s ease;
+               font-weight: 500;
           }
 
           #navbar a:hover,
@@ -112,6 +114,17 @@
                padding: 2rem 0 1rem;
           }
 
+          .logotype a {
+               display: inline-block;
+               transition: transform 0.3s ease;
+          }
+
+          .logotype a:focus-visible {
+               outline: 2px solid greenyellow;
+               outline-offset: 8px;
+               border-radius: 50%;
+          }
+
           .logotype img {
                width: 90px;
                height: 90px;
@@ -123,7 +136,7 @@
                margin: 0 auto;
           }
 
-          .logotype img:hover {
+          .logotype a:hover img {
                transform: scale(1.1) rotate(5deg);
                box-shadow: 0 12px 32px rgba(138, 43, 226, 0.5);
           }
@@ -185,7 +198,7 @@
                font-size: 22px;
                margin-top: 0;
                margin-bottom: 1rem;
-               color: #ffa500;
+               color: lightblue;
           }
 
           .module h2:not(:first-child) {
@@ -228,6 +241,7 @@
                transition: all 0.3s ease;
                box-shadow: 0 4px 12px rgba(173, 255, 47, 0.3);
                cursor: pointer;
+               border: none;
           }
 
           .btn:hover,
@@ -243,16 +257,9 @@
                box-shadow: 0 2px 8px rgba(173, 255, 47, 0.3);
           }
 
-          /* ===== FOOTER ===== */
-          footer {
-               width: 900px;
-               max-width: 85%;
-               margin: auto;
-               border-top: 1px solid rgba(255, 140, 0, 0.2);
-               padding: 3rem 0;
-          }
-
-          #contato a {
+          /* ===== LINKS DAS SEÇÕES ===== */
+          #contato a,
+          #projetos a {
                display: block;
                margin: 0.5rem 0;
                padding: 0.75rem 1.25rem;
@@ -267,10 +274,21 @@
           }
 
           #contato a:hover,
-          #contato a:focus-visible {
+          #contato a:focus-visible,
+          #projetos a:hover,
+          #projetos a:focus-visible {
                background: rgba(173, 255, 47, 0.1);
                border-color: rgba(173, 255, 47, 0.4);
                transform: translateX(4px);
+          }
+
+          /* ===== FOOTER ===== */
+          footer {
+               width: 900px;
+               max-width: 85%;
+               margin: auto;
+               border-top: 1px solid rgba(255, 140, 0, 0.2);
+               padding: 3rem 0;
           }
 
           /* ===== RESPONSIVIDADE ===== */
@@ -332,7 +350,8 @@
                     font-size: 14px;
                }
 
-               #contato a {
+               #contato a,
+               #projetos a {
                     padding: 0.6rem 1rem;
                     font-size: 16px;
                }
@@ -374,87 +393,85 @@
           img {
                display: block;
           }
+
+          /* Skip to content para acessibilidade */
+          .skip-to-content {
+               position: absolute;
+               top: -40px;
+               left: 0;
+               background: greenyellow;
+               color: black;
+               padding: 8px;
+               text-decoration: none;
+               z-index: 2000;
+               font-weight: bold;
+          }
+
+          .skip-to-content:focus {
+               top: 0;
+          }
      </style>
 </head>
 
 <body>
+
      <nav id="navbar" role="navigation" aria-label="Navegação principal">
-          |
-          <a href="index.html" aria-label="Ir para Home">Home</a>
           |
           <a href="#contato" aria-label="Ir para Contato">Contato</a>
           |
      </nav>
 
-     <main>
+     <main id="main-content">
           <div class="logotype">
-               <img alt="Logo do Codemaps com gradiente vibrante" src="./img/logo-profile.png" loading="lazy" width="90"
-                    height="90">
-               <div>@codemaps</div>
+               <a href="index.html" aria-label="Página inicial do @devcaffe">
+                    <img alt="Logo do @devcaffe com gradiente vibrante" src="./img/logo-profile.png" loading="lazy"
+                         width="90" height="90">
+               </a>
+               <div>@devcaffe</div>
           </div>
 
           <h1 class="hero-title">
-               Programação <span class="gradient-text">e Estruturas de Dados</span>
+               <span class="gradient-text">Tutoriais para programadores e desenvolvedores</span>
           </h1>
 
-          <section class="module" id="intro">
-               <p>Conteúdo exclusivo para programadores e desenvolvedores: Mapas de JavaScript do básico ao avançado,
-                    Fundamentos de Java e POO, Estruturas de Dados avançadas, Projetos Front-end/Back-end, Git, DevOps e
-                    Práticas essenciais.</p>
-               <div class="btn-container">
-                    <a href="https://codemaps.substack.com" target="_blank" rel="noopener noreferrer" class="btn"
-                         aria-label="Inscreva-se na newsletter do Codemaps">
-                         Inscreva-se
-                    </a>
-               </div>
+          <section class="module" id="intro" aria-labelledby="intro-heading">
+               <h2 id="intro-heading"
+                    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;">
+                    Introdução</h2>
+               <p>
+                    Meu nome é Guilherme Ribeiro.
+                    <br>
+                    Publico conteúdo exclusivo para programadores e desenvolvedores: Jekyll, Mapas de JavaScript,
+                    Fundamentos de Java e POO, Estruturas de Dados avançadas, Projetos frontend/backend,
+                    Git,
+                    DevOps e práticas essenciais. Inscreva-se na Newsletter para receber tutoriais
+                    completos.
+               </p>
           </section>
 
-          <section class="module">
-               <h2>Fundamentos e Estruturas de Dados</h2>
-               <p>
-                    Mergulhe no coração da programação e da ciência da computação, explorando desde conceitos
-                    fundamentais de lógica e algoritmos até a análise de complexidade de programas. Você vai compreender
-                    como variáveis, tipos de dados, estruturas de controle e funções interagem para criar soluções
-                    eficientes. Além disso, estudaremos a fundo as estruturas de dados clássicas, incluindo listas,
-                    pilhas, filas, árvores e grafos, e como aplicá-las para resolver problemas do mundo real de forma
-                    inteligente e escalável.
-               </p>
-
-               <h2>Projetos Java e JS</h2>
-               <p>
-                    Transforme teoria em prática desenvolvendo projetos reais que refletem desafios profissionais. Crie
-                    aplicações desktop em Java, explore simulações e automações complexas, e desenvolva web apps em
-                    JavaScript, consumindo APIs externas e construindo interfaces dinâmicas. Você também aprenderá a
-                    integrar front-end e back-end, lidar com bancos de dados e autenticação de usuários, aplicando boas
-                    práticas de modularidade, código limpo e reutilização de componentes. Cada projeto é desenhado para
-                    reforçar o aprendizado e fornecer experiência prática que se destaca em portfólios.
-               </p>
-
-               <h2>Git e Versionamento</h2>
-               <p>
-                    Domine o controle de versão profissional usando Git e mantenha seu código organizado e colaborativo.
-                    Aprenda a criar e gerenciar repositórios locais e remotos, trabalhar com branches, realizar merges e
-                    resolver conflitos de forma segura. Descubra como manter históricos claros, aplicar boas práticas de
-                    commits e versionamento semântico, e colaborar de maneira eficiente em equipes de desenvolvimento.
-                    Com essas habilidades, você estará preparado para qualquer ambiente de trabalho ou projeto complexo.
-               </p>
-
-               <div class="btn-container">
-                    <a href="https://codemaps.substack.com" target="_blank" rel="noopener noreferrer" class="btn"
-                         aria-label="Inscreva-se na newsletter do Codemaps">
-                         Inscreva-se
-                    </a>
-               </div>
+          <section id="projetos" class="module" aria-labelledby="projetos-heading">
+               <h2 id="projetos-heading">Códigos e Projetos</h2>
+               <a href="https://devcaffe.substack.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Inscreva-se na newsletter do @devcaffe">
+                    Inscreva-se: Newsletter
+               </a>
+               <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visite o perfil do @devcaffe no GitHub">GitHub Profile</a>
+               <a href="https://devgbr86.github.io/md-editor/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Acesse o Markdown Editor online">Markdown Editor</a>
+               <a href="https://devgbr86.github.io/img-converter/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Conversor de imagens PNG, JPG e WEBP">
+                    PNG/JPG/WEBP Converter</a>
+               <a href="https://devgbr86.github.io/jekyll-page/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Jekyll template">Jekyll template</a>
           </section>
      </main>
 
      <footer>
-          <section id="contato" class="module">
-               <h2>Contato</h2>
-               <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visite o perfil do GitHub do Codemaps">GitHub</a>
+          <section id="contato" class="module" aria-labelledby="contato-heading">
+               <h2 id="contato-heading">Contato</h2>
                <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Conecte-se no LinkedIn com o Codemaps">LinkedIn</a>
+                    aria-label="Conecte-se com @devcaffe no LinkedIn">LinkedIn</a>
                <a href="mailto:topverbs@gmail.com"
                     aria-label="Envie um email para topverbs@gmail.com">topverbs@gmail.com</a>
           </section>
