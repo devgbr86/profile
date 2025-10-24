@@ -2,483 +2,412 @@
 <html lang="pt-br">
 
 <head>
-     <meta charset="UTF-8" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>@devcaffe</title>
-     <meta name="description"
-          content="@devcaffe: Central de tutoriais, referências e links oficiais sobre Java. Explore documentação, ferramentas, cursos e projetos Java.">
-     <meta name="author" content="@devcaffe">
-     <meta name="robots" content="index, follow">
-     <meta name="theme-color" content="#000000">
      <link rel="icon" type="image/svg+xml" href="./img/favicon01.svg" />
-
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>@devcaffe - Guilherme Ribeiro</title>
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
      <style>
-          /* ===== GLOBAL ===== */
           * {
-               box-sizing: border-box;
                margin: 0;
                padding: 0;
+               box-sizing: border-box;
           }
 
           html {
+               font-family: 'Courier New', Courier, monospace;
+               background-color: #f5f5f5;
+               color: #1a1a1a;
                scroll-behavior: smooth;
+               margin-top: 56px;
           }
 
           body {
-               margin: 0;
-               padding-top: 50px;
-               padding-bottom: 25px;
-               background: #000;
-               font-family: 'Courier New', monospace;
-               color: whitesmoke;
-               font-size: 20px;
-               line-height: 1.6;
-               overflow-x: hidden;
+               padding-top: 80px;
           }
 
-          body::before {
-               content: '';
-               position: fixed;
-               inset: 0;
-               background: radial-gradient(ellipse at top, rgba(255, 140, 0, 0.1) 0%, transparent 50%),
-                    radial-gradient(ellipse at bottom, rgba(50, 205, 50, 0.08) 0%, transparent 50%);
-               z-index: 0;
-               pointer-events: none;
-          }
-
-          a {
-               color: greenyellow;
-               text-decoration: none;
-               word-break: break-word;
-               transition: all 0.3s ease;
-          }
-
-          a:hover,
-          a:focus-visible {
-               text-shadow: 0 0 10px rgba(173, 255, 47, 0.5);
-               outline: none;
-          }
-
-          a:focus-visible {
-               outline: 2px solid greenyellow;
-               outline-offset: 4px;
-               border-radius: 4px;
-          }
-
-          main {
-               width: 900px;
-               max-width: 85%;
-               margin: auto;
-               display: flex;
-               flex-direction: column;
-               gap: 2rem;
-               z-index: 1;
-               position: relative;
-          }
-
-          /* ===== NAVBAR ===== */
-          #navbar {
+          /* Navbar */
+          nav {
                position: fixed;
                top: 0;
                left: 0;
-               width: 100%;
-               height: 50px;
+               right: 0;
+               background-color: #000;
+               border-bottom: 3px solid #2a2a2a;
+               padding: 1.2rem 2rem;
+               z-index: 1000;
+               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          }
+
+          nav .container {
+               max-width: 800px;
+               margin: 0 auto;
                display: flex;
                justify-content: center;
                align-items: center;
-               background: rgba(0, 0, 0, 0.95);
-               border-bottom: 1px solid rgba(255, 165, 0, 0.2);
-               backdrop-filter: blur(10px);
-               box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-               z-index: 1000;
           }
 
-          #navbar a {
-               margin: 0 0.5rem;
-               padding: 0.25rem 0.75rem;
-               border-radius: 4px;
-               transition: background 0.3s ease, transform 0.2s ease;
-               font-weight: 500;
-          }
-
-          #navbar a:hover,
-          #navbar a:focus-visible {
-               background: rgba(173, 255, 47, 0.1);
-               transform: scale(1.05);
-          }
-
-          /* ===== LOGO ===== */
-          .logotype {
-               text-align: center;
-               padding: 2rem 0 1rem;
-          }
-
-          .logotype a {
-               display: inline-block;
-               transition: transform 0.3s ease;
-          }
-
-          .logotype a:focus-visible {
-               outline: 2px solid greenyellow;
-               outline-offset: 8px;
-               border-radius: 50%;
-          }
-
-          .logotype img {
-               width: 90px;
-               height: 90px;
-               border-radius: 50%;
-               background: linear-gradient(135deg, #ff4dd2, #00b3ff);
-               box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
-               transition: transform 0.3s ease, box-shadow 0.3s ease;
-               display: block;
-               margin: 0 auto;
-          }
-
-          .logotype a:hover img {
-               transform: scale(1.1) rotate(5deg);
-               box-shadow: 0 12px 32px rgba(138, 43, 226, 0.5);
-          }
-
-          .logotype div {
-               margin-top: 1rem;
+          nav .logo {
                font-size: 1.2rem;
-               font-weight: 600;
-               text-align: center;
-          }
-
-          .hero-title {
-               text-align: center;
-               font-size: clamp(2rem, 6vw, 3.2rem);
-               font-weight: 800;
-               line-height: 1.1;
-               margin-bottom: 1.5rem;
-          }
-
-          .gradient-text {
-               background: linear-gradient(135deg, #ff4dd2, #00b3ff);
-               -webkit-background-clip: text;
-               -webkit-text-fill-color: transparent;
-               background-clip: text;
-               display: inline-block;
-               background-size: 200% 200%;
-               animation: gradient-shift 6s ease infinite;
-          }
-
-          @keyframes gradient-shift {
-
-               0%,
-               100% {
-                    background-position: 0% 50%;
-               }
-
-               50% {
-                    background-position: 100% 50%;
-               }
-          }
-
-          /* ===== MODULES ===== */
-          .module {
-               background: rgba(255, 255, 255, 0.03);
-               border: 1px solid rgba(255, 140, 0, 0.25);
-               border-radius: 12px;
-               padding: 1.75rem;
-               backdrop-filter: blur(10px);
-               transition: all 0.3s ease;
-               font-family: 'Courier New', Courier, monospace;
-               color: rgb(245, 245, 245);
-          }
-
-          .module:hover {
-               background: rgba(255, 255, 255, 0.05);
-               transform: translateY(-2px);
-               box-shadow: 0 8px 24px rgba(255, 140, 0, 0.15);
-          }
-
-          .module h2 {
-               font-size: 22px;
-               margin-top: 0;
-               margin-bottom: 1rem;
-          }
-
-          .module h2:not(:first-child) {
-               margin-top: 2rem;
-          }
-
-          .module p {
-               margin-bottom: 1rem;
-          }
-
-          .module p:last-of-type {
-               margin-bottom: 0;
-          }
-
-          #intro {
-               background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(50, 205, 50, 0.1));
-               border: 1px solid rgba(255, 140, 0, 0.3);
-          }
-
-          #intro p {
-               margin-bottom: 1.5rem;
-          }
-
-          .btn-container {
-               text-align: center;
-               margin: 1.5rem 0;
-          }
-
-          .btn {
-               background-color: greenyellow;
-               color: black;
-               font-size: 22px;
-               font-weight: 615;
-               padding: 18px 40px;
-               text-transform: uppercase;
-               border-radius: 8px;
-               display: inline-block;
-               text-align: center;
+               font-weight: bold;
+               color: #f5f5f5;
                text-decoration: none;
-               transition: all 0.3s ease;
-               box-shadow: 0 4px 12px rgba(173, 255, 47, 0.3);
-               cursor: pointer;
+          }
+
+          /* Conteúdo */
+          main {
+               max-width: 800px;
+               margin: 0 auto;
+               padding: 2rem 1.5rem;
+               font-size: 19px;
+          }
+
+          #content h1 {
+               font-size: 2.6rem;
+               margin-bottom: 1.2rem;
+               color: #000;
+               font-weight: bold;
+               line-height: 1.3;
+               letter-spacing: -0.5px;
+          }
+
+          #content h2 {
+               font-size: 1.8rem;
+               margin-top: 2.8rem;
+               margin-bottom: 1.2rem;
+               color: #000;
+               border-bottom: 3px solid #666;
+               padding-bottom: 0.6rem;
+               font-weight: bold;
+          }
+
+          #content h3 {
+               font-size: 1.35rem;
+               margin-top: 2.2rem;
+               margin-bottom: 1.2rem;
+               color: #000;
+               font-weight: bold;
+          }
+
+          #content p {
+               line-height: 1.8;
+               margin-bottom: 1.2rem;
+               color: #1a1a1a;
+               font-size: 1.05rem;
+          }
+
+          #content ul {
+               margin-left: 2rem;
+               margin-bottom: 1.2rem;
+               list-style: none;
+          }
+
+          #content li {
+               line-height: 1.9;
+               margin-bottom: 0.6rem;
+               position: relative;
+               padding-left: 1.5rem;
+               color: #1a1a1a;
+               font-size: 1.05rem;
+          }
+
+          #content li::before {
+               content: "▹";
+               color: #000;
+               position: absolute;
+               left: 0;
+               font-weight: bold;
+               font-size: 1.2rem;
+          }
+
+          #content a {
+               color: #006400;
+               text-decoration: none;
+               border-bottom: none;
+               font-weight: 700;
+          }
+
+          #content hr {
                border: none;
+               border-top: 3px solid #666;
+               margin: 2.5rem 0;
           }
 
-          .btn:hover,
-          .btn:focus-visible {
-               background-color: #c0ff00;
-               transform: translateY(-2px);
-               box-shadow: 0 6px 20px rgba(173, 255, 47, 0.5);
-               text-shadow: none;
+          /* Tech Skills */
+          .tech-skills {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+               gap: 0.9rem;
+               margin: 2.5rem 0;
           }
 
-          .btn:active {
-               transform: translateY(0);
-               box-shadow: 0 2px 8px rgba(173, 255, 47, 0.3);
-          }
-
-          /* ===== LINKS DAS SEÇÕES ===== */
-          #contato a,
-          #projetos a {
-               display: block;
-               margin: 0.5rem 0;
-               padding: 0.75rem 1.25rem;
-               border: 1px solid rgba(173, 255, 47, 0.2);
+          .tech-badge {
+               display: inline-block;
+               padding: 0.6rem 1.1rem;
+               border: 3px solid #000;
                border-radius: 8px;
-               color: greenyellow;
-               overflow-wrap: anywhere;
-               word-break: break-word;
-               white-space: normal;
-               text-align: left;
-               transition: all 0.3s ease;
+               background-color: #fff;
+               color: #000;
+               font-size: 0.95rem;
+               font-weight: 700;
+               box-shadow: 3px 3px 0 #000;
           }
 
-          #contato a:hover,
-          #contato a:focus-visible,
-          #projetos a:hover,
-          #projetos a:focus-visible {
-               background: rgba(173, 255, 47, 0.1);
-               border-color: rgba(173, 255, 47, 0.4);
-               transform: translateX(4px);
+          /* Project Cards */
+          .project-card {
+               border: 3px solid #666;
+               border-radius: 10px;
+               padding: 1.6rem;
+               margin-bottom: 1.6rem;
+               background-color: #fff;
+               box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
           }
 
-          /* ===== FOOTER ===== */
-          footer {
-               width: 900px;
-               max-width: 85%;
-               margin: auto;
-               border-top: 1px solid rgba(255, 140, 0, 0.2);
-               padding: 3rem 0;
+          .project-card h4 {
+               color: #000;
+               font-size: 1.3rem;
+               margin-bottom: 0.8rem;
+               font-weight: bold;
           }
 
-          /* ===== RESPONSIVIDADE ===== */
+          .project-card p {
+               color: #1a1a1a;
+               margin-bottom: 1.2rem;
+               font-size: 1rem;
+               line-height: 1.7;
+          }
+
+          .project-card a {
+               color: #006400;
+               text-decoration: none;
+               font-size: 0.95rem;
+               border: 3px solid #006400;
+               padding: 0.5rem 1rem;
+               border-radius: 6px;
+               display: inline-block;
+               font-weight: 700;
+               background-color: #fff;
+               box-shadow: 2px 2px 0 #006400;
+          }
+
+          /* Contact Info */
+          .contact-info {
+               display: flex;
+               flex-direction: column;
+               gap: 1.2rem;
+               margin: 2rem 0 2.5rem 0;
+               padding: 1.6rem;
+               border: 3px solid #666;
+               border-radius: 10px;
+               background-color: #fff;
+               box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+          }
+
+          .contact-item {
+               display: flex;
+               flex-direction: column;
+               gap: 0.4rem;
+               padding-left: 1.5rem;
+               position: relative;
+               color: #1a1a1a;
+          }
+
+          .contact-item::before {
+               content: ">";
+               color: #000;
+               font-weight: bold;
+               position: absolute;
+               left: 0;
+               top: 0;
+               font-size: 1.1rem;
+          }
+
+          .contact-item .contact-label {
+               color: #000;
+               font-size: 1rem;
+               font-weight: 700;
+          }
+
+          .contact-item a {
+               color: #006400;
+               text-decoration: none;
+               word-break: break-all;
+               font-size: 0.95rem;
+               font-weight: 600;
+          }
+
+          /* Responsivo */
           @media (max-width: 768px) {
                body {
+                    padding-top: 70px;
+               }
+
+               nav {
+                    padding: 1rem 1.5rem;
+               }
+
+               nav .container {
+                    max-width: 100%;
+               }
+
+               main {
+                    padding: 1.5rem 1.2rem;
                     font-size: 18px;
                }
 
-               .hero-title {
-                    font-size: clamp(1.8rem, 8vw, 2.8rem);
+               #content h1 {
+                    font-size: 2.2rem;
                }
 
-               .module {
-                    padding: 1.5rem;
+               #content h2 {
+                    font-size: 1.6rem;
+                    margin-top: 2.2rem;
                }
 
-               .btn {
-                    font-size: 20px;
-                    padding: 16px 35px;
+               #content h3 {
+                    font-size: 1.2rem;
                }
 
-               #navbar a {
-                    font-size: 16px;
-                    padding: 0.2rem 0.5rem;
+               #content p,
+               #content li {
+                    font-size: 1rem;
+               }
+
+               .tech-skills {
+                    gap: 0.7rem;
+               }
+
+               .tech-badge {
+                    font-size: 0.9rem;
+                    padding: 0.55rem 1rem;
+               }
+
+               .project-card {
+                    padding: 1.4rem;
+               }
+
+               .project-card h4 {
+                    font-size: 1.2rem;
+               }
+
+               .project-card p {
+                    font-size: 0.95rem;
+               }
+
+               .contact-info {
+                    padding: 1.4rem;
                }
           }
 
           @media (max-width: 480px) {
-               body {
-                    font-size: 16px;
-                    padding-top: 50px;
+               main {
+                    padding: 1rem;
+                    font-size: 17px;
                }
 
-               main,
-               footer {
-                    max-width: 90%;
+               #content h1 {
+                    font-size: 2rem;
                }
 
-               .logotype img {
-                    width: 75px;
-                    height: 75px;
+               #content h2 {
+                    font-size: 1.5rem;
                }
 
-               .module {
-                    padding: 1.25rem;
+               #content p,
+               #content li {
+                    font-size: 0.95rem;
                }
 
-               .module h2 {
-                    font-size: 20px;
+               .project-card {
+                    padding: 1.2rem;
                }
 
-               .btn {
-                    font-size: 18px;
-                    padding: 14px 30px;
-                    width: 100%;
+               .contact-info {
+                    gap: 1rem;
+                    padding: 1.2rem;
                }
-
-               #navbar {
-                    font-size: 14px;
-               }
-
-               #contato a,
-               #projetos a {
-                    padding: 0.6rem 1rem;
-                    font-size: 16px;
-               }
-          }
-
-          /* ===== ACESSIBILIDADE ===== */
-          @media (prefers-reduced-motion: reduce) {
-
-               *,
-               *::before,
-               *::after {
-                    animation-duration: 0.01ms !important;
-                    animation-iteration-count: 1 !important;
-                    transition-duration: 0.01ms !important;
-                    scroll-behavior: auto !important;
-               }
-          }
-
-          /* ===== PERFORMANCE - Animação suave apenas quando visível ===== */
-          @media (prefers-reduced-motion: no-preference) {
-               .module {
-                    animation: fadeIn 0.6s ease-out;
-               }
-          }
-
-          @keyframes fadeIn {
-               from {
-                    opacity: 0;
-                    transform: translateY(20px);
-               }
-
-               to {
-                    opacity: 1;
-                    transform: translateY(0);
-               }
-          }
-
-          /* ===== LOADING OPTIMIZATION ===== */
-          img {
-               display: block;
           }
      </style>
 </head>
 
 <body>
-
-     <nav id="navbar" role="navigation" aria-label="Navegação principal">
-          <a href="#contato" aria-label="Ir para Contato">| Contato |</a>
+     <nav>
+          <div class="container">
+               <a href="index.html" class="logo">
+                    <img src="./img/goat.png"
+                         style="width: 48px; height: 48px; vertical-align: middle; border-radius: 50%;"></a>
+          </div>
      </nav>
 
-     <main id="main-content">
-
-          <div
-               style="
-               margin-top: 10px; margin-bottom: 10px; display: block; width: 145px; height: 145px; border-radius: 50%; overflow: hidden;">
-               <a href="index.html" aria-label="Página inicial do @devcaffe">
-                    <img alt="Logo do @devcaffe" src="./img/goat.png" loading="lazy"
-                         style="width: 100%; height: 100%; object-fit: cover; display: block;">
-               </a>
-          </div>
-
-
-
-          <section class="module" id="intro" aria-labelledby="intro-heading">
-               <h2 id="intro-heading"
-                    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;">
-                    Introdução</h2>
-               <p>
-                    Meu nome é <strong style="color: #00ffff;">Guilherme Ribeiro</strong>, sou programador e
-                    desenvolvedor
-                    com experiência em HTML/CSS, JavaScript, Node.js, Java, Flutter e frameworks como Jekyll, além de
-                    gerenciamento de versões com Git.
-               </p>
-
-               <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 15px 0;">
-                    <span
-                         style="background: #e34c26; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">HTML</span>
-                    <span
-                         style="background: #264de4; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">CSS</span>
-                    <span
-                         style="background: #f0db4f; color: #000; padding: 6px 12px; border-radius: 6px; font-weight: bold;">JavaScript</span>
-                    <span
-                         style="background: #68a063; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">Node.js</span>
-                    <span
-                         style="background: orange; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">Java</span>
-                    <span
-                         style="background: #02569b; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">Flutter</span>
-                    <span
-                         style="background: #cc0000; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">Jekyll</span>
-                    <span
-                         style="background: purple; color: #fff; padding: 6px 12px; border-radius: 6px; font-weight: bold;">Git</span>
-               </div>
-
-               <p>
-               </p>
-          </section>
-
-          <section id="projetos" class="module" aria-labelledby="projetos-heading">
-               <h2 id="projetos-heading">Códigos e Projetos</h2>
-               <a href="https://devcaffe.blogspot.com" target="_blank" rel="noopener noreferrer"
-                    aria-label="blogger @devcaffe">
-                    devcaffe.blogspot — Guias e Tutoriais
-               </a>
-               <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visite o perfil do @devcaffe no GitHub">GitHub Profile</a>
-               <a href="https://devgbr86.github.io/md-editor/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Acesse o Markdown Editor online">Markdown Editor</a>
-               <a href="https://devgbr86.github.io/img-converter/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Conversor de imagens PNG, JPG e WEBP">
-                    PNG/JPG/WEBP Converter</a>
-               <a href="https://devgbr86.github.io/jekyll-page/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Jekyll template">Jekyll Template</a>
-               <a href="https://github.com/devgbr86/flutter-app/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Flutter app">Flutter app</a>
-          </section>
+     <main>
+          <div id="content"></div>
      </main>
 
-     <footer>
-          <section id="contato" class="module" aria-labelledby="contato-heading">
-               <h2 id="contato-heading">Contato</h2>
-               <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Conecte-se com @devcaffe no LinkedIn">LinkedIn</a>
-               <a href="mailto:topverbs@gmail.com"
-                    aria-label="Envie um email para topverbs@gmail.com">topverbs@gmail.com</a>
-          </section>
-     </footer>
+     <script>
+          const markdown = `
+
+# Guilherme Ribeiro
+
+Desenvolvedor full-stack com experiência em desenvolvimento web e mobile, especializado em criar soluções práticas e eficientes usando tecnologias modernas.
+Apaixonado por tecnologia e desenvolvimento de software, busco constantemente aprender novas ferramentas e metodologias. Acredito em código limpo, boas práticas e na importância de criar experiências digitais que realmente façam a diferença.
+
+<div class="contact-info">
+          <div class="contact-item">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:topverbs@gmail.com">topverbs@gmail.com</a>
+     </div>
+     <div class="contact-item">
+          <span class="contact-label">GitHub:</span>
+          <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a>
+     </div>
+     <div class="contact-item">
+          <span class="contact-label">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer">linkedin.com/in/devgbr</a>
+     </div>
+</div>
+
+
+
+<div class="project-card">
+     <h4>Newsletter</h4>
+     <p>Inscreva-se para receber guias e tutoriais: devcaffe.substack.com</p>
+     <a href="https://devgbr86.github.io/img-converter/" target="_blank" rel="noopener noreferrer">Inscreva-se</a>
+</div>
+
+<div class="project-card">
+     <h4>Contract Board</h4>
+     <p>MessageBoard para estudantes e freelancers usando Utterances/GitHub pages.</p>
+     <a href="https://devgbr86.github.io/ctrboard/" target="_blank" rel="noopener noreferrer">Projeto ContractBoard</a>
+</div>
+
+
+<div class="tech-skills">
+     <span class="tech-badge">HTML/CSS</span>
+     <span class="tech-badge">JavaScript</span>
+     <span class="tech-badge">Node.js</span>
+     <span class="tech-badge">Java</span>
+     <span class="tech-badge">Flutter</span>
+     <span class="tech-badge">Jekyll</span>
+     <span class="tech-badge">Git</span>
+</div>
+
+
+
+
+`;
+
+          document.getElementById('content').innerHTML = marked.parse(markdown);
+
+          // Ativa o Prism.js para destacar código
+          Prism.highlightAll();
+     </script>
 </body>
 
 </html>
