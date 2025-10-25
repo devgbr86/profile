@@ -7,9 +7,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>@devcaffe</title>
 
-     <!-- CSS embutido -->
      <style>
-          /* Reset básico */
           * {
                box-sizing: border-box;
                margin: 0;
@@ -54,7 +52,6 @@
                text-decoration: none;
           }
 
-          /* Espaço do topo para o conteúdo não ficar por baixo da navbar */
           header {
                height: 100px;
           }
@@ -72,7 +69,7 @@
                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
           }
 
-          /* Markdown melhor formatado */
+          /* Markdown styling */
           .content h1,
           .content h2,
           .content h3 {
@@ -90,6 +87,12 @@
                margin: 1rem 0 1rem 2rem;
           }
 
+          .content hr {
+               border: none;
+               border-top: 2px solid #e0e0e0;
+               margin: 1.5rem 0;
+          }
+
           .content blockquote {
                border-left: 4px solid darkblue;
                padding-left: 1rem;
@@ -100,18 +103,8 @@
                border-radius: 4px;
           }
 
-          /* Contatos */
-          .contact-info {
-               margin-top: 1.5rem;
-          }
-
-          .contact-item {
-               margin-bottom: 0.7rem;
-          }
-
-          .contact-label {
-               font-weight: bold;
-               margin-right: 0.4rem;
+          .content strong {
+               color: darkblue;
           }
 
           /* Tech badges */
@@ -148,14 +141,17 @@
                     height: 60px;
                }
 
+               header {
+                    height: 80px;
+               }
+
                main {
-                    margin: 1.5rem;
+                    margin: 1rem 0.5rem;
                     max-width: 100%;
-                    /* ocupa toda a largura da tela */
                }
 
                .content {
-                    padding: 2rem;
+                    padding: 1.5rem 1rem;
                }
 
                .tech-badge {
@@ -178,7 +174,6 @@
 
      <main>
           <div class="content" id="markdown-content">
-               <!-- Conteúdo Markdown será carregado aqui -->
                Carregando conteúdo...
           </div>
      </main>
@@ -189,7 +184,6 @@
           <a href="https://github.com/devgbr86/">github.com/devgbr86</a>
      </footer>
 
-     <!-- Marked.js via CDN -->
      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
      <script>
           async function loadMarkdown() {
