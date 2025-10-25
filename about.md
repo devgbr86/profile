@@ -27,7 +27,7 @@ Compartilho meus códigos e projetos no repositório GitHub.
     </div>
 </div>
 
-### Skills
+## Skills
 ---
 
 <div class="tech-skills">
