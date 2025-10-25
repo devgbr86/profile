@@ -3,9 +3,9 @@
 
 Programador e Desenvolvedor com experiência em
 JavaScript, Java, Flutter e frameworks como Jekyll,
-além de versionamento usando Git.          
+além de versionamento usando Git.
 Inscreva-se na minha Newsletter
-para receber tutoriais sobre fundamentos, estruturas de dados, guias e referências.              
+para receber tutoriais sobre fundamentos, estruturas de dados, guias e referências.
 Compartilho meus códigos e projetos no repositório GitHub.
 
 
