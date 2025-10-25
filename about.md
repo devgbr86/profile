@@ -18,7 +18,7 @@ Compartilho meus códigos e projetos no repositório GitHub.
     </div>
     <div class="contact-item">
         <span class="contact-label">Newsletter:</span>
-        <a href="https://devcaffe.substack.com" target="_blank" rel="noopener noreferrer">Inscreva-se</a>
+        <a href="https://devcaffe.substack.com" target="_blank" rel="noopener noreferrer">devcaffe.substack.com</a>
     </div>
     <div class="contact-item">
         <span class="contact-label">GitHub:</span>
