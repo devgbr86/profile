@@ -16,14 +16,14 @@
 
           body {
                font-family: 'Courier New', Courier, monospace;
-               background: whitesmoke;
-               color: black;
+               background: #1e1e1e;
+               color: #d4d4d4;
                line-height: 1.7;
                font-size: 18px;
           }
 
           a {
-               color: green;
+               color: #4ec9b0;
                text-decoration: none;
           }
 
@@ -33,13 +33,14 @@
                top: 0;
                left: 0;
                width: 100%;
-               background: black;
+               background: #252526;
                padding: 0.6rem 1rem;
                display: flex;
                align-items: center;
                justify-content: flex-start;
                z-index: 1000;
-               box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+               box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+               border-bottom: 1px solid #3e3e42;
           }
 
           header nav .logo img {
@@ -63,10 +64,12 @@
           }
 
           .content {
-               background: white;
+               background: #2d2d30;
+               color: #d4d4d4;
                padding: 3rem;
                border-radius: 14px;
-               box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+               box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+               border: 1px solid #3e3e42;
           }
 
           /* Markdown styling */
@@ -74,37 +77,50 @@
           .content h2,
           .content h3 {
                margin-bottom: 1.2rem;
-               color: darkblue;
+               color: #4ec9b0;
                line-height: 1.3;
           }
 
           .content p {
                margin-bottom: 1.2rem;
+               color: #cccccc;
           }
 
           .content ul,
           .content ol {
                margin: 1rem 0 1rem 2rem;
+               color: #cccccc;
           }
 
           .content hr {
                border: none;
-               border-top: 2px solid #e0e0e0;
+               border-top: 2px solid #3e3e42;
                margin: 1.5rem 0;
           }
 
           .content blockquote {
-               border-left: 4px solid darkblue;
+               border-left: 4px solid #4ec9b0;
                padding-left: 1rem;
-               color: #555;
+               color: #a9a9a9;
                margin: 1rem 0;
                font-style: italic;
-               background: #f3f3f3;
+               background: #252526;
                border-radius: 4px;
+               padding: 0.8rem 1rem;
           }
 
           .content strong {
-               color: darkblue;
+               color: #cccccc;
+               font-weight: bold;
+          }
+
+          .content a {
+               color: #4ec9b0;
+               transition: color 0.2s;
+          }
+
+          .content a:hover {
+               color: #6dd9bf;
           }
 
           /* Tech badges */
@@ -114,23 +130,24 @@
 
           .tech-badge {
                display: inline-block;
-               background-color: darkblue;
-               color: white;
+               background-color: #264f44;
+               color: #4ec9b0;
                padding: 0.35rem 0.8rem;
                border-radius: 8px;
                margin: 0.25rem 0.25rem 0.25rem 0;
                font-size: 0.9rem;
+               border: 1px solid #3a6b5d;
           }
 
           footer {
                text-align: center;
                padding: 1rem;
-               color: #666;
+               color: #858585;
                font-size: 0.95rem;
           }
 
           footer a {
-               color: green;
+               color: #4ec9b0;
                text-decoration: none;
           }
 
