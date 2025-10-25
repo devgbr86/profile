@@ -1,4 +1,4 @@
-# Guilherme Ribeiro
+# Guilherme Ribeiro 
 ---      
 
 Programador e Desenvolvedor com experiência em
@@ -8,24 +8,17 @@ Publico conteúdo educativo na minha Newsletter,
 inscreva-se para receber guias e tutoriais.        
 Compartilho meus códigos e projetos no repositório GitHub.
 
-<div class="contact-info">
-    <div class="contact-item">
-        <span class="contact-label">Email:</span>
-        <a href="mailto:topverbs@gmail.com">topverbs@gmail.com</a>
-    </div>
-    <div class="contact-item">
-        <span class="contact-label">LinkedIn:</span>
-        <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer">linkedin.com/in/devgbr</a>
-    </div>
-    <div class="contact-item">
-        <span class="contact-label">Newsletter:</span>
-        <a href="https://devcaffe.substack.com" target="_blank" rel="noopener noreferrer">devcaffe.substack.com</a>
-    </div>
-    <div class="contact-item">
-        <span class="contact-label">GitHub:</span>
-        <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a>
-    </div>
-</div>
+## Contact/Links 
+---  
+
+**LinkedIn**         
+[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)            
+**GitHub**      
+[github.com/devgbr86](https://github.com/devgbr86)            
+**Newsletter**       
+[devcaffe.substack.com](https://devcaffe.substack.com)            
+**Email**            
+topverbs@gmail.com         
 
 ## Skills
 ---
@@ -38,4 +31,4 @@ Compartilho meus códigos e projetos no repositório GitHub.
      <span class="tech-badge">Flutter</span>
      <span class="tech-badge">Jekyll</span>
      <span class="tech-badge">Git</span>
-</div>    
+</div>     
