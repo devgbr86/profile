@@ -1,4 +1,5 @@
 # Guilherme Ribeiro
+---      
 
 Programador e Desenvolvedor com experiência em
 JavaScript, Java, Flutter e frameworks como Jekyll,
@@ -26,6 +27,9 @@ Compartilho meus códigos e projetos no repositório GitHub.
     </div>
 </div>
 
+### Skills
+---
+
 <div class="tech-skills">
      <span class="tech-badge">HTML/CSS</span>
      <span class="tech-badge">JavaScript</span>
@@ -34,4 +38,4 @@ Compartilho meus códigos e projetos no repositório GitHub.
      <span class="tech-badge">Flutter</span>
      <span class="tech-badge">Jekyll</span>
      <span class="tech-badge">Git</span>
-</div>
+</div>    
