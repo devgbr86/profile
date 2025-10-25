@@ -131,6 +131,15 @@
                text-decoration: none;
                border-bottom: none;
                font-weight: 700;
+               font-size: 1.05rem;
+               /* Aumenta levemente os links */
+               transition: transform 0.15s ease-in-out, color 0.15s ease-in-out;
+               /* efeito sutil */
+          }
+
+          #content a:active {
+               transform: scale(1.03);
+               /* efeito discreto ao clicar */
           }
 
           #content hr {
@@ -187,7 +196,7 @@
           .project-card a {
                color: #005a00;
                text-decoration: none;
-               font-size: 0.95rem;
+               font-size: 1.05rem;
                border: 3px solid #005a00;
                padding: 0.5rem 1rem;
                border-radius: 6px;
@@ -195,6 +204,13 @@
                font-weight: 700;
                background-color: #fff;
                box-shadow: 3px 3px 0 #005a00;
+               transition: transform 0.15s ease-in-out;
+               /* efeito sutil */
+          }
+
+          .project-card a:active {
+               transform: scale(1.03);
+               /* efeito discreto ao clicar */
           }
 
           /* Contact Info */
@@ -239,8 +255,16 @@
                color: #005a00;
                text-decoration: none;
                word-break: break-all;
-               font-size: 0.95rem;
+               font-size: 1.05rem;
+               /* aumenta levemente */
                font-weight: 600;
+               transition: transform 0.15s ease-in-out;
+               /* efeito sutil */
+          }
+
+          .contact-item a:active {
+               transform: scale(1.03);
+               /* efeito discreto ao clicar */
           }
 
           /* Responsivo */
@@ -278,6 +302,12 @@
                #content p,
                #content li {
                     font-size: 1rem;
+               }
+
+               #content a,
+               .project-card a,
+               .contact-item a {
+                    font-size: 1.03rem;
                }
 
                .tech-skills {
@@ -325,6 +355,12 @@
                     font-size: 0.95rem;
                }
 
+               #content a,
+               .project-card a,
+               .contact-item a {
+                    font-size: 1rem;
+               }
+
                .project-card {
                     padding: 1.2rem;
                }
@@ -357,9 +393,9 @@
 
 Programador e Desenvolvedor com experiência em
 JavaScript, Java, Flutter e frameworks como Jekyll,
-além de versionamento usando Git.
+além de versionamento usando Git.       
 Publico conteúdo educativo na minha Newsletter,
-inscreva-se para receber guias e tutoriais.
+inscreva-se para receber guias e tutoriais.        
 Compartilho meus códigos e projetos no repositório GitHub.
 
 <div class="contact-info">
@@ -381,12 +417,6 @@ Compartilho meus códigos e projetos no repositório GitHub.
     </div>
 </div>
 
-
-
-
-
-
-
 <div class="tech-skills">
      <span class="tech-badge">HTML/CSS</span>
      <span class="tech-badge">JavaScript</span>
@@ -397,14 +427,10 @@ Compartilho meus códigos e projetos no repositório GitHub.
      <span class="tech-badge">Git</span>
 </div>
 
-
-
-
 `;
 
           document.getElementById('content').innerHTML = marked.parse(markdown);
 
-          // Ativa o Prism.js para destacar código
           Prism.highlightAll();
      </script>
 </body>
