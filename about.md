@@ -1,5 +1,4 @@
 # Guilherme Ribeiro 
----      
 
 Programador e Desenvolvedor com experiência em
 JavaScript, Java, Flutter e frameworks como Jekyll,
