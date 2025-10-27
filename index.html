@@ -240,7 +240,7 @@
 
      <script>
           const contentFolder = 'pages/';
-          const files = ['Intro.md', 'E-mail.md'];
+          const files = ['Home.md', 'E-mail.md'];
           const navContainer = document.getElementById('nav-links');
           const contentContainer = document.getElementById('content');
 
@@ -257,7 +257,7 @@
                navContainer.appendChild(link);
           });
 
-          async function loadMarkdown(file = 'Intro.md') {
+          async function loadMarkdown(file = 'Home.md') {
                try {
                     const response = await fetch(`${contentFolder}${file}`);
                     if (!response.ok) throw new Error('Erro ao carregar o arquivo Markdown.');
