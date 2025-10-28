@@ -13,18 +13,15 @@ Compartilho meus códigos e projetos no repositório GitHub.
 ## Códigos e Projetos
 ---
 
-*GitHub*      
+- GitHub     
 [github.com/devgbr86](https://github.com/devgbr86)            
-*Coffee-shop Page/Site/Template*       
-[devgbr86.github.io/coffee-shop](https://devgbr86.github.io/coffee-shop/)       
+- Coffee-shop Page/Site/Template       
+[devgbr86.github.io/coffee-shop](https://devgbr86.github.io/coffee-shop/)   
+- Newsletter      
+[devcaffe.substack.com](https://devcaffe.substack.com)     
 
 
-## Newsletter
----
-
-*Inscreva-se*       
-[devcaffe.substack.com](https://devcaffe.substack.com) 
-
+ 
 
 
 ## Skills

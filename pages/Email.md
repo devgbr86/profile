@@ -1,7 +1,7 @@
 ## Contact/Links 
 ---  
 
-*LinkedIn*            
+- LinkedIn            
 [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
-*Email*             
+- Mail             
 topverbs@gmail.com   
