@@ -19,13 +19,9 @@ Compartilho meus códigos e projetos no repositório GitHub.
 - Newsletter      
 [devcaffe.substack.com](https://devcaffe.substack.com)     
 
---- 
-## @Mail 
 
-- LinkedIn            
-[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
-- Mail             
-topverbs@gmail.com  
+
+
 
 
 --- 
@@ -40,4 +36,15 @@ topverbs@gmail.com
      <span class="tech-badge">Java</span>
      <span class="tech-badge">Flutter</span>
      <span class="tech-badge">Git</span>
-</div>     
+</div>   
+
+
+
+
+
+## Mail 
+
+- LinkedIn            
+[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
+- Mail             
+topverbs@gmail.com      
