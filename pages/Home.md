@@ -35,6 +35,5 @@ Compartilho meus códigos e projetos no repositório GitHub.
      <span class="tech-badge">Marked.js</span>
      <span class="tech-badge">Java</span>
      <span class="tech-badge">Flutter</span>
-     <span class="tech-badge">Jekyll</span>
      <span class="tech-badge">Git</span>
 </div>     
