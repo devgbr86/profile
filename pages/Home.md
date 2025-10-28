@@ -21,8 +21,8 @@ Compartilho meus códigos e projetos no repositório GitHub.
 ---
 
 <div class="tech-skills">
-     <span class="tech-badge">HTML/CSS</span>
      <span class="tech-badge">JavaScript</span>
+     <span class="tech-badge">TailwindCSS</span>
      <span class="tech-badge">Node.js</span>
      <span class="tech-badge">Marked.js</span>
      <span class="tech-badge">Java</span>
