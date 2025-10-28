@@ -9,9 +9,8 @@ Inscreva-se na minha Newsletter
 para receber tutoriais, guias e referências.
 Compartilho meus códigos e projetos no repositório GitHub.
 
-
+--- 
 ### Códigos e Projetos
----
 
 - GitHub     
 [github.com/devgbr86](https://github.com/devgbr86)            
@@ -20,9 +19,8 @@ Compartilho meus códigos e projetos no repositório GitHub.
 - Newsletter      
 [devcaffe.substack.com](https://devcaffe.substack.com)     
 
-
+--- 
 ## @Mail 
----  
 
 - LinkedIn            
 [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
@@ -30,9 +28,8 @@ Compartilho meus códigos e projetos no repositório GitHub.
 topverbs@gmail.com  
 
 
-
+--- 
 ### Skills
----
 
 <div class="tech-skills">
      <span class="tech-badge">HTML/CSS</span>
