@@ -1,4 +1,4 @@
-## Contact/Links 
+## Mail/Links 
 ---  
 
 - LinkedIn            
