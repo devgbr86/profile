@@ -244,8 +244,9 @@
 <body>
      <div id="top"></div>
 
-     <nav class="navbar" id="nav-links" aria-label="Navegação principal">
-          <img src="./img/goat.png" alt="Logo Guilherme Ribeiro">
+     <nav class="navbar" id="nav-links" aria-label="Navegacao principal">
+          <a href="index.html">
+               <img src="./img/goat.png" alt="Logo Guilherme Ribeiro"></a>
      </nav>
 
      <main class="content" id="content" role="main">
@@ -261,33 +262,45 @@
      </footer>
 
      <script>
-          const contentFolder = 'pages/';
-          const files = ['Home.md', 'Mail.md'];
           const navContainer = document.getElementById('nav-links');
           const contentContainer = document.getElementById('content');
 
-          files.forEach(file => {
-               const link = document.createElement('a');
-               link.textContent = file.replace('.md', '');
-               link.className = 'md-link';
-               link.href = '#';
-               link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    loadMarkdown(file);
-               });
-               navContainer.appendChild(link);
-          });
+          function removeEmojis(text) {
+               return text.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{FE00}-\u{FE0F}]/gu, '').trim();
+          }
 
-          async function loadMarkdown(file = 'Home.md') {
+          function createNavLinks() {
+               const existingLinks = navContainer.querySelectorAll('.md-link');
+               existingLinks.forEach(link => link.remove());
+
+               const h2Elements = contentContainer.querySelectorAll('h2');
+
+               h2Elements.forEach((h2, index) => {
+                    const h2Text = removeEmojis(h2.textContent);
+                    const h2Id = `section-${index}`;
+                    h2.id = h2Id;
+
+                    const link = document.createElement('a');
+                    link.textContent = h2Text;
+                    link.className = 'md-link';
+                    link.href = `#${h2Id}`;
+                    navContainer.appendChild(link);
+               });
+          }
+
+          async function loadMarkdown() {
                try {
-                    const response = await fetch(`${contentFolder}${file}`);
+                    const response = await fetch('pages/Home.md');
                     if (!response.ok) throw new Error('Erro ao carregar o arquivo Markdown.');
 
                     const markdown = await response.text();
-                    contentContainer.innerHTML = marked.parse(markdown);
+                    const cleanMarkdown = removeEmojis(markdown);
+                    contentContainer.innerHTML = marked.parse(cleanMarkdown);
+
+                    createNavLinks();
                } catch (error) {
                     console.error(error);
-                    contentContainer.innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
+                    contentContainer.innerHTML = '<p>Erro ao carregar o conteudo.</p>';
                }
           }
 

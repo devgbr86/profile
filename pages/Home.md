@@ -10,7 +10,7 @@ para receber tutoriais, guias e referências.
 Compartilho meus códigos e projetos no repositório GitHub.
 
 
-## Códigos e Projetos
+### Códigos e Projetos
 ---
 
 - GitHub     
@@ -21,18 +21,25 @@ Compartilho meus códigos e projetos no repositório GitHub.
 [devcaffe.substack.com](https://devcaffe.substack.com)     
 
 
- 
+## @Mail 
+---  
+
+- LinkedIn            
+[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
+- Mail             
+topverbs@gmail.com  
 
 
-## Skills
+
+### Skills
 ---
 
 <div class="tech-skills">
      <span class="tech-badge">HTML/CSS</span>
      <span class="tech-badge">JavaScript</span>
      <span class="tech-badge">TailwindCSS</span>
-     <span class="tech-badge">Node.js</span>
      <span class="tech-badge">Marked.js</span>
+     <span class="tech-badge">Node.js</span>
      <span class="tech-badge">Java</span>
      <span class="tech-badge">Flutter</span>
      <span class="tech-badge">Git</span>
