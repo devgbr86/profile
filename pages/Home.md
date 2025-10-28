@@ -2,17 +2,28 @@
 
 
 Programador e Desenvolvedor com experiência em
-JavaScript, Java, Flutter e frameworks como Jekyll,
+JavaScript, TailwindCSS, Marked.js,
+Node.js, Flutter,
 além de versionamento usando Git.
 Inscreva-se na minha Newsletter
-para receber tutoriais sobre fundamentos, estruturas de dados, guias e referências.
+para receber tutoriais, guias e referências.
 Compartilho meus códigos e projetos no repositório GitHub.
 
 
+## Códigos e Projetos
+---
 
-**GitHub**      
+*GitHub*      
 [github.com/devgbr86](https://github.com/devgbr86)            
-**Newsletter**       
+*MD Page/Site/Template*       
+[devgbr86.github.io/md-template](https://devgbr86.github.io/md-template/)       
+*Coffee-shop Template*       
+[devgbr86.github.io/coffee-shop](https://devgbr86.github.io/coffee-shop/) 
+
+## Newsletter
+---
+
+*Inscreva-se*       
 [devcaffe.substack.com](https://devcaffe.substack.com) 
 
 
