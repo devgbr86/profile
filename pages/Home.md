@@ -3,7 +3,7 @@
 
 Programador e Desenvolvedor com experiência em
 JavaScript, TailwindCSS, Marked.js,
-Node.js, Flutter,
+Node.js, Java, Flutter,
 além de versionamento usando Git.
 Inscreva-se na minha Newsletter
 para receber tutoriais, guias e referências.
@@ -86,8 +86,5 @@ topverbs@gmail.com
      <span class="tech-badge">JavaScript</span>
      <span class="tech-badge">TailwindCSS</span>
      <span class="tech-badge">Marked.js</span>
-     <span class="tech-badge">Node.js</span>
-     <span class="tech-badge">Java</span>
-     <span class="tech-badge">Flutter</span>
      <span class="tech-badge">Git</span>
 </div>  
