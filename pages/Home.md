@@ -36,7 +36,7 @@ Compartilho meus códigos e projetos no repositório GitHub.
 
 **Stack:** HTML + CSS + TailwindCSS + JS + Marked.js + DOMPurify + GitHub Pages
 
-Stack simples, leve e rápida, ideal para sites estáticos, blogs, portfólios ou landing pages minimalistas.
+Stack simples, leve e rápida, ideal para sites estáticos, portfólios ou landing pages minimalistas.
 
 
 - **Performance máxima:** sem frameworks pesados, apenas HTML, CSS e JS otimizados.
