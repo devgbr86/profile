@@ -3,6 +3,9 @@
 O **@devcaffe** é um espaço criado para desenvolvedores e entusiastas da tecnologia que buscam conteúdo técnico claro, acessível e aplicável ao dia a dia profissional.  
 Aqui, o foco está em **tutoriais práticos**, **roadmaps**, **referências de ferramentas** e **projetos guiados** que ajudam você a construir uma base sólida em programação, versionamento e desenvolvimento de software moderno.
 
+- Inscreva-se      
+[devcaffe.substack.com](https://devcaffe.substack.com)     
+
 ---
 
 ## O Propósito
@@ -41,9 +44,8 @@ A cada publicação, a meta é consolidar o conhecimento em formato de referênc
 
 ---
 
-## Inscreva-se
-
-- [devcaffe.substack.com](https://devcaffe.substack.com)  
+- Inscreva-se      
+[devcaffe.substack.com](https://devcaffe.substack.com)     
 
 
 
