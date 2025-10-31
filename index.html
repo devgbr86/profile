@@ -8,25 +8,32 @@
      <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml">
      <title>@devcaffe</title>
 
-     <!-- Libs -->
-     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+     <!-- Stack do Projeto:
+          - TailwindCSS: estilos utilitários e responsividade
+          - Marked.js: conversão de Markdown para HTML
+          - Prism.js: destaque de sintaxe para código
+          - DOMPurify: sanitização segura do HTML gerado
+     -->
+
+     <!-- Tailwind CSS -->
      <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- Marked.js -->
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+     <!-- Prism.js -->
+     <link href="https://unpkg.com/prismjs/themes/prism-tomorrow.css" rel="stylesheet">
+     <script src="https://unpkg.com/prismjs/prism.js"></script>
+     <script src="https://unpkg.com/prismjs/components/prism-javascript.min.js"></script>
+     <script src="https://unpkg.com/prismjs/components/prism-bash.min.js"></script>
+
+     <!-- DOMPurify -->
+     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
 
      <!-- Font -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
      <style>
-          /* ====== GLOBAL ====== */
-          * {
-               margin: 0;
-               padding: 0;
-               box-sizing: border-box;
-          }
-
           html {
                scroll-behavior: smooth;
           }
@@ -37,10 +44,9 @@
                color: #111;
                line-height: 1.75;
                padding-top: 120px;
-               transition: background 0.3s ease;
           }
 
-          /* ====== NAVBAR ====== */
+          /* Navbar */
           .navbar {
                position: fixed;
                top: 0;
@@ -82,10 +88,10 @@
                font-weight: 600;
           }
 
-          /* ====== CONTENT ====== */
+          /* Conteúdo principal */
           .content-wrapper {
                max-width: 880px;
-               margin: 80px auto 100px auto;
+               margin: 80px auto 100px;
                padding: 48px 52px;
                background-color: #fff;
                border-radius: 10px;
@@ -140,7 +146,7 @@
                margin-bottom: 10px;
           }
 
-          code {
+          .content-wrapper code {
                background-color: #f3f3f3;
                color: #d35400;
                padding: 3px 7px;
@@ -149,7 +155,7 @@
                font-size: 0.9em;
           }
 
-          pre {
+          .content-wrapper pre {
                background-color: #0d1117;
                padding: 22px 26px;
                border-radius: 8px;
@@ -158,13 +164,13 @@
                margin: 34px 0;
           }
 
-          pre code {
+          .content-wrapper pre code {
                color: #c9d1d9;
                font-size: 0.9em;
                line-height: 1.6;
           }
 
-          blockquote {
+          .content-wrapper blockquote {
                border-left: 4px solid #000;
                background-color: #f6f6f6;
                padding: 20px 26px;
@@ -174,7 +180,7 @@
                color: #222;
           }
 
-          img {
+          .content-wrapper img {
                max-width: 100%;
                border-radius: 8px;
                margin: 36px 0;
@@ -182,7 +188,7 @@
                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           }
 
-          table {
+          .content-wrapper table {
                width: 100%;
                border-collapse: collapse;
                margin: 36px 0;
@@ -191,19 +197,19 @@
                overflow: hidden;
           }
 
-          th,
-          td {
+          .content-wrapper th,
+          .content-wrapper td {
                border: 1px solid #000;
                padding: 12px 16px;
                text-align: left;
           }
 
-          th {
+          .content-wrapper th {
                background-color: #f2f2f2;
                font-weight: 600;
           }
 
-          tr:nth-child(even) {
+          .content-wrapper tr:nth-child(even) {
                background-color: #fafafa;
           }
 
@@ -213,13 +219,13 @@
                font-weight: 500;
           }
 
-          hr {
+          .content-wrapper hr {
                border: none;
                border-top: 2px solid #000;
                margin: 44px 0;
           }
 
-          /* ====== FOOTER ====== */
+          /* Footer */
           footer {
                text-align: center;
                padding: 40px 20px;
@@ -234,8 +240,8 @@
                text-decoration: none;
           }
 
-          /* ====== RESPONSIVE ====== */
-          @media (max-width: 768px) {
+          /* Responsividade */
+          @media (max-width:768px) {
                body {
                     padding-top: 100px;
                }
@@ -281,23 +287,13 @@
 
      <footer>
           <p>
-               <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visite meu GitHub">
-                    github.com/devgbr86
-               </a>
-
+               <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a>
                &nbsp;•&nbsp;
-               <a href="https://www.linkedin.com/in/devgbr" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visite meu LinkedIn">
-                    linkedin.com/in/devgbr
-               </a>
-               &nbsp;•&nbsp;
-               <a href="mailto:topverbs@gmail.com" aria-label="Enviar e-mail para topverbs@gmail.com">
-                    topverbs@gmail.com
-               </a>
+               <a href="https://www.linkedin.com/in/devgbr" target="_blank"
+                    rel="noopener noreferrer">linkedin.com/in/devgbr</a> &nbsp;•&nbsp;
+               <a href="mailto:topverbs@gmail.com">topverbs@gmail.com</a>
           </p>
      </footer>
-
 
      <script>
           const contentFolder = 'pages/';
@@ -309,63 +305,58 @@
 
           const navContainer = document.getElementById('nav-links');
           const contentContainer = document.getElementById('content');
-          let currentFile = 'Home.md';
-
-          files.forEach(file => {
-               const link = document.createElement('a');
-               link.textContent = file.label;
-               link.className = 'navbar-link';
-               link.href = '#';
-               link.addEventListener('click', e => {
-                    e.preventDefault();
-                    document.querySelectorAll('.navbar-link').forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
-                    currentFile = file.name;
-                    loadMarkdown(file.name);
-               });
-               navContainer.appendChild(link);
-          });
 
           function removeEmojis(text) {
                return text.replace(/[\p{Extended_Pictographic}]/gu, '').trim();
           }
 
           function applySyntaxHighlighting() {
-               contentContainer.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+               contentContainer.querySelectorAll('pre code').forEach(block => Prism.highlightElement(block));
           }
 
           async function loadMarkdown(file = 'Home.md') {
                try {
-                    const response = await fetch(`${contentFolder}${file}`);
-                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                    const markdown = await response.text();
+                    const res = await fetch(`${contentFolder}${file}`);
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+                    const markdown = await res.text();
                     const cleanMarkdown = removeEmojis(markdown);
-
-                    marked.setOptions({
-                         highlight: (code, lang) => {
-                              const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-                              return hljs.highlight(code, { language }).value;
-                         }
-                    });
-
                     const rawHtml = marked.parse(cleanMarkdown);
-                    const sanitized = DOMPurify.sanitize(rawHtml);
+                    const sanitized = DOMPurify.sanitize(rawHtml, { ADD_TAGS: ['span', 'div'], ADD_ATTR: ['id', 'class'] });
                     contentContainer.innerHTML = sanitized;
+
+                    // Lazy load images
+                    contentContainer.querySelectorAll('img').forEach(img => img.setAttribute('loading', 'lazy'));
+
                     applySyntaxHighlighting();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                } catch (err) {
                     contentContainer.innerHTML = `
-          <h1>Erro ao carregar</h1>
-          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-          <p>Verifique se ele existe em <code>${contentFolder}</code>.</p>
-        `;
+                    <h1>Erro ao carregar</h1>
+                    <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
+                    <p>Verifique se ele existe em <code>${contentFolder}</code>.</p>
+                `;
                }
           }
 
+          // Configurar navbar links
+          files.forEach((file, index) => {
+               const link = document.createElement('a');
+               link.textContent = file.label;
+               link.className = 'navbar-link';
+               link.href = '#';
+               if (index === 0) link.classList.add('active');
+               link.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.querySelectorAll('.navbar-link').forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    loadMarkdown(file.name);
+               });
+               navContainer.appendChild(link);
+          });
+
           document.addEventListener('DOMContentLoaded', () => {
-               loadMarkdown();
-               const first = navContainer.querySelector('.navbar-link');
-               if (first) first.classList.add('active');
+               loadMarkdown(files[0].name);
           });
      </script>
 </body>
