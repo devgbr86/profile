@@ -1,4 +1,4 @@
-# Stack Frontend para Sites Pessoais e Profissionais
+# Stack Frontend para Sites Profissionais
 
 Esta é uma solução minimalista e de alta performance, projetada especialmente para portfólios profissionais, sites pessoais e páginas institucionais que exigem carregamento ultrarrápido, segurança robusta e manutenção simplificada.
 A força desta arquitetura está na combinação estratégica de bibliotecas JavaScript leves com um framework CSS utilitário, eliminando a necessidade de um backend tradicional.  
