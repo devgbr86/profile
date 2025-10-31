@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="./img/goat.png" alt="Descrição da imagem" style="border-radius: 50%;
-  width: 125px; height: 125px;">
+  width: 135px; height: 135px;">
 </p>
 
 Esta é uma solução minimalista e de alta performance, projetada especialmente para portfólios profissionais, sites pessoais e páginas institucionais que exigem carregamento ultrarrápido, segurança robusta e manutenção simplificada.
