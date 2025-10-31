@@ -1,7 +1,7 @@
 # Frontend Stack
 
 <p align="center">
-  <img src="./img/goat.png" alt="Descrição da imagem" style="border-radius: 50%;
+  <img src="./img/goatstack.png" alt="Descrição da imagem" style="border-radius: 50%;
   width: 135px; height: 135px;">
 </p>
 
