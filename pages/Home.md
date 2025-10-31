@@ -11,10 +11,6 @@ para receber tutoriais, guias e referências.
 
  
 
-<p align="center">
-  <img src="./img/goat.png" alt="Descrição da imagem" style="border-radius: 50%;
-  width: 125px; height: 125px;">
-</p>
 
 
 

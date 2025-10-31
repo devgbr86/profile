@@ -1,5 +1,10 @@
 # Stack Frontend para Sites Profissionais
 
+<p align="center">
+  <img src="./img/goat.png" alt="Descrição da imagem" style="border-radius: 50%;
+  width: 125px; height: 125px;">
+</p>
+
 Esta é uma solução minimalista e de alta performance, projetada especialmente para portfólios profissionais, sites pessoais e páginas institucionais que exigem carregamento ultrarrápido, segurança robusta e manutenção simplificada.
 A força desta arquitetura está na combinação estratégica de bibliotecas JavaScript leves com um framework CSS utilitário, eliminando a necessidade de um backend tradicional.  
 O fluxo de desenvolvimento é centrado em Markdown, simplificando tanto a criação quanto a manutenção do conteúdo.
@@ -27,7 +32,6 @@ O processo de geração e entrega do conteúdo é otimizado para velocidade e se
 
 ---
 
-## Benefícios Principais
 
 ### Performance Superior
 
