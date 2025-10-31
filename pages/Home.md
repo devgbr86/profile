@@ -2,12 +2,10 @@
 
 Programador e Desenvolvedor com experiência em
 **JavaScript**,
-**Node.js**, **TailwindCSS**, **Java**, **Flutter**,
+**Node.js**, **Java**, **Flutter**,
 além de versionamento usando **Git**.
-
-
 No frontend, uso uma stack prática baseada em Marked.js, Highlight.js, TailwindCSS, DOMPurify
-e KaTeX.js(opcional),
+e KaTeX.js,
 focada em otimização, manutenção e para sites estáticos profissionais.
 
 
