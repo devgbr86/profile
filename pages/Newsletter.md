@@ -39,7 +39,6 @@ Artigos sobre aprendizado de inglês técnico e comunicação contextual — vol
 O **@devcaffe** acredita em um aprendizado contínuo e colaborativo.  
 A cada publicação, a meta é consolidar o conhecimento em formato de referência rápida, com clareza técnica e exemplos práticos.
 
-Nada de conteúdo superficial: cada guia é desenvolvido para ser **útil de verdade**, replicável e sustentável.
 
 ---
 

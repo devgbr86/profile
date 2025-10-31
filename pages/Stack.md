@@ -1,9 +1,6 @@
 # Stack Frontend para Sites Pessoais e Profissionais
 
 Esta é uma solução minimalista e de alta performance, projetada especialmente para portfólios profissionais, sites pessoais e páginas institucionais que exigem carregamento ultrarrápido, segurança robusta e manutenção simplificada.
-
-## Arquitetura da Stack
-
 A força desta arquitetura está na combinação estratégica de bibliotecas JavaScript leves com um framework CSS utilitário, eliminando a necessidade de um backend tradicional.  
 O fluxo de desenvolvimento é centrado em Markdown, simplificando tanto a criação quanto a manutenção do conteúdo.
 
