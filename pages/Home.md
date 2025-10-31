@@ -1,12 +1,12 @@
 # Guilherme Ribeiro
 
 Programador e Desenvolvedor com experiência em
-JavaScript, TailwindCSS, Marked.js,
-Node.js, Java, Flutter,
+JavaScript, Marked.js,
+Node.js, TailwindCSS, Java, Flutter,
 além de versionamento usando Git.
+Compartilho meus códigos e projetos no repositório GitHub.
 Inscreva-se na minha Newsletter
 para receber tutoriais, guias e referências.
-Compartilho meus códigos e projetos no repositório GitHub.
 
 
  

@@ -30,11 +30,10 @@ Da criação de repositórios à colaboração em projetos open source, o foco �
 ### 4. Aprendizado de Idiomas para Desenvolvedores
 Artigos sobre aprendizado de inglês técnico e comunicação contextual — voltados especialmente para profissionais de tecnologia que desejam trabalhar ou se comunicar em ambientes internacionais.
 
----
 
-## Filosofia
 
-> “Aprender, documentar e compartilhar — sem ruído.”
+
+
 
 O **@devcaffe** acredita em um aprendizado contínuo e colaborativo.  
 A cada publicação, a meta é consolidar o conhecimento em formato de referência rápida, com clareza técnica e exemplos práticos.
@@ -44,7 +43,7 @@ A cada publicação, a meta é consolidar o conhecimento em formato de referênc
 
 ## Inscreva-se
 
-- **Newsletter:** [devcaffe.substack.com](https://devcaffe.substack.com)  
+- [devcaffe.substack.com](https://devcaffe.substack.com)  
 
 
 
