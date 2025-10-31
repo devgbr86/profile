@@ -9,11 +9,11 @@
      <title>@devcaffe</title>
 
      <!-- Stack do Projeto:
-          - TailwindCSS: estilos utilitários e responsividade
-          - Marked.js: conversão de Markdown para HTML
-          - Prism.js: destaque de sintaxe para código
-          - DOMPurify: sanitização segura do HTML gerado
-     -->
+       - TailwindCSS (via CDN)
+       - Marked.js
+       - Highlight.js
+       - DOMPurify
+  -->
 
      <!-- Tailwind CSS -->
      <script src="https://cdn.tailwindcss.com"></script>
@@ -21,16 +21,15 @@
      <!-- Marked.js -->
      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-     <!-- Prism.js -->
-     <link href="https://unpkg.com/prismjs/themes/prism-tomorrow.css" rel="stylesheet">
-     <script src="https://unpkg.com/prismjs/prism.js"></script>
-     <script src="https://unpkg.com/prismjs/components/prism-javascript.min.js"></script>
-     <script src="https://unpkg.com/prismjs/components/prism-bash.min.js"></script>
+     <!-- Highlight.js -->
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
      <!-- DOMPurify -->
-     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
 
-     <!-- Font -->
+     <!-- Fonte -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
      <style>
@@ -40,10 +39,10 @@
 
           body {
                font-family: 'Roboto Mono', monospace;
-               background-color: #f8f9fa;
-               color: #111;
+               background-color: whitesmoke;
+               color: #000;
                line-height: 1.75;
-               padding-top: 120px;
+               padding-top: 110px;
           }
 
           /* Navbar */
@@ -57,11 +56,11 @@
                display: flex;
                align-items: center;
                flex-wrap: wrap;
-               padding: 8px 20px;
                gap: 14px;
-               z-index: 1000;
                border-bottom: 1px solid #222;
                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+               padding: 10px 24px;
+               z-index: 1000;
           }
 
           .navbar-icon {
@@ -79,7 +78,6 @@
                font-size: 15px;
                padding: 4px 10px;
                border-radius: 4px;
-               display: inline-block;
           }
 
           .navbar-link.active {
@@ -96,7 +94,7 @@
                background-color: #fff;
                border-radius: 10px;
                border: 1px solid #000;
-               box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+               box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
           }
 
           .content-wrapper h1,
@@ -111,29 +109,28 @@
           }
 
           .content-wrapper h1 {
-               font-size: 2.5em;
+               font-size: 2.4em;
                border-bottom: 3px solid #000;
                padding-bottom: 16px;
                margin-bottom: 32px;
           }
 
           .content-wrapper h2 {
-               font-size: 2em;
-               border-bottom: 2px solid #f2f2f2;
-               margin-top: 56px;
+               font-size: 1.9em;
+               border-bottom: 2px solid #f0f0f0;
+               margin-top: 52px;
                margin-bottom: 22px;
                padding-bottom: 10px;
           }
 
           .content-wrapper h3 {
-               font-size: 1.6em;
+               font-size: 1.5em;
                margin-top: 40px;
                margin-bottom: 18px;
           }
 
           .content-wrapper p {
                margin-bottom: 22px;
-               color: #111;
           }
 
           .content-wrapper ul,
@@ -241,24 +238,24 @@
           }
 
           /* Responsividade */
-          @media (max-width:768px) {
+          @media (max-width: 768px) {
                body {
-                    padding-top: 100px;
+                    padding-top: 90px;
                }
 
                .navbar {
-                    padding: 8px 14px;
+                    padding: 8px 16px;
                     gap: 10px;
                }
 
                .navbar-link {
                     font-size: 14px;
-                    padding: 4px 8px;
+                    padding: 3px 7px;
                }
 
                .content-wrapper {
-                    margin: 50px 14px 70px;
-                    padding: 32px 22px;
+                    margin: 40px 14px 70px;
+                    padding: 28px 22px;
                }
 
                .content-wrapper h1 {
@@ -266,11 +263,11 @@
                }
 
                .content-wrapper h2 {
-                    font-size: 1.6em;
+                    font-size: 1.5em;
                }
 
                .content-wrapper h3 {
-                    font-size: 1.3em;
+                    font-size: 1.25em;
                }
           }
      </style>
@@ -290,7 +287,8 @@
                <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a>
                &nbsp;•&nbsp;
                <a href="https://www.linkedin.com/in/devgbr" target="_blank"
-                    rel="noopener noreferrer">linkedin.com/in/devgbr</a> &nbsp;•&nbsp;
+                    rel="noopener noreferrer">linkedin.com/in/devgbr</a>
+               &nbsp;•&nbsp;
                <a href="mailto:topverbs@gmail.com">topverbs@gmail.com</a>
           </p>
      </footer>
@@ -310,10 +308,6 @@
                return text.replace(/[\p{Extended_Pictographic}]/gu, '').trim();
           }
 
-          function applySyntaxHighlighting() {
-               contentContainer.querySelectorAll('pre code').forEach(block => Prism.highlightElement(block));
-          }
-
           async function loadMarkdown(file = 'Home.md') {
                try {
                     const res = await fetch(`${contentFolder}${file}`);
@@ -325,21 +319,19 @@
                     const sanitized = DOMPurify.sanitize(rawHtml, { ADD_TAGS: ['span', 'div'], ADD_ATTR: ['id', 'class'] });
                     contentContainer.innerHTML = sanitized;
 
-                    // Lazy load images
+                    contentContainer.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
                     contentContainer.querySelectorAll('img').forEach(img => img.setAttribute('loading', 'lazy'));
 
-                    applySyntaxHighlighting();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                } catch (err) {
                     contentContainer.innerHTML = `
-                    <h1>Erro ao carregar</h1>
-                    <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-                    <p>Verifique se ele existe em <code>${contentFolder}</code>.</p>
-                `;
+          <h1>Erro ao carregar</h1>
+          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
+          <p>Verifique se ele existe em <code>${contentFolder}</code>.</p>
+        `;
                }
           }
 
-          // Configurar navbar links
           files.forEach((file, index) => {
                const link = document.createElement('a');
                link.textContent = file.label;

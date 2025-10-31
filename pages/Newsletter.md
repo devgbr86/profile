@@ -14,9 +14,7 @@ Aqui, o foco está em **tutoriais práticos**, **roadmaps**, **referências de f
 - Inscreva-se      
 [devcaffe.substack.com](https://devcaffe.substack.com)     
 
----
 
-## O Propósito
 
 A missão do @devcaffe é oferecer **conteúdo técnico de alta qualidade** com linguagem simples, objetiva e sem distrações.  
 Cada artigo é escrito para transmitir conhecimento de forma direta — sem jargões desnecessários, sem sobrecarga de frameworks, e com ênfase no entendimento conceitual e prático.
