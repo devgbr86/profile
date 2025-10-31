@@ -43,21 +43,10 @@ Nada de conteúdo superficial: cada guia é desenvolvido para ser **útil de ver
 
 ---
 
-## Conecte-se
+## Inscreva-se
 
-- **Substack:** [devcaffe.substack.com](https://devcaffe.substack.com)  
-- **GitHub:** [github.com/devgbr86](https://github.com/devgbr86)  
-- **Pinterest:** [pinterest.com/kaffeoverdose](https://pinterest.com/kaffeoverdose)  
+- **Newsletter:** [devcaffe.substack.com](https://devcaffe.substack.com)  
 
-Para contato, colaborações ou sugestões, envie uma mensagem pelo formulário de contato do site.
 
----
 
-## Créditos e Direitos
-
-© 2025 **@devcaffe**  
-Todos os direitos reservados.  
-Publicações originais sob licença aberta para fins educacionais e não comerciais.
-
-Substack é a plataforma onde este projeto vive — um espaço dedicado à cultura, conhecimento e desenvolvimento.
 
