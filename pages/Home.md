@@ -1,36 +1,30 @@
 # Guilherme Ribeiro
 
-Programador e Desenvolvedor com experiência em
-**JavaScript**,
-**Node.js**, **Java**, **Flutter**,
-além de versionamento usando **Git**.
-No frontend, uso uma stack prática baseada em Marked.js, Highlight.js, TailwindCSS, DOMPurify
-e KaTeX.js,
-focada em otimização, manutenção e para sites estáticos profissionais.
+
+<p align="center">
+  <img src="./img/goatgreen.png" alt="Descrição da imagem" style="border-radius: 50%;
+  width: 135px; height: 135px;">
+</p>
 
 
 
 
-Compartilho meus códigos e projetos no repositório GitHub.
-Inscreva-se na minha Newsletter
-para receber tutoriais, guias e referências.
+
+Sou **Programador e Desenvolvedor** com experiência em **JavaScript**, **Node.js**, **Java** e **Flutter**, além de versionamento com **Git**.  
+
+No **frontend**, utilizo uma stack prática para sites estáticos profissionais, baseada em:
+
+- **Marked.js** – Renderização rápida de Markdown
+- **Highlight.js** – Destaque de código
+- **TailwindCSS** – Estilização modular e responsiva
+- **DOMPurify** – Segurança contra XSS
+- **KaTeX.js** – Renderização de fórmulas matemáticas
 
 
- 
 
 
 
 
-## Mail/Links
-
-- LinkedIn            
-[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)          
-- Mail             
-topverbs@gmail.com      
-
-
-- GitHub     
-[github.com/devgbr86](https://github.com/devgbr86)            
 
 
 
