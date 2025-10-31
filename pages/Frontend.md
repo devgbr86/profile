@@ -1,4 +1,4 @@
-# Stack Frontend para Sites Profissionais
+# Frontend Stack
 
 <p align="center">
   <img src="./img/goat.png" alt="Descrição da imagem" style="border-radius: 50%;

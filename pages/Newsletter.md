@@ -1,5 +1,13 @@
 # Newsletter 
 
+
+<p align="center">
+  <img src="./img/goat02.png" alt="Descrição da imagem" style="border-radius: 50%;
+  width: 135px; height: 135px;">
+</p>
+
+
+
 O **@devcaffe** é um espaço criado para desenvolvedores e entusiastas da tecnologia que buscam conteúdo técnico claro, acessível e aplicável ao dia a dia profissional.  
 Aqui, o foco está em **tutoriais práticos**, **roadmaps**, **referências de ferramentas** e **projetos guiados** que ajudam você a construir uma base sólida em programação, versionamento e desenvolvimento de software moderno.
 
