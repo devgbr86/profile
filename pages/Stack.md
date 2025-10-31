@@ -15,7 +15,7 @@ O fluxo de desenvolvimento é centrado em Markdown, simplificando tanto a criaç
 
 **Highlight.js** — Aplica destaque de sintaxe em blocos de código, proporcionando uma exibição técnica e profissional.  
 
-**Tailwind CSS** — Framework utilitário de CSS que facilita a criação de layouts responsivos, consistentes e leves.  
+**TailwindCSS** — Framework utilitário de CSS que facilita a criação de layouts responsivos, consistentes e leves.  
 
 **DOMPurify** — Sanitiza o HTML gerado, protegendo o site contra vulnerabilidades de Cross-Site Scripting (XSS).
 
