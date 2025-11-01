@@ -2,486 +2,355 @@
 <html lang="pt-BR">
 
 <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="description" content="@devcaffe" />
-     <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml" />
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="@devcaffe">
+     <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml">
      <title>@devcaffe</title>
 
-     <!-- Stack do Projeto (mantida) -->
+     <!-- Tailwind CSS -->
      <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- Marked.js -->
      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+     <!-- Highlight.js -->
      <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+     <!-- DOMPurify -->
      <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
 
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+     <!-- Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
      <style>
-          /* Paleta centralizada */
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               transition: none;
+          }
+
           :root {
-               --bg-1: whitesmoke;
-               /* background principal */
-               --bg-2: #ffffff;
-               /* content background */
-               --fg: #000000;
-               /* texto */
+               --bg: #f5f5f5;
+               --fg: #000;
                --accent: #ff8c00;
-               /* laranja */
-               --muted: #222222;
-               /* tom de borda/sombra */
+               --card-bg: #fff;
+               --border: #000;
+               --code-bg: #282c34;
           }
 
           html {
                scroll-behavior: smooth;
-               font-size: 16px;
           }
 
           body {
-               margin: 0;
                font-family: 'Roboto Mono', monospace;
-               background-color: var(--bg-1);
+               background-color: var(--bg);
                color: var(--fg);
-               line-height: 1.7;
-               -webkit-font-smoothing: antialiased;
-               -moz-osx-font-smoothing: grayscale;
-               padding-top: 106px;
-               /* espaço para a navbar fixa */
+               line-height: 1.6;
+               display: flex;
+               flex-direction: column;
+               min-height: 100vh;
           }
 
-          /* NAVBAR - fixa e minimalista */
-          .navbar {
+          /* SIDEBAR */
+          .sidebar {
                position: fixed;
-               inset: 0 0 auto 0;
-               top: 0;
                left: 0;
-               right: 0;
-               height: 64px;
-               background: #000;
+               top: 0;
+               height: 100%;
+               width: 250px;
+               background-color: #000;
                color: #fff;
                display: flex;
-               align-items: center;
-               gap: 12px;
-               padding: 10px 18px;
-               z-index: 1200;
-               border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-               box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-               /* sem hover effects */
+               flex-direction: column;
+               padding: 20px 10px;
+               border-right: 1px solid var(--accent);
+               box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+               transition: transform 0.3s ease;
+               z-index: 1000;
           }
 
-          .navbar .brand {
-               display: flex;
-               align-items: center;
-               gap: 10px;
-               flex-shrink: 0;
+          .sidebar.collapsed {
+               transform: translateX(-100%);
           }
 
-          .navbar-icon {
-               width: 34px;
-               height: 34px;
-               border-radius: 6px;
-               background: var(--bg-2);
-               padding: 4px;
-               box-sizing: border-box;
-               border: 1px solid rgba(255, 255, 255, 0.06);
-          }
-
-          .navbar .nav-links {
-               display: flex;
-               gap: 8px;
-               margin-left: 8px;
-               align-items: center;
-               overflow: auto;
-               -webkit-overflow-scrolling: touch;
-          }
-
-          .navbar-link {
-               color: #f8f9fa;
-               text-decoration: none;
-               font-size: 0.95rem;
-               padding: 6px 10px;
-               border-radius: 6px;
-               white-space: nowrap;
-               border: 1px solid transparent;
-               font-weight: 500;
-               background: transparent;
-               /* removendo efeitos de hover / transitions */
-          }
-
-          .navbar-link[aria-current="page"],
-          .navbar-link.active {
-               background: var(--bg-2);
-               color: var(--fg);
-               font-weight: 700;
-               border-color: rgba(0, 0, 0, 0.08);
-          }
-
-          .navbar-link:focus {
-               outline: 2px solid rgba(255, 140, 0, 0.18);
-               outline-offset: 2px;
-          }
-
-          /* CONTEÚDO - wrapper principal */
-          .content-wrapper {
-               max-width: 940px;
-               margin: 22px auto;
-               padding: 36px;
-               background: var(--bg-2);
-               border-radius: 12px;
-               border: 1px solid rgba(0, 0, 0, 0.06);
-               box-shadow: 0 8px 26px rgba(2, 2, 2, 0.06);
-               box-sizing: border-box;
-          }
-
-          /* títulos do conteúdo — respeitando o markdown */
-          .content-wrapper h1,
-          .content-wrapper h2,
-          .content-wrapper h3,
-          .content-wrapper h4,
-          .content-wrapper h5 {
-               color: var(--fg);
-               font-weight: 700;
-               scroll-margin-top: 120px;
-               line-height: 1.22;
-               margin-top: 1.1em;
-               margin-bottom: 0.45em;
-          }
-
-          .content-wrapper h1 {
-               font-size: clamp(1.6rem, 2.4rem, 2.4rem);
-               border-bottom: 3px solid var(--fg);
-               padding-bottom: 12px;
+          .sidebar-icon {
+               width: 32px;
+               height: 32px;
                margin-bottom: 20px;
+               border-radius: 4px;
+               background-color: #fff;
+               padding: 4px;
+          }
+
+          .sidebar-links {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+          }
+
+          .sidebar-link {
+               color: #f5f5f5;
+               text-decoration: none;
+               font-size: 14px;
+               padding: 8px 12px;
+               border-radius: 4px;
+               font-weight: 500;
+          }
+
+          .sidebar-link.active {
+               background-color: #fff;
+               color: #000;
+               font-weight: 700;
+          }
+
+          /* MOBILE TOGGLE */
+          .menu-toggle {
+               display: none;
+               position: fixed;
+               top: 15px;
+               right: 15px;
+               z-index: 1100;
+               background-color: var(--accent);
+               border: none;
+               padding: 8px 12px;
+               color: #fff;
+               font-weight: 700;
+               border-radius: 4px;
+          }
+
+          /* CONTENT */
+          .main-wrapper {
+               display: flex;
+               flex: 1;
+          }
+
+          .content-wrapper {
+               margin-left: 250px;
+               flex: 1;
+               padding: 40px;
+               max-width: 900px;
+          }
+
+          /* Markdown styles */
+          .content-wrapper h1 {
+               font-size: 2em;
+               font-weight: 700;
+               margin-top: 0;
+               margin-bottom: 0.5em;
+               border-bottom: 2px solid var(--border);
+               color: var(--fg);
           }
 
           .content-wrapper h2 {
-               font-size: clamp(1.25rem, 1.9rem, 1.9rem);
-               border-bottom: 2px solid #f0f0f0;
-               padding-bottom: 8px;
-               margin-top: 28px;
-               margin-bottom: 16px;
+               font-size: 1.5em;
+               font-weight: 700;
+               margin-top: 1.5em;
+               margin-bottom: 0.5em;
+               border-bottom: 1px solid var(--accent);
+               color: var(--fg);
           }
 
           .content-wrapper h3 {
-               font-size: clamp(1.05rem, 1.4rem, 1.5rem);
+               font-size: 1.25em;
+               font-weight: 700;
+               margin-top: 1.5em;
+               margin-bottom: 0.5em;
+               color: var(--fg);
           }
 
           .content-wrapper p {
-               margin-bottom: 1.15rem;
-               color: #111;
-          }
-
-          .content-wrapper ul,
-          .content-wrapper ol {
-               margin-left: 1.25rem;
-               margin-bottom: 1.15rem;
-          }
-
-          .content-wrapper li {
-               margin-bottom: 0.55rem;
-          }
-
-          .content-wrapper code {
-               background-color: #f3f3f3;
-               color: var(--accent);
-               padding: 3px 8px;
-               border-radius: 6px;
-               border: 1px solid rgba(0, 0, 0, 0.06);
-               font-size: 0.95rem;
-          }
-
-          .content-wrapper pre {
-               background-color: #0d1117;
-               padding: 18px;
-               border-radius: 10px;
-               border-left: 4px solid var(--accent);
-               overflow-x: auto;
-               margin: 26px 0;
-               box-shadow: 0 6px 18px rgba(2, 2, 2, 0.08);
-          }
-
-          .content-wrapper pre code {
-               color: #c9d1d9;
-               font-size: 0.92rem;
-               line-height: 1.6;
-               display: block;
-               white-space: pre;
-          }
-
-          .content-wrapper blockquote {
-               border-left: 4px solid var(--fg);
-               background: #fafafa;
-               padding: 16px 20px;
-               border-radius: 8px;
-               margin: 20px 0;
-               font-style: italic;
-               color: #222;
-          }
-
-          .content-wrapper img {
-               max-width: 100%;
-               border-radius: 8px;
-               margin: 22px 0;
-               border: 1px solid rgba(0, 0, 0, 0.06);
-               box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
-               display: block;
-          }
-
-          .content-wrapper table {
-               width: 100%;
-               border-collapse: collapse;
-               margin: 20px 0;
-               border: 1px solid rgba(0, 0, 0, 0.06);
-               border-radius: 8px;
-               overflow: hidden;
-          }
-
-          .content-wrapper th,
-          .content-wrapper td {
-               border: 1px solid rgba(0, 0, 0, 0.06);
-               padding: 10px 12px;
-               text-align: left;
-          }
-
-          .content-wrapper th {
-               background: #f6f6f6;
-               font-weight: 700;
+               margin-bottom: 1em;
+               color: var(--fg);
+               font-size: 1em;
           }
 
           .content-wrapper a {
                color: var(--accent);
                text-decoration: none;
                font-weight: 600;
-               /* neutralizar hover */
           }
 
-          .content-wrapper a:hover {
-               color: inherit;
-               text-decoration: none;
+          .content-wrapper code {
+               background-color: #f5f5f5;
+               color: var(--accent);
+               padding: 0.2em 0.4em;
+               border-radius: 3px;
+               border: 1px solid #ddd;
+               font-size: 0.9em;
           }
 
-          .content-wrapper hr {
+          .content-wrapper pre {
+               background-color: var(--code-bg);
+               padding: 16px;
+               border-radius: 6px;
+               border-left: 4px solid var(--accent);
+               overflow-x: auto;
+               margin: 1em 0;
+          }
+
+          .content-wrapper pre code {
+               background: none;
                border: none;
-               border-top: 2px solid var(--fg);
-               margin: 32px 0;
+               color: #abb2bf;
           }
 
           footer {
                text-align: center;
-               padding: 30px 18px;
-               font-size: 0.95rem;
-               color: #222;
+               padding: 30px 20px;
+               font-size: 13px;
+               color: #666;
+               background-color: var(--bg);
           }
 
-          footer a {
-               color: var(--fg);
-               font-weight: 700;
-               text-decoration: none;
-               border-bottom: 2px solid var(--accent);
-               padding-bottom: 1px;
+          /* RESPONSIVE */
+          @media (max-width: 1024px) {
+               .content-wrapper {
+                    margin-left: 200px;
+                    padding: 32px;
+               }
           }
 
-          /* Responsividade */
-          @media (max-width: 900px) {
-               body {
-                    padding-top: 96px;
+          @media (max-width: 768px) {
+               .menu-toggle {
+                    display: block;
                }
 
-               .navbar {
-                    height: 58px;
-                    padding: 8px 12px;
-                    gap: 8px;
+               .sidebar {
+                    transform: translateX(-100%);
+               }
+
+               .sidebar.show {
+                    transform: translateX(0);
                }
 
                .content-wrapper {
-                    margin: 16px;
+                    margin-left: 0;
+                    padding: 24px;
+               }
+          }
+
+          @media (max-width: 480px) {
+               .content-wrapper {
                     padding: 20px;
-                    border-radius: 10px;
                }
-
-               .navbar-icon {
-                    width: 30px;
-                    height: 30px;
-               }
-          }
-
-          @media (max-width: 520px) {
-               .content-wrapper {
-                    padding: 16px;
-               }
-
-               .content-wrapper h1 {
-                    font-size: 1.5rem;
-               }
-
-               .navbar {
-                    padding: 8px 10px;
-               }
-
-               .navbar .nav-links {
-                    gap: 6px;
-               }
-          }
-
-          /* Remover efeitos de hover globais (garante que não haja transições inesperadas) */
-          a,
-          .navbar-link,
-          button {
-               transition: none !important;
-               -webkit-transition: none !important;
-          }
-
-          a:hover,
-          .navbar-link:hover,
-          button:hover {
-               background: none !important;
-               color: inherit !important;
-               text-decoration: none !important;
           }
      </style>
 </head>
 
 <body>
-     <nav class="navbar" role="navigation" aria-label="Navegação principal" id="nav-root">
-          <div class="brand" aria-hidden="false">
-               <img src="./img/favcoreicon.svg" alt="Logo Dev Wiki" class="navbar-icon" />
-          </div>
+     <button class="menu-toggle" id="menuToggle">☰</button>
 
-          <div class="nav-links" id="nav-links" role="menu" aria-label="Links de páginas">
-               <!-- Links serão injetados via JS -->
-          </div>
-     </nav>
+     <aside class="sidebar" id="sidebar">
+          <img src="./img/favcoreicon.svg" alt="Logo Dev Wiki" class="sidebar-icon">
+          <div class="sidebar-links" id="sidebarLinks"></div>
+     </aside>
 
-     <main class="content-wrapper" id="content" role="main" tabindex="-1">
-          <h1>Carregando conteúdo...</h1>
-     </main>
+     <div class="main-wrapper">
+          <main class="content-wrapper" id="content" role="main" aria-live="polite">
+               <h1>Carregando conteúdo...</h1>
+          </main>
+     </div>
 
      <footer>
           <p>
                <a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a>
-               &nbsp;•&nbsp;
-               <a href="https://www.linkedin.com/in/devgbr" target="_blank"
-                    rel="noopener noreferrer">linkedin.com/in/devgbr</a>
-               &nbsp;•&nbsp;
-               <a href="https://devcaffe.substack.com" target="_blank"
-                    rel="noopener noreferrer">devcaffe.substack.com</a>
-               &nbsp;•&nbsp;
-               <a href="mailto:topverbs@gmail.com">topverbs@gmail.com</a>
           </p>
      </footer>
 
      <script>
-          /* Configuração de arquivos */
           const contentFolder = 'pages/';
           const files = [
                { name: 'Home.md', label: 'Home' },
+               { name: 'Stack.md', label: 'Frontend-Stack' },
+               { name: 'News.md', label: 'Newsletter' },
                { name: 'Mail.md', label: 'Mail' }
           ];
 
-          const navContainer = document.getElementById('nav-links');
+          const sidebarContainer = document.getElementById('sidebarLinks');
           const contentContainer = document.getElementById('content');
+          const sidebar = document.getElementById('sidebar');
+          const menuToggle = document.getElementById('menuToggle');
 
-          /* Remove emojis (Unicode property - robusto) */
           function removeEmojis(text) {
-               try {
-                    return text.replace(/[\p{Extended_Pictographic}]/gu, '').trim();
-               } catch (e) {
-                    // fallback simples se regex Unicode não for suportado
-                    return text.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
-               }
+               return text.replace(/[\p{Extended_Pictographic}\u{1F000}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u200D\uFE0F]/gu, '').trim();
           }
 
-          /* Carrega markdown, converte com marked, sanitiza com DOMPurify */
-          async function loadMarkdown(file = 'Home.md') {
-               contentContainer.innerHTML = '<h1>Carregando conteúdo...</h1>';
-               try {
-                    const res = await fetch(`${contentFolder}${file}`, { cache: 'no-store' });
-                    if (!res.ok) {
-                         throw new Error(`HTTP ${res.status} - ${res.statusText}`);
-                    }
-                    let markdown = await res.text();
-                    markdown = removeEmojis(markdown);
-                    const rawHtml = marked.parse(markdown);
-                    // Sanitização com DOMPurify (adiciona id/class se necessário)
-                    const sanitized = DOMPurify.sanitize(rawHtml, { ADD_TAGS: ['span', 'div'], ADD_ATTR: ['id', 'class'] });
-                    contentContainer.innerHTML = sanitized;
-
-                    // Delay pequeno para garantir DOM atualizado, depois highlight
-                    contentContainer.querySelectorAll('pre code').forEach(block => {
-                         try { hljs.highlightElement(block); } catch (e) { /* highlight erro - silencioso */ }
-                    });
-
-                    // Lazy-loading em imagens e acessibilidade
-                    contentContainer.querySelectorAll('img').forEach(img => {
-                         img.setAttribute('loading', 'lazy');
-                         if (!img.alt) img.alt = ''; // evitar erro de acessibilidade
-                    });
-
-                    // Move foco para o conteúdo carregado para melhor usabilidade
-                    contentContainer.focus({ preventScroll: true });
-                    window.scrollTo({ top: 0 });
-
-               } catch (err) {
-                    contentContainer.innerHTML = `
-          <h1>Erro ao carregar</h1>
-          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-          <p>Verifique se ele existe em <code>${contentFolder}</code> e se o servidor está servindo o arquivo (HTTP).<br>
-          Erro: <strong>${err.message}</strong></p>
-        `;
-                    console.error('Erro ao carregar markdown:', err);
-               }
-          }
-
-          /* Cria links de navegação (sem hover effects) */
-          function createNavLinks() {
-               files.forEach((file, index) => {
-                    const link = document.createElement('a');
-                    link.textContent = file.label;
-                    link.className = 'navbar-link';
-                    link.href = '#';
-                    link.setAttribute('role', 'menuitem');
-                    link.dataset.filename = file.name;
-                    if (index === 0) {
-                         link.classList.add('active');
-                         link.setAttribute('aria-current', 'page');
-                    }
-
-                    link.addEventListener('click', (e) => {
-                         e.preventDefault();
-                         // Remove active de outros
-                         document.querySelectorAll('.navbar-link').forEach(l => {
-                              l.classList.remove('active');
-                              l.removeAttribute('aria-current');
-                         });
-                         link.classList.add('active');
-                         link.setAttribute('aria-current', 'page');
-                         loadMarkdown(file.name);
-                    });
-
-                    navContainer.appendChild(link);
+          function applySyntaxHighlighting(container) {
+               container.querySelectorAll('pre code').forEach(block => {
+                    hljs.highlightElement(block);
                });
           }
 
-          /* Inicialização */
-          document.addEventListener('DOMContentLoaded', () => {
-               createNavLinks();
-               // Se houver hash correspondente a arquivo, tenta carregá-lo
-               const hash = window.location.hash.replace('#', '');
-               const matched = files.find(f => f.name === hash || f.label.toLowerCase() === hash.toLowerCase());
-               if (matched) {
-                    // marca ativo corretamente
-                    document.querySelectorAll('.navbar-link').forEach(l => {
-                         if (l.dataset.filename === matched.name) {
-                              l.click();
-                         }
+          function sanitizeHtml(html) {
+               return DOMPurify.sanitize(html, {
+                    ADD_TAGS: ['span', 'div'],
+                    ADD_ATTR: ['class', 'style'],
+                    FORBID_TAGS: ['script'],
+                    WHOLE_DOCUMENT: false
+               });
+          }
+
+          async function loadMarkdown(file = 'Home.md') {
+               try {
+                    const res = await fetch(`${contentFolder}${file}`);
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+                    let markdown = await res.text();
+                    markdown = removeEmojis(markdown);
+
+                    let rawHtml = marked.parse(markdown);
+                    let sanitized = sanitizeHtml(rawHtml);
+
+                    contentContainer.innerHTML = sanitized;
+
+                    contentContainer.querySelectorAll('img').forEach(img => {
+                         img.setAttribute('loading', 'lazy');
                     });
-               } else {
-                    loadMarkdown(files[0].name);
+
+                    applySyntaxHighlighting(contentContainer);
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    if (window.innerWidth < 768) sidebar.classList.remove('show');
+               } catch (err) {
+                    console.error(err);
+                    contentContainer.innerHTML = `
+                    <h1>Erro ao carregar</h1>
+                    <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
+                    <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>
+                `;
                }
+          }
+
+          files.forEach((file, index) => {
+               const link = document.createElement('a');
+               link.textContent = file.label;
+               link.className = 'sidebar-link';
+               link.href = '#';
+               if (index === 0) link.classList.add('active');
+
+               link.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    loadMarkdown(file.name);
+               });
+
+               sidebarContainer.appendChild(link);
           });
 
-          /* Observação: não utilizamos efeitos hover, e fazemos foco acessível. */
+          menuToggle.addEventListener('click', () => {
+               sidebar.classList.toggle('show');
+          });
+
+          document.addEventListener('DOMContentLoaded', () => {
+               loadMarkdown(files[0].name);
+          });
      </script>
 </body>
 
