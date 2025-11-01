@@ -6,10 +6,10 @@
 
 
 
-- **LinkedIn**: [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)  
-- **Email**: [topverbs@gmail.com](mailto:topverbs@gmail.com)  
-- **GitHub**: [github.com/devgbr86](https://github.com/devgbr86)  
-- **Substack**: [devcaffe.substack.com](https://devcaffe.substack.com)  
+- [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr/)      
+- [topverbs@gmail.com](mailto:topverbs@gmail.com)         
+- [github.com/devgbr86](https://github.com/devgbr86)       
+- [devcaffe.substack.com](https://devcaffe.substack.com)      
 
 
 
