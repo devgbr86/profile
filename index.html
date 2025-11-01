@@ -113,7 +113,7 @@
                display: none;
                position: fixed;
                top: 15px;
-               right: 15px;
+               left: 15px;
                z-index: 1100;
                background-color: var(--accent);
                border: none;
@@ -230,20 +230,21 @@
 
                .content-wrapper {
                     margin-left: 0;
-                    padding: 24px;
+                    padding: 64px 24px 24px 24px;
+                    /* espaço para não ficar atrás do botão */
                }
           }
 
           @media (max-width: 480px) {
                .content-wrapper {
-                    padding: 20px;
+                    padding: 60px 20px 20px 20px;
                }
           }
      </style>
 </head>
 
 <body>
-     <button class="menu-toggle" id="menuToggle"><img src="./img/eng.svg"></button>
+     <button class="menu-toggle" id="menuToggle"><img src="./img/eng.svg" alt="Menu"></button>
 
      <aside class="sidebar" id="sidebar">
           <img src="./img/favcoreicon.svg" alt="Logo Dev Wiki" class="sidebar-icon">
@@ -320,10 +321,10 @@
                } catch (err) {
                     console.error(err);
                     contentContainer.innerHTML = `
-                    <h1>Erro ao carregar</h1>
-                    <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-                    <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>
-                `;
+          <h1>Erro ao carregar</h1>
+          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
+          <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>
+        `;
                }
           }
 
