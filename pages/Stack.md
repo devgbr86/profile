@@ -1,3 +1,12 @@
+
+
+
+---
+
+
+
+
+
 # Frontend Stack
 
 Para este Portifólio utilizei uma stack para sites estáticos profissionais.      
