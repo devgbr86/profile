@@ -10,7 +10,7 @@ Sou **Programador e Desenvolvedor** com experiência em **JavaScript**, **Node.j
 
 Para este Portifólio utilizei uma stack prática para sites estáticos profissionais, baseada em:
 
-- **Marked.js** – Renderização rápida de Markdown
+- **Marked.js** – Edição e Renderização rápida de Markdown
 - **Highlight.js** – Destaque de código
 - **TailwindCSS** – Estilização modular e responsiva
 - **DOMPurify** – Segurança contra XSS
@@ -18,6 +18,9 @@ Para este Portifólio utilizei uma stack prática para sites estáticos profissi
 
 Compartilho meus códigos e projetos do repositório GitHub
 - [github.com/devgbr86](https://github.com/devgbr86)  
+
+
+
 
 
 
@@ -34,7 +37,6 @@ Inscreva-se na minha Newsletter para receber **tutoriais**, **roadmaps**, **fund
 
 
   
-
 
 
 
@@ -69,10 +71,6 @@ Inscreva-se na minha Newsletter para receber **tutoriais**, **roadmaps**, **fund
   <img src="./img/goatgreen.png" alt="Descrição da imagem" style="border-radius: 50%;
   width: 135px; height: 135px;">
 </p>
-
-
-
-
 
 
 
