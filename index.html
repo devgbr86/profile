@@ -26,12 +26,10 @@
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
      <style>
-          /* RESET & BASE */
           * {
                margin: 0;
                padding: 0;
                box-sizing: border-box;
-               transition: none;
           }
 
           :root {
@@ -57,86 +55,101 @@
                min-height: 100vh;
           }
 
-          /* SIDEBAR */
-          .sidebar {
+          /* NAVBAR TOP */
+          .navbar {
                position: fixed;
                top: 0;
                left: 0;
-               width: 240px;
-               height: 100%;
+               width: 100%;
                background-color: #000;
                color: #fff;
                display: flex;
-               flex-direction: column;
-               padding: 24px 12px;
-               border-right: 1px solid var(--accent);
-               box-shadow: 2px 0 12px rgba(0, 0, 0, 0.25);
+               align-items: center;
+               justify-content: space-between;
+               padding: 12px 24px;
+               border-bottom: 1px solid var(--accent);
                z-index: 1000;
-               transition: transform 0.3s ease;
           }
 
-          .sidebar.collapsed {
-               transform: translateX(-100%);
+          .navbar-logo {
+               display: flex;
+               align-items: center;
+               gap: 10px;
           }
 
-          .sidebar-icon {
+          .navbar-logo img {
                width: 36px;
                height: 36px;
-               margin-bottom: 24px;
                border-radius: 4px;
                background-color: #fff;
                padding: 4px;
           }
 
-          .sidebar-links {
+          .navbar-links {
                display: flex;
-               flex-direction: column;
-               gap: 10px;
+               gap: 16px;
           }
 
-          .sidebar-link {
+          .navbar-link {
                color: #f5f5f5;
                text-decoration: none;
                font-size: 15px;
-               padding: 10px 14px;
+               padding: 8px 14px;
                border-radius: 4px;
                font-weight: 500;
-               /* remove hover effects */
           }
 
-          .sidebar-link.active {
+          .navbar-link.active {
                background-color: #fff;
                color: #000;
                font-weight: 700;
           }
 
-          /* MOBILE TOGGLE BUTTON */
           .menu-toggle {
                display: none;
-               position: fixed;
-               top: 12px;
-               right: 12px;
-               transform: translateX(-50%);
-               z-index: 1100;
                background-color: var(--accent);
                border: none;
-               padding: 10px 16px;
                color: #fff;
+               padding: 8px 12px;
                font-weight: 700;
-               border-radius: 6px;
+               border-radius: 4px;
+          }
+
+          @media (max-width: 768px) {
+               .navbar-links {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    background-color: #000;
+                    width: 100%;
+                    border-top: 1px solid var(--accent);
+                    padding: 12px 0;
+               }
+
+               .navbar-links.show {
+                    display: flex;
+               }
+
+               .menu-toggle {
+                    display: block;
+               }
           }
 
           /* MAIN CONTENT */
           .main-wrapper {
-               display: flex;
                flex: 1;
+               display: flex;
+               justify-content: center;
+               padding-top: 80px;
+               /* space for navbar */
           }
 
           .content-wrapper {
-               margin-left: 240px;
-               flex: 1;
-               padding: 48px;
+               width: 100%;
                max-width: 900px;
+               padding: 32px 24px;
           }
 
           /* MARKDOWN STYLING */
@@ -209,50 +222,18 @@
                color: #666;
                background-color: var(--bg);
           }
-
-          /* RESPONSIVITY */
-          @media (max-width: 1024px) {
-               .content-wrapper {
-                    margin-left: 200px;
-                    padding: 32px;
-               }
-          }
-
-          @media (max-width: 768px) {
-               .menu-toggle {
-                    display: block;
-               }
-
-               .sidebar {
-                    transform: translateX(-100%);
-               }
-
-               .sidebar.show {
-                    transform: translateX(0);
-               }
-
-               .content-wrapper {
-                    margin-left: 0;
-                    padding: 80px 24px 24px 24px;
-                    /* extra padding-top for mobile button */
-               }
-          }
-
-          @media (max-width: 480px) {
-               .content-wrapper {
-                    padding: 72px 20px 20px 20px;
-               }
-          }
      </style>
 </head>
 
 <body>
-     <button class="menu-toggle" id="menuToggle"><img src="./img/favcoreicon.svg" alt="Menu"></button>
-
-     <aside class="sidebar" id="sidebar">
-          <img src="./img/goatgreen.png" alt="Logo @devcaffe" class="sidebar-icon">
-          <div class="sidebar-links" id="sidebarLinks"></div>
-     </aside>
+     <nav class="navbar">
+          <div class="navbar-logo">
+               <img src="./img/goatgreen.png" alt="Logo @devcaffe">
+               <span></span>
+          </div>
+          <button class="menu-toggle" id="menuToggle">☰</button>
+          <div class="navbar-links" id="navbarLinks"></div>
+     </nav>
 
      <div class="main-wrapper">
           <main class="content-wrapper" id="content" role="main" aria-live="polite">
@@ -273,9 +254,8 @@
                { name: 'Mail.md', label: 'Mail' }
           ];
 
-          const sidebarContainer = document.getElementById('sidebarLinks');
+          const navLinks = document.getElementById('navbarLinks');
           const contentContainer = document.getElementById('content');
-          const sidebar = document.getElementById('sidebar');
           const menuToggle = document.getElementById('menuToggle');
 
           function removeEmojis(text) {
@@ -308,39 +288,37 @@
                     contentContainer.innerHTML = sanitized;
                     contentContainer.querySelectorAll('img').forEach(img => img.setAttribute('loading', 'lazy'));
                     applySyntaxHighlighting(contentContainer);
-
                     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                    if (window.innerWidth < 768) sidebar.classList.remove('show');
+                    if (window.innerWidth < 768) navLinks.classList.remove('show');
                } catch (err) {
                     console.error(err);
                     contentContainer.innerHTML = `
-          <h1>Erro ao carregar</h1>
-          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-          <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>
-        `;
+                    <h1>Erro ao carregar</h1>
+                    <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
+                    <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>`;
                }
           }
 
           files.forEach((file, index) => {
                const link = document.createElement('a');
                link.textContent = file.label;
-               link.className = 'sidebar-link';
+               link.className = 'navbar-link';
                link.href = '#';
                if (index === 0) link.classList.add('active');
 
                link.addEventListener('click', e => {
                     e.preventDefault();
-                    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('.navbar-link').forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
                     loadMarkdown(file.name);
                });
 
-               sidebarContainer.appendChild(link);
+               navLinks.appendChild(link);
           });
 
           menuToggle.addEventListener('click', () => {
-               sidebar.classList.toggle('show');
+               navLinks.classList.toggle('show');
           });
 
           document.addEventListener('DOMContentLoaded', () => {
