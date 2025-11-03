@@ -2,7 +2,7 @@
 
 Para este portfólio utilizei uma stack moderna voltada para sites estáticos profissionais.  
 O objetivo é criar uma estrutura prática, fácil de editar e manter, com destaque para otimização, performance e conteúdo centralizado no formato Markdown.  
-Esta abordagem é ideal para professores, desenvolvedores ou qualquer profissional que queira criar sites pessoais, blogs ou portfólios com conteúdo técnico, incluindo fórmulas matemáticas e numéricas.
+Esta abordagem é ideal para professores, desenvolvedores ou qualquer profissional que queira criar sites pessoais, portfólios com conteúdo técnico, incluindo fórmulas matemáticas e numéricas.
 
 ## Tech Stack
 
