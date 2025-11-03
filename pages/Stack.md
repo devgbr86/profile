@@ -35,7 +35,9 @@ Esta abordagem é ideal para professores, desenvolvedores ou qualquer profission
 - **Segurança e estabilidade**: DOMPurify protege contra conteúdo malicioso.  
 - **Ideal para profissionais**: professores, pesquisadores e desenvolvedores podem criar sites pessoais ou portfólios completos com conteúdo técnico, fórmulas e códigos destacados.
 
----
+
+
+
 
 <p align="center">
   <img src="./img/goatvs.png" alt="Imagem representativa da stack" style="border-radius: 50%; width: 135px; height: 135px;">
