@@ -12,7 +12,16 @@ Programador e Desenvolvedor com experiência
 em: **JavaScript, Node.js, Marked.js, TailwindCSS, 
 Java, Flutter, além de versionamento
 usando Git**.       
+
+
+
+
 Compartilho meus códigos e projetos no repositório GitHub.       
+
+
+
+
+
 Inscreva-se na minha Newsletter para receber tutoriais, roadmaps e referências.
 
 
@@ -21,13 +30,26 @@ Inscreva-se na minha Newsletter para receber tutoriais, roadmaps e referências.
 
 
 
-## Tech Skills
+- LinkedIn            
+[linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
 
-**| JavaScript | Node.js | Marked.js | TailwindCSS | Java | Flutter | Git |**
+- Mail             
+topverbs@gmail.com      
+
+- GitHub     
+[github.com/devgbr86](https://github.com/devgbr86)    
+
+- Substack     
+[devcaffe.substack.com](https://devcaffe.substack.com) 
 
 
 
-  
+---
+
+
+
+
+
 
 
 

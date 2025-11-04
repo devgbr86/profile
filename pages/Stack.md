@@ -1,4 +1,4 @@
-# Frontend Stack
+# Frontend[Stack]
 
 Para este portfólio utilizei uma stack moderna voltada para sites estáticos profissionais.  
 O objetivo é criar uma estrutura prática, fácil de editar e manter, com destaque para otimização, performance e conteúdo centralizado no formato Markdown.  
