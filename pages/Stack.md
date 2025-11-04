@@ -10,11 +10,11 @@ Esta abordagem é ideal para professores, desenvolvedores ou qualquer profission
   Biblioteca JavaScript que converte Markdown em HTML de forma rápida e segura.  
   Permite que todo o conteúdo textual seja escrito em Markdown, mantendo uma estrutura limpa e fácil de manter.
 
-- **Highlight.js**  
+- **Highlight.js** (opcional)      
   Ferramenta para realce de sintaxe em blocos de código.  
   Compatível com diversas linguagens de programação, ideal para documentação, tutoriais ou portfólios que exibem trechos de código.
 
-- **KaTeX.js**  
+- **KaTeX.js** (opcional)     
   Biblioteca para renderizar fórmulas matemáticas e científicas em HTML.  
   Suporta expressões LaTeX, garantindo que sites educacionais, materiais acadêmicos ou blogs de ciência exibam equações de forma clara e precisa.
 
@@ -29,11 +29,11 @@ Esta abordagem é ideal para professores, desenvolvedores ou qualquer profission
 
 
 
-- **Foco em conteúdo**: todo o texto e documentação ficam centralizados em Markdown.  
-- **Suporte matemático e científico**: KaTeX permite renderizar fórmulas, tabelas e expressões numéricas complexas.  
-- **Design moderno e responsivo**: TailwindCSS garante layouts adaptáveis a qualquer dispositivo.  
-- **Segurança e estabilidade**: DOMPurify protege contra conteúdo malicioso.  
-- **Ideal para profissionais**: professores, pesquisadores e desenvolvedores podem criar sites pessoais ou portfólios completos com conteúdo técnico, fórmulas e códigos destacados.
+ **Foco em conteúdo**: todo o texto e documentação ficam centralizados em Markdown.  
+ **Suporte matemático e científico**: KaTeX permite renderizar fórmulas, tabelas e expressões numéricas complexas.  
+ **Design moderno e responsivo**: TailwindCSS garante layouts adaptáveis a qualquer dispositivo.  
+ **Segurança e estabilidade**: DOMPurify protege contra conteúdo malicioso.  
+ **Ideal para profissionais**: professores, pesquisadores e desenvolvedores podem criar sites pessoais ou portfólios completos com conteúdo técnico, fórmulas e códigos destacados.
 
 
 
