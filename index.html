@@ -82,6 +82,8 @@
           .navbar-links {
                display: flex;
                gap: 14px;
+               align-items: center;
+               transition: all 0.3s ease;
           }
 
           .navbar-link {
@@ -91,7 +93,6 @@
                border-radius: var(--radius);
                font-weight: 500;
                font-size: 15px;
-               transition: all 0.2s ease;
           }
 
           .navbar-link:hover {
@@ -104,34 +105,74 @@
                font-weight: 700;
           }
 
+          /* Botão menu */
           .menu-toggle {
                display: none;
-               background: var(--accent);
+               background: none;
                border: none;
-               color: #fff;
-               padding: 8px 12px;
-               font-weight: 700;
-               border-radius: var(--radius);
+               cursor: pointer;
+               flex-direction: column;
+               justify-content: space-between;
+               width: 24px;
+               height: 18px;
+          }
+
+          .menu-toggle span {
+               display: block;
+               height: 3px;
+               width: 100%;
+               background: #fff;
+               border-radius: 2px;
+               transition: all 0.3s ease;
+          }
+
+          /* Estado ativo */
+          .menu-toggle.active span:nth-child(1) {
+               transform: translateY(7px) rotate(45deg);
+          }
+
+          .menu-toggle.active span:nth-child(2) {
+               opacity: 0;
+          }
+
+          .menu-toggle.active span:nth-child(3) {
+               transform: translateY(-7px) rotate(-45deg);
           }
 
           @media (max-width: 768px) {
+               .menu-toggle {
+                    display: flex;
+               }
+
                .navbar-links {
-                    display: none;
-                    flex-direction: column;
-                    width: 100%;
-                    background: #000;
                     position: absolute;
                     top: 60px;
                     left: 0;
+                    flex-direction: column;
+                    align-items: center;
+                    background: #000;
+                    width: 100%;
+                    overflow: hidden;
+                    max-height: 0;
                     border-top: 1px solid var(--accent);
                }
 
                .navbar-links.show {
-                    display: flex;
+                    max-height: 300px;
+                    padding: 10px 0;
                }
 
-               .menu-toggle {
-                    display: block;
+               .navbar-link {
+                    width: 100%;
+                    text-align: center;
+                    padding: 14px 0;
+                    border-radius: 0;
+                    font-size: 16px;
+               }
+
+               .navbar-link.active {
+                    background: #fff;
+                    color: #000;
                }
           }
 
@@ -248,7 +289,11 @@
           <div class="navbar-logo">
                <img src="./img/goatgreen.png" alt="@devcaffe logo">
           </div>
-          <button class="menu-toggle" id="menuToggle">☰</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+               <span></span>
+               <span></span>
+               <span></span>
+          </button>
           <div class="navbar-links" id="navbarLinks"></div>
      </nav>
 
@@ -259,7 +304,6 @@
      </div>
 
      <footer>
-
           <div class="badges">
                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge"
                     alt="JavaScript">
@@ -275,11 +319,7 @@
                     alt="Flutter">
                <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge" alt="Git">
           </div>
-
-
-
           <p><a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a></p>
-
      </footer>
 
      <script>
@@ -321,6 +361,7 @@
                     window.scrollTo({ top: 0, behavior: 'smooth' });
 
                     if (window.innerWidth < 768) navLinks.classList.remove('show');
+                    menuToggle.classList.remove('active');
                } catch (err) {
                     console.error(err);
                     contentContainer.innerHTML = `
@@ -349,6 +390,7 @@
 
           menuToggle.addEventListener('click', () => {
                navLinks.classList.toggle('show');
+               menuToggle.classList.toggle('active');
           });
 
           document.addEventListener('DOMContentLoaded', () => {
