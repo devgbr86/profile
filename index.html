@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="@devcaffe - Personal Page">
-     <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml">
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="description" content="@devcaffe - Personal Page" />
+     <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml" />
      <title>@devcaffe</title>
 
      <!-- UnoCSS -->
@@ -17,8 +17,16 @@
      <!-- DOMPurify -->
      <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
 
+     <!-- Highlight.js -->
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+     <!-- Mermaid.js -->
+     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+
      <!-- Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
      <style>
           :root {
@@ -27,7 +35,6 @@
                --accent: #ff8c00;
                --card-bg: #fff;
                --border: #000;
-               --code-bg: #282c34;
                --radius: 10px;
                --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
           }
@@ -39,17 +46,18 @@
           }
 
           body {
-               font-family: 'Roboto Mono', monospace;
-               background-color: var(--bg);
+               font-family: "Roboto Mono", monospace;
+               background: var(--bg);
                color: var(--fg);
-               line-height: 1.6;
-               min-height: 100vh;
                display: flex;
                flex-direction: column;
+               min-height: 100vh;
+               line-height: 1.6;
+               overflow-x: hidden;
           }
 
-          /* NAVBAR */
-          .navbar {
+          /* Navbar fixa no topo */
+          nav {
                position: fixed;
                top: 0;
                left: 0;
@@ -57,46 +65,37 @@
                background: #000;
                color: #fff;
                display: flex;
-               align-items: center;
                justify-content: space-between;
+               align-items: center;
                padding: 12px 24px;
                border-bottom: 2px solid var(--accent);
-               box-shadow: var(--shadow);
-               z-index: 1000;
-          }
-
-          .navbar-logo {
-               display: flex;
-               align-items: center;
-               gap: 10px;
+               z-index: 100;
           }
 
           .navbar-logo img {
-               width: 36px;
-               height: 36px;
+               width: 38px;
+               height: 38px;
                border-radius: 6px;
                background: #fff;
                padding: 4px;
+               flex-shrink: 0;
           }
 
           .navbar-links {
                display: flex;
                gap: 14px;
+               flex-wrap: wrap;
                align-items: center;
-               transition: all 0.3s ease;
           }
 
           .navbar-link {
-               color: #f5f5f5;
+               color: #fff;
                text-decoration: none;
-               padding: 8px 14px;
+               padding: 6px 10px;
                border-radius: var(--radius);
                font-weight: 500;
-               font-size: 15px;
-          }
-
-          .navbar-link:hover {
-               background: rgba(255, 255, 255, 0.1);
+               font-size: 14px;
+               white-space: nowrap;
           }
 
           .navbar-link.active {
@@ -105,137 +104,86 @@
                font-weight: 700;
           }
 
-          /* Botão menu */
-          .menu-toggle {
-               display: none;
-               background: none;
-               border: none;
-               cursor: pointer;
-               flex-direction: column;
-               justify-content: space-between;
-               width: 24px;
-               height: 18px;
-          }
-
-          .menu-toggle span {
-               display: block;
-               height: 3px;
-               width: 100%;
-               background: #fff;
-               border-radius: 2px;
-               transition: all 0.3s ease;
-          }
-
-          /* Estado ativo */
-          .menu-toggle.active span:nth-child(1) {
-               transform: translateY(7px) rotate(45deg);
-          }
-
-          .menu-toggle.active span:nth-child(2) {
-               opacity: 0;
-          }
-
-          .menu-toggle.active span:nth-child(3) {
-               transform: translateY(-7px) rotate(-45deg);
-          }
-
           @media (max-width: 768px) {
-               .menu-toggle {
-                    display: flex;
+               nav {
+                    padding: 10px 16px;
+                    min-height: 54px;
+               }
+
+               .navbar-logo img {
+                    width: 32px;
+                    height: 32px;
                }
 
                .navbar-links {
-                    position: absolute;
-                    top: 60px;
-                    left: 0;
-                    flex-direction: column;
-                    align-items: center;
-                    background: #000;
-                    width: 100%;
-                    overflow: hidden;
-                    max-height: 0;
-                    border-top: 1px solid var(--accent);
-               }
-
-               .navbar-links.show {
-                    max-height: 300px;
-                    padding: 10px 0;
+                    gap: 8px;
+                    flex: 1;
+                    justify-content: flex-end;
                }
 
                .navbar-link {
-                    width: 100%;
-                    text-align: center;
-                    padding: 14px 0;
-                    border-radius: 0;
-                    font-size: 16px;
-               }
-
-               .navbar-link.active {
-                    background: #fff;
-                    color: #000;
+                    font-size: 12px;
+                    padding: 5px 8px;
                }
           }
 
-          /* CONTENT */
-          .main-wrapper {
+          /* Espaço automático abaixo da navbar */
+          main {
                flex: 1;
-               display: flex;
-               justify-content: center;
-               padding: 90px 16px 40px;
-          }
-
-          .content-wrapper {
+               max-width: 860px;
+               margin: 0 auto 40px;
                background: var(--card-bg);
-               width: 100%;
-               max-width: 880px;
-               padding: 32px 26px;
+               border: 1px solid rgba(0, 0, 0, 0.05);
                border-radius: var(--radius);
                box-shadow: var(--shadow);
-               border: 1px solid rgba(0, 0, 0, 0.05);
+               padding: 34px 28px;
+               width: 92%;
+               margin-top: 96px;
           }
 
-          /* MARKDOWN */
-          .content-wrapper h1 {
+          @media (max-width: 768px) {
+               main {
+                    margin-top: 84px;
+                    padding: 26px 20px;
+                    width: 94%;
+               }
+          }
+
+          main h1 {
                font-size: 2em;
-               font-weight: 700;
-               margin-top: 0;
-               margin-bottom: 0.6em;
                border-bottom: 2px solid var(--border);
                padding-bottom: 6px;
+               margin-bottom: 0.6em;
           }
 
-          .content-wrapper h2 {
+          main h2 {
                font-size: 1.5em;
-               font-weight: 700;
+               border-bottom: 1px solid var(--accent);
                margin-top: 1.5em;
                margin-bottom: 0.5em;
-               border-bottom: 1px solid var(--accent);
-               padding-bottom: 4px;
           }
 
-          .content-wrapper h3 {
+          main h3 {
                font-size: 1.25em;
-               font-weight: 700;
                margin-top: 1.2em;
                margin-bottom: 0.5em;
           }
 
-          .content-wrapper p {
+          main p {
                margin-bottom: 1em;
-               font-size: 1em;
           }
 
-          .content-wrapper a {
+          main a {
                color: var(--accent);
-               font-weight: 600;
                text-decoration: none;
+               font-weight: 500;
           }
 
-          .content-wrapper a:hover {
+          main a:hover {
                text-decoration: underline;
           }
 
-          .content-wrapper code {
+          main code {
                background: #f5f5f5;
                color: var(--accent);
                padding: 0.25em 0.5em;
@@ -244,23 +192,22 @@
                font-size: 0.95em;
           }
 
-          .content-wrapper pre {
-               background: var(--code-bg);
+          pre {
+               background: #282c34;
                color: #dfe6ee;
-               padding: 18px;
+               padding: 16px;
                border-radius: var(--radius);
                border-left: 4px solid var(--accent);
                overflow-x: auto;
                margin: 1.2em 0;
-               font-size: 0.9em;
           }
 
-          .content-wrapper img {
+          img {
                max-width: 100%;
                height: auto;
                border-radius: var(--radius);
-               margin: 16px 0;
                box-shadow: var(--shadow);
+               margin: 16px 0;
           }
 
           footer {
@@ -270,132 +217,91 @@
                color: #666;
           }
 
-          .badges {
-               margin-top: 16px;
-               display: flex;
-               flex-wrap: wrap;
-               justify-content: center;
-               gap: 6px;
-          }
-
-          .badges img {
-               height: 22px;
+          footer a {
+               color: inherit;
+               text-decoration: none;
           }
      </style>
 </head>
 
 <body>
-     <nav class="navbar">
+     <nav>
           <div class="navbar-logo">
-               <img src="./img/goatgreen.png" alt="@devcaffe logo">
+               <img src="./img/goatgreen.png" alt="@devcaffe logo" />
           </div>
-          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-               <span></span>
-               <span></span>
-               <span></span>
-          </button>
+
           <div class="navbar-links" id="navbarLinks"></div>
      </nav>
 
-     <div class="main-wrapper">
-          <main class="content-wrapper" id="content" role="main" aria-live="polite">
-               <h1>Carregando conteúdo...</h1>
-          </main>
-     </div>
+     <main id="content">
+          <h1>Carregando conteúdo...</h1>
+     </main>
 
      <footer>
-          <div class="badges">
-               <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge"
-                    alt="JavaScript">
-               <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=fff&style=for-the-badge"
-                    alt="Node.js">
-               <img src="https://img.shields.io/badge/Marked.js-000000?logo=markdown&logoColor=fff&style=for-the-badge"
-                    alt="Marked.js">
-               <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwindcss&logoColor=fff&style=for-the-badge"
-                    alt="TailwindCSS">
-               <img src="https://img.shields.io/badge/Java-007396?logo=openjdk&logoColor=fff&style=for-the-badge"
-                    alt="Java">
-               <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=fff&style=for-the-badge"
-                    alt="Flutter">
-               <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge" alt="Git">
-          </div>
-          <p><a href="https://github.com/devgbr86" target="_blank" rel="noopener noreferrer">github.com/devgbr86</a></p>
+          <p><a href="https://github.com/devgbr86" target="_blank">github.com/devgbr86</a></p>
      </footer>
 
      <script>
-          const contentFolder = 'pages/';
           const files = [
-               { name: 'Home.md', label: 'Home' },
-               { name: 'Stack.md', label: 'Frontend[Stack]' },
-               { name: 'News.md', label: 'Newsletter' },
+               { name: "Home.md", label: "Home" },
+               { name: "Stack.md", label: "Frontend[Stack]" },
+               { name: "News.md", label: "Newsletter" },
           ];
 
-          const navLinks = document.getElementById('navbarLinks');
-          const contentContainer = document.getElementById('content');
-          const menuToggle = document.getElementById('menuToggle');
+          const contentFolder = "pages/";
+          const navLinks = document.getElementById("navbarLinks");
+          const contentContainer = document.getElementById("content");
 
           function removeEmojis(text) {
-               return text.replace(/[\p{Extended_Pictographic}\u{1F000}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u200D\uFE0F]/gu, '').trim();
+               return text.replace(/[\p{Extended_Pictographic}]/gu, "").trim();
           }
 
-          function sanitizeHtml(html) {
-               return DOMPurify.sanitize(html, {
-                    ADD_TAGS: ['span', 'div'],
-                    ADD_ATTR: ['class', 'style'],
-                    FORBID_TAGS: ['script'],
-               });
-          }
-
-          async function loadMarkdown(file = 'Home.md') {
+          async function loadMarkdown(file = "Home.md") {
                try {
                     const res = await fetch(`${contentFolder}${file}`);
                     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                    let markdown = await res.text();
-                    markdown = removeEmojis(markdown);
+                    let markdown = removeEmojis(await res.text());
+                    let html = marked.parse(markdown);
+                    let clean = DOMPurify.sanitize(html);
+                    contentContainer.innerHTML = clean;
 
-                    let rawHtml = marked.parse(markdown);
-                    let sanitized = sanitizeHtml(rawHtml);
+                    contentContainer.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
 
-                    contentContainer.innerHTML = sanitized;
-                    contentContainer.querySelectorAll('img').forEach(img => img.loading = 'lazy');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    const mermaidBlocks = contentContainer.querySelectorAll("code.language-mermaid");
+                    if (mermaidBlocks.length > 0) {
+                         mermaid.initialize({ startOnLoad: false, theme: "default" });
+                         for (const code of mermaidBlocks) {
+                              const wrapper = document.createElement("div");
+                              wrapper.classList.add("mermaid");
+                              wrapper.textContent = code.textContent;
+                              code.parentNode.replaceWith(wrapper);
+                         }
+                         await mermaid.run();
+                    }
 
-                    if (window.innerWidth < 768) navLinks.classList.remove('show');
-                    menuToggle.classList.remove('active');
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                } catch (err) {
                     console.error(err);
-                    contentContainer.innerHTML = `
-          <h1>Erro ao carregar</h1>
-          <p>Não foi possível carregar o arquivo <code>${file}</code>.</p>
-          <p>Verifique se ele existe em <code>${contentFolder}</code> ou se o servidor está rodando.</p>`;
+                    contentContainer.innerHTML = `<h1>Erro ao carregar</h1><p>Não foi possível carregar o arquivo <code>${file}</code>.</p>`;
                }
           }
 
           files.forEach((file, index) => {
-               const link = document.createElement('a');
+               const link = document.createElement("a");
                link.textContent = file.label;
-               link.className = 'navbar-link';
-               link.href = '#';
-               if (index === 0) link.classList.add('active');
-
-               link.addEventListener('click', e => {
+               link.href = "#";
+               link.className = "navbar-link";
+               if (index === 0) link.classList.add("active");
+               link.addEventListener("click", e => {
                     e.preventDefault();
-                    document.querySelectorAll('.navbar-link').forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
+                    document.querySelectorAll(".navbar-link").forEach(l => l.classList.remove("active"));
+                    link.classList.add("active");
                     loadMarkdown(file.name);
                });
-
                navLinks.appendChild(link);
           });
 
-          menuToggle.addEventListener('click', () => {
-               navLinks.classList.toggle('show');
-               menuToggle.classList.toggle('active');
-          });
-
-          document.addEventListener('DOMContentLoaded', () => {
-               loadMarkdown(files[0].name);
-          });
+          document.addEventListener("DOMContentLoaded", () => loadMarkdown(files[0].name));
      </script>
 </body>
 
