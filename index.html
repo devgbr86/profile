@@ -53,7 +53,7 @@
                overflow-x: hidden;
           }
 
-          /* Navbar fixa no topo */
+          /* Navbar fixa no topo com apenas logotipo */
           nav {
                position: fixed;
                top: 0;
@@ -62,7 +62,6 @@
                background: #000;
                color: #fff;
                display: flex;
-               justify-content: space-between;
                align-items: center;
                padding: 14px 28px;
                border-bottom: 2px solid var(--accent);
@@ -78,27 +77,43 @@
                flex-shrink: 0;
           }
 
-          .navbar-links {
+          /* Container para links badges acima do conteúdo */
+          .page-links {
                display: flex;
-               gap: 16px;
+               gap: 10px;
                flex-wrap: wrap;
-               align-items: center;
+               margin: 120px auto 20px;
+               max-width: 900px;
+               justify-content: flex-start;
           }
 
-          .navbar-link {
-               color: #fff;
-               text-decoration: none;
+          .page-link {
+               display: inline-block;
                padding: 6px 12px;
-               border-radius: var(--radius);
+               background: var(--accent);
+               color: #fff;
                font-weight: 500;
-               font-size: 14px;
-               white-space: nowrap;
+               border-radius: var(--radius);
+               text-decoration: none;
+               font-size: 0.9em;
           }
 
-          .navbar-link.active {
-               background: #fff;
-               color: #000;
+          .page-link.active {
+               background: #000;
+               color: #fff;
                font-weight: 700;
+          }
+
+          main {
+               flex: 1;
+               max-width: 900px;
+               margin: 0 auto 40px;
+               background: var(--card-bg);
+               border: 1px solid rgba(0, 0, 0, 0.05);
+               border-radius: var(--radius);
+               box-shadow: var(--shadow);
+               padding: 36px 32px;
+               width: 94%;
           }
 
           @media (max-width: 768px) {
@@ -112,37 +127,19 @@
                     height: 32px;
                }
 
-               .navbar-links {
-                    gap: 8px;
-                    flex: 1;
-                    justify-content: flex-end;
-               }
-
-               .navbar-link {
-                    font-size: 12px;
-                    padding: 5px 8px;
-               }
-          }
-
-          /* Espaço automático abaixo da navbar */
-          main {
-               flex: 1;
-               max-width: 900px;
-               margin: 0 auto 40px;
-               background: var(--card-bg);
-               border: 1px solid rgba(0, 0, 0, 0.05);
-               border-radius: var(--radius);
-               box-shadow: var(--shadow);
-               padding: 36px 32px;
-               width: 94%;
-               margin-top: 100px;
-          }
-
-          @media (max-width: 768px) {
                main {
                     margin-top: 84px;
                     padding: 28px 20px;
                     width: 96%;
+               }
+
+               .page-links {
+                    margin: 100px auto 16px;
+               }
+
+               .page-link {
+                    font-size: 0.8em;
+                    padding: 5px 10px;
                }
           }
 
@@ -174,10 +171,6 @@
                color: var(--accent);
                text-decoration: none;
                font-weight: 500;
-          }
-
-          main a:hover {
-               text-decoration: underline;
           }
 
           main code {
@@ -226,9 +219,10 @@
           <div class="navbar-logo">
                <img src="./img/goatgreen.png" alt="@devcaffe logo" />
           </div>
-
-          <div class="navbar-links" id="navbarLinks"></div>
      </nav>
+
+     <!-- Links das páginas -->
+     <div class="page-links" id="pageLinks"></div>
 
      <main id="content">
           <h1>Carregando conteúdo...</h1>
@@ -236,7 +230,6 @@
 
      <footer>
           <p><a href="https://github.com/devgbr86" target="_blank">github.com/devgbr86</a></p>
-
           <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge"
                     alt="JavaScript" />
@@ -258,13 +251,13 @@
      <script>
           const files = [
                { name: "Home.md", label: "Home" },
-               { name: "Stack.md", label: "Frontend[Stack]" },
+               { name: "Stack.md", label: "Frontend Stack" },
                { name: "News.md", label: "Newsletter" },
           ];
 
           const contentFolder = "pages/";
-          const navLinks = document.getElementById("navbarLinks");
           const contentContainer = document.getElementById("content");
+          const pageLinksContainer = document.getElementById("pageLinks");
 
           function removeEmojis(text) {
                return text.replace(/[\p{Extended_Pictographic}]/gu, "").trim();
@@ -278,10 +271,7 @@
                     let html = marked.parse(markdown);
                     let clean = DOMPurify.sanitize(html);
                     contentContainer.innerHTML = clean;
-
                     contentContainer.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
-
-                    // MermaidJS removido, nada será processado
                     window.scrollTo({ top: 0, behavior: "smooth" });
                } catch (err) {
                     console.error(err);
@@ -289,19 +279,20 @@
                }
           }
 
+          // Criar badges de links
           files.forEach((file, index) => {
                const link = document.createElement("a");
                link.textContent = file.label;
                link.href = "#";
-               link.className = "navbar-link";
+               link.className = "page-link";
                if (index === 0) link.classList.add("active");
                link.addEventListener("click", e => {
                     e.preventDefault();
-                    document.querySelectorAll(".navbar-link").forEach(l => l.classList.remove("active"));
+                    document.querySelectorAll(".page-link").forEach(l => l.classList.remove("active"));
                     link.classList.add("active");
                     loadMarkdown(file.name);
                });
-               navLinks.appendChild(link);
+               pageLinksContainer.appendChild(link);
           });
 
           document.addEventListener("DOMContentLoaded", () => loadMarkdown(files[0].name));
