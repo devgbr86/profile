@@ -53,7 +53,6 @@
                overflow-x: hidden;
           }
 
-          /* Navbar fixa no topo com apenas logotipo */
           nav {
                position: fixed;
                top: 0;
@@ -80,22 +79,25 @@
           /* Container para links badges acima do conteúdo */
           .page-links {
                display: flex;
-               gap: 10px;
+               gap: 12px;
                flex-wrap: wrap;
-               margin: 120px auto 20px;
+               margin: 140px auto 24px;
+               /* mais espaçamento do topo e entre links e conteúdo */
                max-width: 900px;
                justify-content: flex-start;
+               transition: gap 0.2s ease, margin 0.2s ease;
           }
 
           .page-link {
                display: inline-block;
-               padding: 6px 12px;
+               padding: 8px 14px;
                background: var(--accent);
                color: #fff;
                font-weight: 500;
                border-radius: var(--radius);
                text-decoration: none;
-               font-size: 0.9em;
+               font-size: 0.95em;
+               transition: padding 0.2s ease, font-size 0.2s ease;
           }
 
           .page-link.active {
@@ -114,6 +116,19 @@
                box-shadow: var(--shadow);
                padding: 36px 32px;
                width: 94%;
+               transition: padding 0.2s ease, width 0.2s ease;
+          }
+
+          @media (max-width: 1024px) {
+               .page-links {
+                    gap: 10px;
+                    margin: 130px auto 20px;
+               }
+
+               .page-link {
+                    padding: 7px 12px;
+                    font-size: 0.9em;
+               }
           }
 
           @media (max-width: 768px) {
@@ -128,18 +143,19 @@
                }
 
                main {
-                    margin-top: 84px;
+                    margin-top: 90px;
                     padding: 28px 20px;
                     width: 96%;
                }
 
                .page-links {
-                    margin: 100px auto 16px;
+                    margin: 110px auto 18px;
+                    gap: 8px;
                }
 
                .page-link {
-                    font-size: 0.8em;
-                    padding: 5px 10px;
+                    font-size: 0.82em;
+                    padding: 6px 10px;
                }
           }
 
@@ -221,7 +237,6 @@
           </div>
      </nav>
 
-     <!-- Links das páginas -->
      <div class="page-links" id="pageLinks"></div>
 
      <main id="content">
@@ -251,7 +266,7 @@
      <script>
           const files = [
                { name: "Home.md", label: "Home" },
-               { name: "Stack.md", label: "Frontend Stack" },
+               { name: "Stack.md", label: "FrontendStack" },
                { name: "News.md", label: "Newsletter" },
           ];
 
@@ -279,7 +294,6 @@
                }
           }
 
-          // Criar badges de links
           files.forEach((file, index) => {
                const link = document.createElement("a");
                link.textContent = file.label;
