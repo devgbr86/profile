@@ -76,13 +76,13 @@
                flex-shrink: 0;
           }
 
-          /* Container para links badges acima do conteúdo */
+          /* Container de links badges */
           .page-links {
                display: flex;
-               gap: 12px;
                flex-wrap: wrap;
+               /* permite quebrar linha naturalmente */
+               gap: 12px;
                margin: 140px auto 24px;
-               /* mais espaçamento do topo e entre links e conteúdo */
                max-width: 900px;
                justify-content: flex-start;
                transition: gap 0.2s ease, margin 0.2s ease;
@@ -98,6 +98,8 @@
                text-decoration: none;
                font-size: 0.95em;
                transition: padding 0.2s ease, font-size 0.2s ease;
+               white-space: nowrap;
+               /* mantém o texto do link em uma linha */
           }
 
           .page-link.active {
@@ -117,46 +119,6 @@
                padding: 36px 32px;
                width: 94%;
                transition: padding 0.2s ease, width 0.2s ease;
-          }
-
-          @media (max-width: 1024px) {
-               .page-links {
-                    gap: 10px;
-                    margin: 130px auto 20px;
-               }
-
-               .page-link {
-                    padding: 7px 12px;
-                    font-size: 0.9em;
-               }
-          }
-
-          @media (max-width: 768px) {
-               nav {
-                    padding: 10px 16px;
-                    min-height: 54px;
-               }
-
-               .navbar-logo img {
-                    width: 32px;
-                    height: 32px;
-               }
-
-               main {
-                    margin-top: 90px;
-                    padding: 28px 20px;
-                    width: 96%;
-               }
-
-               .page-links {
-                    margin: 110px auto 18px;
-                    gap: 8px;
-               }
-
-               .page-link {
-                    font-size: 0.82em;
-                    padding: 6px 10px;
-               }
           }
 
           main h1 {
@@ -227,6 +189,56 @@
                color: inherit;
                text-decoration: none;
           }
+
+          footer .badges {
+               display: flex;
+               flex-wrap: wrap;
+               /* quebra natural se não couber */
+               justify-content: center;
+               gap: 6px;
+               margin-top: 12px;
+          }
+
+          /* Responsividade refinada */
+          @media (max-width: 1024px) {
+               .page-links {
+                    gap: 10px;
+                    margin: 130px auto 20px;
+               }
+
+               .page-link {
+                    padding: 7px 12px;
+                    font-size: 0.9em;
+               }
+          }
+
+          @media (max-width: 768px) {
+               nav {
+                    padding: 10px 16px;
+                    min-height: 54px;
+               }
+
+               .navbar-logo img {
+                    width: 32px;
+                    height: 32px;
+               }
+
+               main {
+                    margin-top: 90px;
+                    padding: 28px 20px;
+                    width: 96%;
+               }
+
+               .page-links {
+                    margin: 110px auto 18px;
+                    gap: 8px;
+               }
+
+               .page-link {
+                    font-size: 0.82em;
+                    padding: 6px 10px;
+               }
+          }
      </style>
 </head>
 
@@ -245,7 +257,7 @@
 
      <footer>
           <p><a href="https://github.com/devgbr86" target="_blank">github.com/devgbr86</a></p>
-          <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
+          <div class="badges">
                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge"
                     alt="JavaScript" />
                <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=fff&style=for-the-badge"
@@ -267,6 +279,7 @@
           const files = [
                { name: "Home.md", label: "Home" },
                { name: "Stack.md", label: "FrontendStack" },
+               { name: "Mail.md", label: "Mail" },
                { name: "News.md", label: "Newsletter" },
           ];
 
