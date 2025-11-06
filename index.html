@@ -34,6 +34,8 @@
                --border: #000;
                --radius: 10px;
                --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+               --nav-height: 64px;
+               /* altura base da navbar fixa */
           }
 
           * {
@@ -65,6 +67,8 @@
                padding: 14px 28px;
                border-bottom: 2px solid var(--accent);
                z-index: 100;
+               min-height: var(--nav-height);
+               /* garante referência */
           }
 
           .navbar-logo img {
@@ -76,15 +80,22 @@
                flex-shrink: 0;
           }
 
-          /* Container de links badges */
+          /* Container de links badges
+             Ajuste: margem superior calculada a partir da altura da navbar
+             para garantir espaçamento equilibrado (nem grudado, nem muito distante)
+          */
           .page-links {
                display: flex;
                flex-wrap: wrap;
                /* permite quebrar linha naturalmente */
                gap: 12px;
-               margin: 140px auto 24px;
+               margin: calc(var(--nav-height) + 60px) auto 22px;
+               /* 64 + 60 ≈ 124px (equilíbrio) */
                max-width: 900px;
                justify-content: flex-start;
+               /* alinhado à esquerda */
+               padding: 0 16px;
+               /* evita encostar nas laterais em telas pequenas */
                transition: gap 0.2s ease, margin 0.2s ease;
           }
 
@@ -99,7 +110,7 @@
                font-size: 0.95em;
                transition: padding 0.2s ease, font-size 0.2s ease;
                white-space: nowrap;
-               /* mantém o texto do link em uma linha */
+               /* mantém cada badge em uma linha única */
           }
 
           .page-link.active {
@@ -193,7 +204,6 @@
           footer .badges {
                display: flex;
                flex-wrap: wrap;
-               /* quebra natural se não couber */
                justify-content: center;
                gap: 6px;
                margin-top: 12px;
@@ -203,7 +213,8 @@
           @media (max-width: 1024px) {
                .page-links {
                     gap: 10px;
-                    margin: 130px auto 20px;
+                    margin: calc(var(--nav-height) + 56px) auto 18px;
+                    /* ligeiro ajuste para telas médias */
                }
 
                .page-link {
@@ -224,14 +235,17 @@
                }
 
                main {
-                    margin-top: 90px;
+                    margin-top: 0;
+                    /* mantemos o main alinhado logo abaixo dos links */
                     padding: 28px 20px;
                     width: 96%;
                }
 
                .page-links {
-                    margin: 110px auto 18px;
+                    margin: calc(54px + 46px) auto 16px;
+                    /* calcula com nav menor em mobile */
                     gap: 8px;
+                    padding: 0 12px;
                }
 
                .page-link {
