@@ -1,4 +1,4 @@
-# Roadmap: Fundamentos Web, Git e Ferramentas
+# Roadmap: Web, Git e Ferramentas
 
 ## Índice
 1. [História da Web e Fundamentos](#1-história-da-web-e-fundamentos)
