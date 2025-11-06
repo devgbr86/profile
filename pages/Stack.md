@@ -14,7 +14,7 @@ Esta abordagem é ideal para professores, desenvolvedores ou qualquer profission
   Ferramenta para realce de sintaxe em blocos de código.  
   Compatível com diversas linguagens de programação, ideal para documentação, tutoriais ou portfólios que exibem trechos de código.
 
-- **KaTeX.js** (opcional)     
+- **KaTeX.js/Mermaid.js**** (opcional)     
   Biblioteca para renderizar fórmulas matemáticas e científicas em HTML.  
   Suporta expressões LaTeX, garantindo que sites educacionais, materiais acadêmicos ou blogs de ciência exibam equações de forma clara e precisa.
 
@@ -25,6 +25,7 @@ Esta abordagem é ideal para professores, desenvolvedores ou qualquer profission
 - **DOMPurify**  
   Biblioteca para sanitização de HTML, garantindo segurança contra ataques XSS.  
   Essencial para sites que carregam conteúdo Markdown dinâmico, mantendo o site seguro sem comprometer a liberdade de formatação.
+
 
 
 
