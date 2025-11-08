@@ -41,6 +41,6 @@ Inscreva-se na minha Newsletter para receber tutoriais, roadmaps e referências.
 
 
 <p align="center">
-  <img src="./img/goatgreen.png" alt="Descrição da imagem" style="border-radius: 50%;
+  <img src="./img/goathome.png" alt="Descrição da imagem" style="border-radius: 50%;
   width: 135px; height: 135px;">
 </p>
