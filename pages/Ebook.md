@@ -2,22 +2,17 @@
   <img src="./img/git.png" alt="Logo da newsletter" 
   style="max-width: 21%; max-height: 21%;">
   <br>
-  EBOOK SOBRE A HISTORIA, FUNDAMENTOS, GIT BASH, GUIAS E REFERENCIAS.
 </p>
+
+[https://go.hotmart.com/L102836385C](https://go.hotmart.com/L102836385C)
 
 <p align="left">
   <img src="./img/vscode.png" alt="Logo da newsletter" 
   style="max-width: 21%; max-height: 21%;">
   <br>
-    VISUAL STUDIO CODE, EXTENSOES, GUIAS, INSTALACAO E CONFIGURACOES.
 </p>
 
+[https://go.hotmart.com/C102836496S](https://go.hotmart.com/C102836496S)
 
 
 
-<p align="left">
-  <img src="./img/web.png" alt="Logo da newsletter" 
-  style="max-width: 21%; max-height: 21%;">
-  <br>
-HISTORIA, GUIAS E REFERENCIAS SOBRE OS FUNDAMENTOS WEB.
-</p>
