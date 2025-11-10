@@ -2,8 +2,7 @@
 
 Programador e Desenvolvedor com experiência
 em: **JavaScript, Node.js, Marked.js, TailwindCSS, 
-Java, Flutter, além de versionamento
-utilizando Git.**    
+Java, Flutter, além de versionamento utilizando Git.**    
 
 
 Experiência na produção e edição de eBooks usando Markdown e Pandoc,
