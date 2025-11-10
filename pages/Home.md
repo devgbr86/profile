@@ -11,18 +11,17 @@
 Programador e Desenvolvedor com experiência
 em: **JavaScript, Node.js, Marked.js, TailwindCSS, 
 Java, Flutter, além de versionamento
-usando Git**.       
+utilizando Git, produção e edição de Ebooks**.       
 
 
 
 
 Compartilho meus códigos e projetos no repositório GitHub.       
+[github.com/devgbr86](https://github.com/devgbr86)    
 
 
 
 
-
-Inscreva-se na minha Newsletter para receber tutoriais, roadmaps e referências.
 
 
 
