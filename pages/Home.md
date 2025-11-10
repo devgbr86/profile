@@ -6,8 +6,8 @@ Java, Flutter, além de versionamento utilizando Git.**
 
 
 Experiência na produção e edição de eBooks usando Markdown e Pandoc,
-garantindo padronização, qualidade tipográfica
-e conversões consistentes entre formatos.
+garantindo padronização, qualidade tipográfica e conversões consistentes entre formatos.
+
 
 Para este Portifólio utilizei uma Stack Front-end para
 site estáticos profissionais, baseada em:
