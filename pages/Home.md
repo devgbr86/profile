@@ -16,7 +16,7 @@ utilizando Git, produção e edição de Ebooks**.
 
 
 
-Compartilho meus códigos e projetos no repositório GitHub.       
+- Compartilho meus códigos e projetos no repositório GitHub       
 [github.com/devgbr86](https://github.com/devgbr86)    
 
 

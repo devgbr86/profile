@@ -34,8 +34,7 @@
                --border: #000;
                --radius: 10px;
                --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-               --nav-height: 52px;
-               /* navbar mais fina */
+               --nav-height: 60px;
           }
 
           * {
@@ -64,15 +63,15 @@
                color: #fff;
                display: flex;
                align-items: center;
-               padding: 8px 20px;
+               padding: 12px 22px;
                border-bottom: 2px solid var(--accent);
                z-index: 100;
                min-height: var(--nav-height);
           }
 
           .navbar-logo img {
-               width: 34px;
-               height: 34px;
+               width: 36px;
+               height: 36px;
                border-radius: 6px;
                background: #fff;
                padding: 3px;
@@ -116,6 +115,12 @@
                box-shadow: var(--shadow);
                padding: 36px 32px;
                width: 94%;
+          }
+
+          main a {
+               color: var(--accent);
+               text-decoration: none;
+               font-weight: 500;
           }
 
           main h1 {
@@ -201,45 +206,42 @@
                { name: "Mail.md", label: "@Mail" }
           ];
 
-          const contentFolder = "pages/";
-          const contentContainer = document.getElementById("content");
-          const pageLinksContainer = document.getElementById("pageLinks");
+          const folder = "pages/";
+          const content = document.getElementById("content");
 
           function removeEmojis(text) {
                return text.replace(/[\p{Extended_Pictographic}]/gu, "").trim();
           }
 
-          async function loadMarkdown(file = "Home.md") {
+          async function loadMarkdown(file) {
                try {
-                    const res = await fetch(`${contentFolder}${file}`);
-                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                    let markdown = removeEmojis(await res.text());
-                    let html = marked.parse(markdown);
-                    let clean = DOMPurify.sanitize(html);
-                    contentContainer.innerHTML = clean;
-                    contentContainer.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
+                    const res = await fetch(folder + file);
+                    let md = removeEmojis(await res.text());
+                    let html = DOMPurify.sanitize(marked.parse(md));
+                    content.innerHTML = html;
+                    content.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
                     window.scrollTo({ top: 0, behavior: "smooth" });
                } catch (err) {
-                    contentContainer.innerHTML = `<h1>Erro ao carregar</h1><p>Não foi possível carregar <code>${file}</code>.</p>`;
+                    content.innerHTML = "<h1>Erro ao carregar página.</h1>";
                }
           }
 
-          files.forEach((file, index) => {
-               const link = document.createElement("a");
-               link.textContent = file.label;
-               link.href = "#";
-               link.className = "page-link";
-               if (index === 0) link.classList.add("active");
-               link.addEventListener("click", e => {
+          const linksContainer = document.getElementById("pageLinks");
+          files.forEach((f, i) => {
+               const a = document.createElement("a");
+               a.textContent = f.label;
+               a.href = "#";
+               a.className = "page-link" + (i === 0 ? " active" : "");
+               a.onclick = e => {
                     e.preventDefault();
-                    document.querySelectorAll(".page-link").forEach(l => l.classList.remove("active"));
-                    link.classList.add("active");
-                    loadMarkdown(file.name);
-               });
-               pageLinksContainer.appendChild(link);
+                    document.querySelectorAll(".page-link").forEach(x => x.classList.remove("active"));
+                    a.classList.add("active");
+                    loadMarkdown(f.name);
+               };
+               linksContainer.appendChild(a);
           });
 
-          document.addEventListener("DOMContentLoaded", () => loadMarkdown(files[0].name));
+          loadMarkdown(files[0].name);
      </script>
 </body>
 
