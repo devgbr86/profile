@@ -22,10 +22,10 @@ site estáticos profissionais, baseada em:
 
 
 <p><br>
-Compartilho meus códigos e projetos no repositório [github.com/devgbr86](https://github.com/devgbr86)    
+Compartilho meus códigos e projetos no repositório  
 </p>
 
-
+- [github.com/devgbr86](https://github.com/devgbr86)  
 
 
 
