@@ -3,7 +3,7 @@
 
 
 <p align="left">
-  <img src="./img/git.png" alt="Logo da newsletter" 
+  <img src="./img/github.png" alt="Logo da newsletter" 
   style="width: 24%; height: 24%;">
   <br>
 </p>
