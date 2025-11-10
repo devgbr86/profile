@@ -8,7 +8,7 @@
   <br>
 </p>
 
-
+### Git e GitHub - Tutorial [2025]
 - [https://go.hotmart.com/L102836385C](https://go.hotmart.com/L102836385C)
 
 
@@ -22,7 +22,7 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
   <br>
 </p>
 
-
+### Visual Studio Code - Tutorial [2025]
 - [https://go.hotmart.com/C102836496S](https://go.hotmart.com/C102836496S)
 
 
