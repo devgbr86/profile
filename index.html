@@ -47,6 +47,7 @@
                color: #fff;
                display: flex;
                align-items: center;
+               gap: 15px;
                padding: 13px 18px;
                border-bottom: 2px solid var(--accent);
                z-index: 100;
@@ -54,17 +55,10 @@
           }
 
           .page-links {
-               position: fixed;
-               top: 60px;
-               left: 0;
-               right: 0;
-               background: var(--bg);
                display: flex;
                gap: 10px;
-               justify-content: center;
+               align-items: center;
                flex-wrap: wrap;
-               padding: 15px 10px;
-               z-index: 50;
           }
 
           .page-link {
@@ -75,6 +69,7 @@
                font-weight: 500;
                text-decoration: none;
                cursor: pointer;
+               display: inline-block;
           }
 
           .page-link.active {
@@ -89,7 +84,7 @@
                border-radius: var(--radius);
                box-shadow: var(--shadow);
                padding: 30px;
-               margin-top: 140px;
+               margin-top: 80px;
                margin-bottom: 40px;
                width: calc(100% - 40px);
           }
@@ -98,7 +93,7 @@
                main {
                     padding: 20px;
                     width: calc(100% - 20px);
-                    margin-top: 160px;
+                    margin-top: 80px;
                }
 
                main h1 {
@@ -257,9 +252,8 @@
 
      <nav>
           <img src="./img/goathome.png" width="34" height="34" style="border-radius:6px;background:#fff;padding:3px;">
+          <div class="page-links" id="pageLinks"></div>
      </nav>
-
-     <div class="page-links" id="pageLinks"></div>
 
      <main id="content">
           <h1>Carregando...</h1>
