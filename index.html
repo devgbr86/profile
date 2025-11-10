@@ -4,166 +4,235 @@
 <head>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta name="description" content="@devcaffe - Personal Page" />
-     <link rel="icon" href="./img/favcoreicon.svg" type="image/svg+xml" />
      <title>@devcaffe</title>
 
-     <!-- TailwindCSS -->
      <script src="https://cdn.tailwindcss.com"></script>
-
-     <!-- Marked.js -->
      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-     <!-- DOMPurify -->
      <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
-
-     <!-- Highlight.js -->
      <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-     <!-- Font -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
      <style>
-          :root {
-               --bg: #f5f5f5;
-               --fg: #000;
-               --accent: #ff8c00;
-               --card-bg: #fff;
-               --border: #000;
-               --radius: 10px;
-               --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-               --nav-height: 60px;
-          }
-
           * {
                margin: 0;
                padding: 0;
                box-sizing: border-box;
           }
 
+          :root {
+               --bg: #f5f5f5;
+               --fg: #000;
+               --accent: #ff8c00;
+               --card-bg: #fff;
+               --radius: 10px;
+               --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          }
+
           body {
                font-family: "Roboto Mono", monospace;
                background: var(--bg);
                color: var(--fg);
-               display: flex;
-               flex-direction: column;
                min-height: 100vh;
-               line-height: 1.6;
-               overflow-x: hidden;
           }
 
           nav {
                position: fixed;
                top: 0;
                left: 0;
-               width: 100%;
+               right: 0;
                background: #000;
                color: #fff;
                display: flex;
                align-items: center;
-               padding: 12px 22px;
+               padding: 13px 18px;
                border-bottom: 2px solid var(--accent);
                z-index: 100;
-               min-height: var(--nav-height);
-          }
-
-          .navbar-logo img {
-               width: 36px;
-               height: 36px;
-               border-radius: 6px;
-               background: #fff;
-               padding: 3px;
+               height: 60px;
           }
 
           .page-links {
+               position: fixed;
+               top: 60px;
+               left: 0;
+               right: 0;
+               background: var(--bg);
                display: flex;
+               gap: 10px;
+               justify-content: center;
                flex-wrap: wrap;
-               gap: 12px;
-               margin: calc(var(--nav-height) + 50px) auto 22px;
-               max-width: 900px;
-               justify-content: flex-start;
-               padding: 0 16px;
+               padding: 15px 10px;
+               z-index: 50;
           }
 
           .page-link {
-               display: inline-block;
                padding: 8px 14px;
                background: var(--accent);
                color: #fff;
                border-radius: var(--radius);
-               text-decoration: none;
                font-weight: 500;
-               white-space: nowrap;
-               transition: 0.2s ease;
+               text-decoration: none;
+               cursor: pointer;
           }
 
           .page-link.active {
                background: #000;
-               color: #fff;
                font-weight: 700;
           }
 
           main {
-               flex: 1;
                max-width: 900px;
-               margin: 0 auto 40px;
+               margin: 0 auto;
                background: var(--card-bg);
-               border: 1px solid rgba(0, 0, 0, 0.05);
                border-radius: var(--radius);
                box-shadow: var(--shadow);
-               padding: 36px 32px;
-               width: 94%;
+               padding: 30px;
+               margin-top: 140px;
+               margin-bottom: 40px;
+               width: calc(100% - 40px);
           }
 
-          main a {
-               color: var(--accent);
-               text-decoration: none;
-               font-weight: 500;
+          @media (max-width: 768px) {
+               main {
+                    padding: 20px;
+                    width: calc(100% - 20px);
+                    margin-top: 160px;
+               }
+
+               main h1 {
+                    font-size: 1.5em;
+               }
+
+               main h2 {
+                    font-size: 1.3em;
+               }
+
+               main h3 {
+                    font-size: 1.1em;
+               }
+
+               .page-links {
+                    padding: 10px;
+               }
+
+               .page-link {
+                    padding: 6px 12px;
+                    font-size: 0.9em;
+               }
+          }
+
+          @media (max-width: 480px) {
+               main {
+                    padding: 15px;
+                    width: calc(100% - 10px);
+               }
+
+               main h1 {
+                    font-size: 1.3em;
+               }
+
+               main h2 {
+                    font-size: 1.2em;
+               }
+
+               main h3 {
+                    font-size: 1em;
+               }
+
+               main p,
+               main li {
+                    font-size: 0.9em;
+               }
+
+               .page-link {
+                    padding: 5px 10px;
+                    font-size: 0.85em;
+               }
           }
 
           main h1 {
-               font-size: 2.1em;
-               border-bottom: 2px solid var(--border);
-               padding-bottom: 8px;
-               margin-bottom: 0.8em;
+               font-size: 2em;
+               font-weight: 700;
+               margin-bottom: 0.5em;
+               margin-top: 0.5em;
           }
 
           main h2 {
                font-size: 1.5em;
-               border-bottom: 1px solid var(--accent);
-               margin-top: 1.5em;
-               margin-bottom: 0.6em;
+               font-weight: 700;
+               margin-bottom: 0.5em;
+               margin-top: 1em;
           }
 
           main h3 {
-               font-size: 1.25em;
-               margin-top: 1.2em;
+               font-size: 1.17em;
+               font-weight: 700;
                margin-bottom: 0.5em;
+               margin-top: 1em;
           }
 
           main p {
                margin-bottom: 1em;
+               line-height: 1.6;
+          }
+
+          main ul,
+          main ol {
+               margin-bottom: 1em;
+               padding-left: 2em;
+          }
+
+          main li {
+               margin-bottom: 0.5em;
+               line-height: 1.6;
+          }
+
+          main a {
+               color: var(--accent);
+               text-decoration: underline;
+          }
+
+          main blockquote {
+               border-left: 4px solid var(--accent);
+               padding-left: 1em;
+               margin: 1em 0;
+               color: #666;
+          }
+
+          main hr {
+               border: none;
+               border-top: 2px solid #e0e0e0;
+               margin: 2em 0;
+          }
+
+          main pre {
+               background: #1a1a1a !important;
+               padding: 14px;
+               border-radius: 8px;
+               overflow-x: auto;
+               margin: 1em 0;
+          }
+
+          main pre code {
+               background: transparent !important;
+               padding: 0 !important;
+               color: #fff !important;
           }
 
           main code {
-               background: #f5f5f5;
-               color: var(--accent);
-               padding: 0.25em 0.5em;
+               background: #f0f0f0;
+               padding: 2px 6px;
                border-radius: 4px;
-               border: 1px solid #ddd;
-               font-size: 0.95em;
+               font-family: "Roboto Mono", monospace;
           }
 
-          pre {
-               background: #282c34;
-               color: #dfe6ee;
-               padding: 16px;
-               border-radius: var(--radius);
-               border-left: 4px solid var(--accent);
-               overflow-x: auto;
-               margin: 1.2em 0;
+          main img {
+               max-width: 100%;
+               height: auto;
+               display: block;
+               margin: 1em 0;
           }
 
           footer {
@@ -174,56 +243,75 @@
           }
 
           footer a {
-               color: inherit;
+               color: #666;
+               text-decoration: none;
+          }
+
+          main a {
                text-decoration: none;
           }
      </style>
 </head>
 
 <body>
+
      <nav>
-          <div class="navbar-logo">
-               <img src="./img/goathome.png" alt="@devcaffe logo" />
-          </div>
+          <img src="./img/goathome.png" width="34" height="34" style="border-radius:6px;background:#fff;padding:3px;">
      </nav>
 
      <div class="page-links" id="pageLinks"></div>
 
      <main id="content">
-          <h1>Carregando conteúdo...</h1>
+          <h1>Carregando...</h1>
      </main>
 
      <footer>
-          <p><a style="text-transform: uppercase;" href="https://github.com/devgbr86"
-                    target="_blank">github.com/devgbr86</a></p>
+          <a style="text-transform:uppercase;" href="https://github.com/devgbr86" target="_blank">
+               github.com/devgbr86
+          </a>
      </footer>
 
      <script>
           const files = [
                { name: "Home.md", label: "Home" },
                { name: "Ebook.md", label: "Ebooks" },
-
-
-               { name: "Mail.md", label: "@Mail" }
+               { name: "Mail.md", label: "@Mail" },
           ];
 
           const folder = "pages/";
           const content = document.getElementById("content");
 
+          marked.setOptions({
+               breaks: true,
+               gfm: true,
+               headerIds: true,
+               mangle: false
+          });
+
           function removeEmojis(text) {
-               return text.replace(/[\p{Extended_Pictographic}]/gu, "").trim();
+               return text.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDDFF])/g, "");
           }
 
           async function loadMarkdown(file) {
                try {
                     const res = await fetch(folder + file);
-                    let md = removeEmojis(await res.text());
-                    let html = DOMPurify.sanitize(marked.parse(md));
+                    if (!res.ok) throw new Error('Arquivo não encontrado');
+
+                    let md = await res.text();
+                    md = removeEmojis(md);
+
+                    let html = marked.parse(md);
+                    html = DOMPurify.sanitize(html);
+
                     content.innerHTML = html;
-                    content.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
+
+                    content.querySelectorAll("pre code").forEach(el => {
+                         hljs.highlightElement(el);
+                    });
+
                     window.scrollTo({ top: 0, behavior: "smooth" });
                } catch (err) {
-                    content.innerHTML = "<h1>Erro ao carregar página.</h1>";
+                    content.innerHTML = "<h1>Erro ao carregar</h1><p>" + err.message + "</p>";
                }
           }
 
@@ -244,6 +332,7 @@
 
           loadMarkdown(files[0].name);
      </script>
+
 </body>
 
 </html>
