@@ -1,6 +1,6 @@
 <p align="left">
   <img src="./img/git.png" alt="Logo da newsletter" 
-  style="max-width: 20%; max-height: 20%;">
+  style="width: 24%; height: 24%;">
   <br>
 </p>
 
@@ -14,7 +14,7 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
 
 <p align="left">
   <img src="./img/vscode.png" alt="Logo da newsletter" 
-  style="max-width: 20%; max-height: 20%;">
+  style="max-width: 24%; max-height: 24%;">
   <br>
 </p>
 

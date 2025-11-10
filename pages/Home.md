@@ -1,23 +1,28 @@
-
-
-
-
-
-
-
-
 # Guilherme Ribeiro
 
 Programador e Desenvolvedor com experiência
 em: **JavaScript, Node.js, Marked.js, TailwindCSS, 
 Java, Flutter, além de versionamento
-utilizando Git, produção e edição de Ebooks**.       
+utilizando Git.**    
+
+
+Experiência na produção e edição de eBooks usando Markdown e Pandoc,
+garantindo padronização, qualidade tipográfica
+e conversões consistentes entre formatos.
+
+Para este Portifólio utilizei uma Stack Front-end para
+site estáticos profissionais, baseada em:
+- Marked.js
+- Highlight.js
+- TailwindCSS
+- Katex/Mermaid.js (opcional)
+- DOMPurify
 
 
 
 
-- Compartilho meus códigos e projetos no repositório GitHub       
-[github.com/devgbr86](https://github.com/devgbr86)    
+
+Compartilho meus códigos e projetos no repositório [github.com/devgbr86](https://github.com/devgbr86)    
 
 
 
