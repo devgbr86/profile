@@ -63,18 +63,13 @@
 
           .page-link {
                padding: 8px 14px;
-               background: var(--accent);
-               color: #fff;
+               background: #fff;
+               color: #000;
                border-radius: var(--radius);
                font-weight: 500;
                text-decoration: none;
                cursor: pointer;
                display: inline-block;
-          }
-
-          .page-link.active {
-               background: #000;
-               font-weight: 700;
           }
 
           main {
@@ -251,7 +246,7 @@
 <body>
 
      <nav>
-          <img src="./img/goathome.png" width="34" height="34" style="border-radius:6px;background:#fff;padding:3px;">
+          <img src="./img/goat.png" width="34" height="34" style="border-radius:6px;background:#fff;padding:3px;">
           <div class="page-links" id="pageLinks"></div>
      </nav>
 
@@ -260,20 +255,14 @@
      </main>
 
      <footer>
-          <a style="text-transform:uppercase;" href="https://github.com/devgbr86" target="_blank">
-               github.com/devgbr86
+          <a style="text-transform:uppercase;" href="https://devgbr86.github.io/profile">
+               devgbr86.github.io/profile
           </a>
      </footer>
 
      <script>
-          const files = [
-               { name: "Home.md", label: "Home" },
-               { name: "Ebook.md", label: "Ebooks" },
-               { name: "Mail.md", label: "Mail" },
-          ];
-
-          const folder = "pages/";
           const content = document.getElementById("content");
+          const linksContainer = document.getElementById("pageLinks");
 
           marked.setOptions({
                breaks: true,
@@ -286,10 +275,29 @@
                return text.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDDFF])/g, "");
           }
 
-          async function loadMarkdown(file) {
+          function createNavLinksFromHTML() {
+               linksContainer.innerHTML = '';
+               const h2Elements = content.querySelectorAll("h2");
+
+               h2Elements.forEach((h2, i) => {
+                    const a = document.createElement("a");
+                    a.textContent = h2.textContent;
+                    a.className = "page-link";
+                    a.onclick = e => {
+                         e.preventDefault();
+
+                         const navHeight = 80;
+                         const targetPosition = h2.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                         window.scrollTo({ top: targetPosition, behavior: "smooth" });
+                    };
+                    linksContainer.appendChild(a);
+               });
+          }
+
+          async function loadMarkdown() {
                try {
-                    const res = await fetch(folder + file);
-                    if (!res.ok) throw new Error('Arquivo não encontrado');
+                    const res = await fetch("Home.md");
+                    if (!res.ok) throw new Error('Arquivo main.md não encontrado');
 
                     let md = await res.text();
                     md = removeEmojis(md);
@@ -303,28 +311,15 @@
                          hljs.highlightElement(el);
                     });
 
+                    createNavLinksFromHTML();
+
                     window.scrollTo({ top: 0, behavior: "smooth" });
                } catch (err) {
                     content.innerHTML = "<h1>Erro ao carregar</h1><p>" + err.message + "</p>";
                }
           }
 
-          const linksContainer = document.getElementById("pageLinks");
-          files.forEach((f, i) => {
-               const a = document.createElement("a");
-               a.textContent = f.label;
-               a.href = "#";
-               a.className = "page-link" + (i === 0 ? " active" : "");
-               a.onclick = e => {
-                    e.preventDefault();
-                    document.querySelectorAll(".page-link").forEach(x => x.classList.remove("active"));
-                    a.classList.add("active");
-                    loadMarkdown(f.name);
-               };
-               linksContainer.appendChild(a);
-          });
-
-          loadMarkdown(files[0].name);
+          loadMarkdown();
      </script>
 
 </body>
