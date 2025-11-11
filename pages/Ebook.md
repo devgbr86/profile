@@ -15,9 +15,11 @@
 
 
 
-Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.[PREÇO: 49,00 REAIS - EPUB/PDF]      
+Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.
+- [PREÇO: 49,00 REAIS - EPUB/PDF]      
 
 
+---
 
 
 ### Visual Studio Code - Tutorial [2025]
@@ -27,16 +29,21 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
 
 </p>
 
-O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.[PREÇO: 49,00 REAIS - EPUB/PDF]  
+O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.
+- [PREÇO: 49,00 REAIS - EPUB/PDF]  
 
 
 
 ---
 
 
-## Contato
+
+## Contato para Vendas
 
 - Atendimento direto comigo
-- Whatsapp: 31 - 996981103 ou topverbs@gmail.com
+- Envio imediato
+- WhatsApp: (31) 99698-1103
+- E-mail: topverbs@gmail.com
+
 
 
