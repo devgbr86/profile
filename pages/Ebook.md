@@ -9,7 +9,7 @@
 </p>
 
 ### Git e GitHub - Tutorial [2025]
-- [https://go.hotmart.com/L102836385C](https://go.hotmart.com/L102836385C)
+- [https://pay.kiwify.com.br/lvM4yS7](https://pay.kiwify.com.br/lvM4yS7)
 
 
 Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.       
@@ -23,7 +23,7 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
 </p>
 
 ### Visual Studio Code - Tutorial [2025]
-- [https://go.hotmart.com/C102836496S](https://go.hotmart.com/C102836496S)
+- [https://pay.kiwify.com.br/6DQrJIa](https://pay.kiwify.com.br/6DQrJIa)
 
 
 O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.
