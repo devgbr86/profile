@@ -2,34 +2,41 @@
 
 
 
-<p align="left">
-  <img src="./img/github.png" alt="Logo da newsletter" 
-  style="width: 24%; height: 24%;">
-  <br>
-</p>
 
 ### Git e GitHub - Tutorial [2025]
-- [https://pay.kiwify.com.br/lvM4yS7](https://pay.kiwify.com.br/lvM4yS7)
-
-
-Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.       
-
 
 
 <p align="left">
-  <img src="./img/vscode.png" alt="Logo da newsletter" 
-  style="max-width: 24%; max-height: 24%;">
-  <br>
+  <img src="./img/github.png" alt="Logo da newsletter" 
+  style="width: 21%; height: 21%;">
+ 
+ 
 </p>
 
+
+
+Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.[PREÇO: 49,00 REAIS - EPUB/PDF]      
+
+
+
+
 ### Visual Studio Code - Tutorial [2025]
-- [https://pay.kiwify.com.br/6DQrJIa](https://pay.kiwify.com.br/6DQrJIa)
+<p align="left">
+    <img src="./img/vscode.png" alt="Logo da newsletter" 
+  style="max-width: 21%; max-height: 21%;">
+
+</p>
+
+O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.[PREÇO: 49,00 REAIS - EPUB/PDF]  
 
 
-O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.
+
+---
 
 
+## Contato
 
-
+- Atendimento direto comigo
+- Whatsapp: 31 - 996981103 ou topverbs@gmail.com
 
 

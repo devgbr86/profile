@@ -20,12 +20,22 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 
 
 
+---
 
-<p><br>
-Compartilho meus códigos e projetos no repositório  
-</p>
 
-- [github.com/devgbr86](https://github.com/devgbr86)  
+- [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
+
+
+
+
+- topverbs@gmail.com      
+
+
+
+
+- [github.com/devgbr86](https://github.com/devgbr86)    
+
+   
 
 
 
