@@ -26,9 +26,7 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 - [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
 
 
-
-
-- topverbs@gmail.com      
+  
 
 
 
