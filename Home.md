@@ -39,7 +39,7 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 
 
 <p align="left">
-  <img src="./img/github.png" alt="Logo da newsletter" 
+  <img src="./img/img01.png" alt="Logo da newsletter" 
   style="width: 21%; height: 21%;">
  
  
@@ -65,7 +65,7 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
 
 ### Visual Studio Code - Tutorial [2025]
 <p align="left">
-    <img src="./img/vscode.png" alt="Logo da newsletter" 
+    <img src="./img/img02.png" alt="Logo da newsletter" 
   style="max-width: 21%; max-height: 21%;">
 
 </p>
