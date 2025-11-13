@@ -49,7 +49,7 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 
 Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do controle de versão e da colaboração em projetos de software. Ele cobre fundamentos essenciais como commits, branches e merges, além de fluxos modernos de trabalho. Também apresenta os recursos mais recentes do GitHub, incluindo melhorias de colaboração e automação. É um material ideal para iniciantes e para quem busca dominar as práticas atualizadas do ecossistema.
 
-- PREÇO 49,00 REAIS
+- PREÇO: 49,00 REAIS
 - Atendimento direto/Envio imediato
 - Formatos EPUB/PDF
 
@@ -71,7 +71,7 @@ Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do contro
 O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias da versão 2025. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
 
 
-- PREÇO 49,00 REAIS
+- PREÇO: 49,00 REAIS
 - Atendimento direto/Envio imediato
 - Formatos EPUB/PDF
 
