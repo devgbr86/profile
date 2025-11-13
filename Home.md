@@ -47,9 +47,7 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 
 
 
-Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes, programadores e desenvolvedores que desejam dominar o controle de versão e a colaboração em projetos de software. Aprenda desde os conceitos básicos até as técnicas avançadas de gerenciamento de código-fonte com Git, e descubra como utilizar eficientemente a plataforma GitHub para hospedar, compartilhar e colaborar em seus projetos.
-
-
+Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do controle de versão e da colaboração em projetos de software. Ele cobre fundamentos essenciais como commits, branches e merges, além de fluxos modernos de trabalho. Também apresenta os recursos mais recentes do GitHub, incluindo melhorias de colaboração e automação. É um material ideal para iniciantes e para quem busca dominar as práticas atualizadas do ecossistema.
 
 - PREÇO 49,00 REAIS
 - Atendimento direto/Envio imediato
@@ -70,7 +68,7 @@ Este ebook abrangente sobre Git e GitHub é o recurso definitivo para estudantes
 
 </p>
 
-O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usado no desenvolvimento web e em contextos acadêmicos. Ele permite instalar extensões que facilitam a programação em diferentes linguagens e frameworks. Há muitos tutoriais e cursos online que ensinam desde o básico até técnicas avançadas. Sua integração com Git e ferramentas de depuração torna-o ideal para projetos acadêmicos e profissionais. Além disso, a personalização com temas e atalhos aumenta a produtividade e o aprendizado.
+O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias da versão 2025. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
 
 
 - PREÇO 49,00 REAIS
@@ -110,6 +108,7 @@ O Visual Studio Code (VSCode) é um editor de código leve e poderoso, muito usa
 
 - [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
 - [github.com/devgbr86](https://github.com/devgbr86)
+- topverbs@gmail.com
 
 
 
