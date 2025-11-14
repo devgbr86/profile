@@ -36,7 +36,7 @@ Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do contro
 
 </p>
 
-O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
+Este ebook sobre Visual Studio Code em 2025 oferece uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
 
 
 - PREÇO: 49,00 REAIS
@@ -71,8 +71,8 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 
-- [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
-- [github.com/devgbr86](https://github.com/devgbr86)
+- [LINKEDIN](https://www.linkedin.com/in/devgbr)    
+- [GITHUB](https://github.com/devgbr86)
 
 
 
@@ -91,7 +91,7 @@ Experiência na produção e edição de eBooks usando Markdown e Pandoc, garant
 
 
 
-Para este Portifólio utilizei uma Stack Front-end para site estáticos profissionais, baseada em:
+Para este Portifólio utilizei uma Stack Front-end para sites estáticos, baseada em:
 - Marked.js
 - Highlight.js
 - TailwindCSS
