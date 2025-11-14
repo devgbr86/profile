@@ -19,7 +19,9 @@
 Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do controle de versão e da colaboração em projetos de software. Ele cobre fundamentos essenciais como commits, branches e merges, além de fluxos modernos de trabalho. Também apresenta os recursos mais recentes do GitHub, incluindo melhorias de colaboração e automação. É um material ideal para iniciantes e para quem busca dominar as práticas atualizadas do ecossistema.
 
 - PREÇO: 49,00 REAIS
-
+- Formatos EPUB/PDF
+- Atendimento direto/Envio imediato
+- E-mail: topverbs@gmail.com
 
 
 
@@ -38,6 +40,9 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 - PREÇO: 49,00 REAIS
+- Formatos EPUB/PDF
+- Atendimento direto/Envio imediato
+- E-mail: topverbs@gmail.com
 
 
 
@@ -58,15 +63,6 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 
-### Contato para Vendas
-
-
-- E-mail: topverbs@gmail.com
-- Atendimento direto/Envio imediato
-- Formatos EPUB/PDF
-
-
-
 
 
 
@@ -77,7 +73,7 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 - [linkedin.com/in/devgbr](https://www.linkedin.com/in/devgbr)    
 - [github.com/devgbr86](https://github.com/devgbr86)
-- topverbs@gmail.com
+
 
 
 ---
