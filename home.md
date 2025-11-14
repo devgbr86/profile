@@ -1,3 +1,37 @@
+# SOBRE
+
+
+Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, Marked.js, TailwindCSS, Frameworks e Tecnologias para sites estáticos profissionais, além de versionamento utilizando Git.**    
+
+
+
+Experiência na produção e edição de eBooks usando Markdown e Pandoc, garantindo padronização, qualidade tipográfica e conversões consistentes entre formatos.
+
+
+
+
+
+Para este Portifólio utilizei uma Stack Front-end para sites estáticos, baseada em:
+- Marked.js
+- Highlight.js
+- TailwindCSS
+- OpenPropsCSS
+- DOMPurify
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
 # EBOOKS 
 
 
@@ -82,38 +116,14 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
 
 
 
----
-
-## Sobre
 
 
-Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência em **JavaScript, Node.js, Marked.js, TailwindCSS, Java, Flutter, além de versionamento utilizando Git.**    
-
-
-
-Experiência na produção e edição de eBooks usando Markdown e Pandoc, garantindo padronização, qualidade tipográfica e conversões consistentes entre formatos.
-
-
-
-
-
-Para este Portifólio utilizei uma Stack Front-end para sites estáticos, baseada em:
-- Marked.js
-- Highlight.js
-- TailwindCSS
-- OpenPropsCSS
-- DOMPurify
 
 
 
 
 
 ---
-
-
-
-
-
 
 
 
