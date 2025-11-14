@@ -1,6 +1,19 @@
 # SOBRE
 
 
+
+
+
+<p align="center">
+  <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
+  width: 125px; height: 125px;">
+</p>
+
+
+
+
+
+
 Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, Marked.js, TailwindCSS, Frameworks e Tecnologias para sites estáticos profissionais, além de versionamento utilizando Git.**    
 
 
@@ -123,7 +136,6 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
 
 
 
----
 
 
 
@@ -133,12 +145,4 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
 
 
 
-
-
-
-
-<p align="center">
-  <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
-  width: 125px; height: 125px;">
-</p>
 
