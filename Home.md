@@ -8,7 +8,7 @@
 
 
 <p align="left">
-  <img src="./img/img01.png" alt="Logo da newsletter" 
+  <img src="./img/imga1.png" alt="Logo da newsletter" 
   style="width: 21%; height: 21%;">
  
  
@@ -31,7 +31,7 @@ Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do contro
 
 
 <p align="left">
-    <img src="./img/img02.png" alt="Logo da newsletter" 
+    <img src="./img/imga2.png" alt="Logo da newsletter" 
   style="max-width: 21%; max-height: 21%;">
 
 </p>
