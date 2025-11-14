@@ -1,41 +1,10 @@
-# Guilherme Ribeiro
-
-Programador e Desenvolvedor com experiência em: **JavaScript, Node.js, Marked.js, TailwindCSS, Java, Flutter, além de versionamento utilizando Git.**    
-
-
-
-Experiência na produção e edição de eBooks usando Markdown e Pandoc, garantindo padronização, qualidade tipográfica e conversões consistentes entre formatos.
-
-
-
-
-
-Para este Portifólio utilizei uma Stack Front-end para site estáticos profissionais, baseada em:
-- Marked.js
-- Highlight.js
-- TailwindCSS
-- Katex/Mermaid.js (opcional)
-- DOMPurify
-
-
-
-
----
-
-
-
-
-   
+## EBOOKS 
 
 
 
 
 
 
-
-
-
-### Git e GitHub - Tutorial [2025]
 
 
 <p align="left">
@@ -61,14 +30,13 @@ Este ebook sobre Git e GitHub em 2025 traz uma visão completa e atual do contro
 ---
 
 
-### Visual Studio Code - Tutorial [2025]
 <p align="left">
     <img src="./img/img02.png" alt="Logo da newsletter" 
   style="max-width: 21%; max-height: 21%;">
 
 </p>
 
-O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias da versão 2025. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
+O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução prática e atualizada ao editor mais utilizado por estudantes e desenvolvedores. O conteúdo apresenta instalação, configuração inicial, produtividade com extensões e personalização do ambiente. Também aborda integração com Git, atalhos modernos, recursos recentes e melhorias. É um guia direto para quem deseja estudar, organizar projetos e otimizar seu fluxo de trabalho no VS Code.
 
 
 - PREÇO: 49,00 REAIS
@@ -93,6 +61,13 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 
+
+
+
+
+
+
+
 ### Contato para Vendas
 
 - E-mail: topverbs@gmail.com
@@ -102,7 +77,8 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 
-## Contato
+## CONTATO
+
 
 
 
@@ -111,11 +87,46 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 - topverbs@gmail.com
 
 
+---
+
+### Sobre
+
+
+Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência em **JavaScript, Node.js, Marked.js, TailwindCSS, Java, Flutter, além de versionamento utilizando Git.**    
+
+
+
+Experiência na produção e edição de eBooks usando Markdown e Pandoc, garantindo padronização, qualidade tipográfica e conversões consistentes entre formatos.
+
+
+
+
+
+Para este Portifólio utilizei uma Stack Front-end para site estáticos profissionais, baseada em:
+- Marked.js
+- Highlight.js
+- TailwindCSS
+- Katex/Mermaid.js (opcional)
+- DOMPurify
+
 
 
 
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
