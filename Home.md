@@ -94,7 +94,7 @@ Experiência na produção e edição de eBooks usando Markdown e Pandoc, garant
 Para este Portifólio utilizei uma Stack Front-end para sites estáticos, baseada em:
 - Marked.js
 - Highlight.js
-- Open PropsCSS
+- OpenPropsCSS
 - TailwindCSS
 - DOMPurify
 
