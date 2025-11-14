@@ -33,8 +33,8 @@ function createNavLinksFromHTML() {
 
 async function loadMarkdown() {
      try {
-          const res = await fetch("Home.md");
-          if (!res.ok) throw new Error('Arquivo main.md não encontrado');
+          const res = await fetch("home.md");
+          if (!res.ok) throw new Error('Arquivo home.md não encontrado');
 
           let md = await res.text();
           md = removeEmojis(md);
