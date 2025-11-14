@@ -276,17 +276,17 @@
 
           function createNavLinksFromHTML() {
                linksContainer.innerHTML = '';
-               const h2Elements = content.querySelectorAll("h2");
+               const h1Elements = content.querySelectorAll("h1");
 
-               h2Elements.forEach((h2, i) => {
+               h1Elements.forEach((h1, i) => {
                     const a = document.createElement("a");
-                    a.textContent = h2.textContent;
+                    a.textContent = h1.textContent;
                     a.className = "page-link";
                     a.onclick = e => {
                          e.preventDefault();
 
                          const navHeight = 80;
-                         const targetPosition = h2.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                         const targetPosition = h1.getBoundingClientRect().top + window.pageYOffset - navHeight;
                          window.scrollTo({ top: targetPosition, behavior: "smooth" });
                     };
                     linksContainer.appendChild(a);

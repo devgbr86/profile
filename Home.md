@@ -1,4 +1,4 @@
-## EBOOKS 
+# EBOOKS 
 
 
 
@@ -66,7 +66,7 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 
 
-## CONTATO
+# CONTATO
 
 
 
@@ -78,7 +78,7 @@ O Visual Studio Code 2025 é o foco deste ebook, oferecendo uma introdução pr�
 
 ---
 
-### Sobre
+## Sobre
 
 
 Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência em **JavaScript, Node.js, Marked.js, TailwindCSS, Java, Flutter, além de versionamento utilizando Git.**    
