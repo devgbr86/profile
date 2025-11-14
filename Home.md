@@ -95,7 +95,6 @@ Para este Portifólio utilizei uma Stack Front-end para site estáticos profissi
 - Marked.js
 - Highlight.js
 - TailwindCSS
-- Katex/Mermaid.js (opcional)
 - DOMPurify
 
 
