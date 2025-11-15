@@ -73,13 +73,13 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
 
 
 
-  
+
+
+
 
 
 - Git e GitHub Exercícios Práticos Tutorial 2025
-  - Introdução e Fundamentos
-  - Exercícios organizados por Níveis de Dificuldade
-  - Recursos e Referências
+  - Introdução e Fundamentos; Exercícios organizados por Níveis de Dificuldade; Recursos e Referências
   - EPUB/PDF
   - 49,00 REAIS
 
@@ -88,11 +88,9 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
   
   
 - Visual Studio Code Exercícios Práticos Tutorial 2025
-  - Introdução e Fundamentos
-  - Exercícios organizados por Níveis de Dificuldade
-  - Recursos e Referências
+  - Introdução e Fundamentos; Exercícios organizados por Níveis de Dificuldade; Recursos e Referências
   - EPUB/PDF
-  - 49,00 REAIS  
+  - 49,00 REAIS
 
 
 
