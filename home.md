@@ -23,7 +23,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-Para este Portifólio utilizei uma Stack Front-end, baseada em:
+Para este Portfólio utilizei uma Stack Front-end, baseada em:
 - Marked.js
 - Highlight.js
 - TailwindCSS
