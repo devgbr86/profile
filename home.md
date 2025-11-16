@@ -14,7 +14,7 @@
 
 
 
-Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, Marked.js, TailwindCSS, Frameworks e Tecnologias para sites estáticos profissionais, produção e edição de eBooks utilizando Markdown e Pandoc, além de versionamento utilizando Git**.    
+Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, Marked.js, TailwindCSS, Frameworks e Tecnologias para sites estáticos, produção e edição de eBooks utilizando Markdown e Pandoc, além de versionamento utilizando Git**.    
 
 
 
@@ -54,10 +54,10 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-### Desenvolvimento de Sites Estáticos
-- Criação de sites **totalmente responsivos**.  
-- **Práticos para editar**, com uma estrutura focada na experiência do usuário.
-- Sites rápidos, seguros e otimizados.
+### Front-end Sites Estáticos Profissionais
+- **Criação de sites totalmente responsivos**  
+- **Projeto com Estrutura prática para Modificações**
+- **Sites rápidos, seguros e otimizados**
   - HTML/CSS
   - JavaScript
   - Marked.js
@@ -71,8 +71,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 ### Produção e Edição de eBooks
-- Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**.  
-- Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
+- Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**. Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
 - [Front-end eBook Tutorial](https://github.com/devgbr86/profile/releases)
 
 
