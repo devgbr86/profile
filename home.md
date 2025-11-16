@@ -64,7 +64,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
   - TailwindCSS
   - OpenPropsCSS
   - DOMPurify
-- [Template Cafeteria Grãos&Aromas](https://devgbr86.github.io/coffee-shop)
+- [Site/Template Cafeteria](https://devgbr86.github.io/coffee-shop)
 
 
 
