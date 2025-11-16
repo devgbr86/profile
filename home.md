@@ -70,7 +70,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-### Produção e Edição de eBooks
+### Produção e Edição eBooks
 - Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**. Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
 - [Front-end eBook Tutorial](https://github.com/devgbr86/profile/releases)
 
