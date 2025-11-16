@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
-  width: 125px; height: 125px;">
+  width: 145px; height: 145px;">
 </p>
 
 
@@ -23,16 +23,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-Para este Portfólio utilizei uma Stack Front-end, baseada em:
-- Marked.js
-- Highlight.js
-- TailwindCSS
-- OpenPropsCSS
-- DOMPurify
-
-
-
-
 
 ---
 
@@ -44,30 +34,7 @@ Para este Portfólio utilizei uma Stack Front-end, baseada em:
 
 
 
-# EBOOKS 
-
-
-
-
-
-
-
-
-<p align="center">
-  <img src="./assets/goldenbook.png" alt="Banner" 
-  style="width: 175px; height: 175px; border-radius: 50%;">
-
- 
- 
-</p>
-
-
-
-O **ebook *Git e GitHub – Exercícios Práticos Tutorial 2025*** apresenta, de forma mais direta e compacta, os conceitos essenciais de controle de versão e colaboração. Ele aborda commits, branches, merges e fluxos modernos de trabalho, além dos recursos recentes do GitHub.
-
-
-
-O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complementa o aprendizado com uma introdução prática ao editor mais utilizado por estudantes e desenvolvedores. Traz instalação, configuração, extensões, produtividade, personalização e integração com Git, sempre com foco em exercícios guiados e atualizados.
+# SERVIÇOS 
 
 
 
@@ -77,24 +44,46 @@ O **ebook *Visual Studio Code – Exercícios Práticos Tutorial 2025*** complem
 
 
 
-- Git e GitHub Exercícios Práticos Tutorial 2025
-  - Introdução e Fundamentos; Exercícios organizados por Níveis de Dificuldade; Recursos e Referências
-  - EPUB/PDF
-  - 49,00 REAIS
-
-
-
-  
-  
-- Visual Studio Code Exercícios Práticos Tutorial 2025
-  - Introdução e Fundamentos; Exercícios organizados por Níveis de Dificuldade; Recursos e Referências
-  - EPUB/PDF
-  - 49,00 REAIS
 
 
 
 
-- **Atendimento direto/Envio imediato**
+
+
+
+
+
+
+### Desenvolvimento de Sites Estáticos
+- Criação de sites totalmente responsivos.  
+- Prático para editar, com uma estrutura focada na experiência do usuário.
+- Sites rápidos, seguros e otimizados.
+  - HTML/CSS
+  - JavaScript
+  - Marked.js
+  - TailwindCSS
+  - OpenPropsCSS
+  - DOMPurify
+- Template Cafeteria: https://devgbr86.github.io/coffee-shop/
+
+
+
+
+### Produção e Edição de eBooks
+- Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**.  
+- Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
+- Front-end Tutorial eBook: https://github.com/devgbr86/profile/releases/
+
+
+
+
+--- 
+
+
+
+- Atendimento direto e envio rápido de arquivos digitais.  
+- Personalização de projetos conforme a necessidade do cliente.  
+- Experiência em versionamento e manutenção com **Git**.
 - **E-mail: topverbs@gmail.com**
 
 
