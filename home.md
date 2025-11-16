@@ -55,8 +55,8 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 ### Desenvolvimento de Sites Estáticos
-- Criação de sites totalmente responsivos.  
-- Prático para editar, com uma estrutura focada na experiência do usuário.
+- Criação de sites **totalmente responsivos**.  
+- **Práticos para editar**, com uma estrutura focada na experiência do usuário.
 - Sites rápidos, seguros e otimizados.
   - HTML/CSS
   - JavaScript
@@ -64,7 +64,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
   - TailwindCSS
   - OpenPropsCSS
   - DOMPurify
-- Template Cafeteria: https://devgbr86.github.io/coffee-shop/
+- Template Cafeteria: https://devgbr86.github.io/coffee-shop
 
 
 
@@ -72,7 +72,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 ### Produção e Edição de eBooks
 - Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**.  
 - Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
-- Front-end Tutorial eBook: https://github.com/devgbr86/profile/releases/
+- Front-end Tutorial eBook: https://github.com/devgbr86/profile/releases
 
 
 
