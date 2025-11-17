@@ -14,7 +14,7 @@
 
 
 
-Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, Marked.js, TailwindCSS, Frameworks e Tecnologias para sites estáticos, produção e edição de eBooks utilizando Markdown e Pandoc, além de versionamento utilizando Git**.    
+Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, TailwindCSS, Frameworks e Tecnologias para sites estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando Git**.    
 
 
 
@@ -54,25 +54,23 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-### Front-end Sites Estáticos Profissionais
+### Sites e Templates Estáticos 
 - **Criação de sites totalmente responsivos**  
 - **Projeto com Estrutura prática para Modificações**
 - **Sites rápidos, seguros e otimizados**
   - HTML/CSS
   - JavaScript
   - Marked.js
-  - TailwindCSS
-  - OpenPropsCSS
-  - DOMPurify
-- [Site/Template Cafeteria](https://devgbr86.github.io/coffee-shop)
+  - Bibliotecas e Frameworks para sites estáticos
+- [Site/Template Cafeteria](https://devgbr86.github.io/static-template)
 
 
 
 
 
-### Produção e Edição eBooks
+### eBooks Produção e Edição
 - Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**. Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
-- [Front-end eBook Tutorial](https://github.com/devgbr86/profile/releases)
+- [eBook Tutorial](https://github.com/devgbr86/profile/releases)
 
 
 
@@ -81,7 +79,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com exp
 
 
 
-- Atendimento direto e envio rápido de arquivos digitais.  
+- Atendimento direto e envio rápido de arquivos **ZIP**.  
 - Personalização de projetos conforme a necessidade do cliente.  
 - Experiência em versionamento e manutenção com **Git**.
 - **E-mail: topverbs@gmail.com**
