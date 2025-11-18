@@ -14,7 +14,7 @@
 
 
 
-Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor Front-end com experiência em **HTML/CSS, JavaScript, TailwindCSS, Frameworks e Tecnologias para sites estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando Git**.    
+Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência em **HTML/CSS, JavaScript, TailwindCSS, Frameworks e Tecnologias Front-end para sites estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando Git**.    
 
 
 
