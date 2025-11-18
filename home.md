@@ -79,16 +79,16 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
+
 - Atendimento direto e envio rápido de arquivos **ZIP**.  
 - Personalização de projetos conforme a necessidade do cliente.  
 - Experiência em versionamento e manutenção com **Git**.
-- **E-mail: topverbs@gmail.com**
 
 
 
 
 
----
+
 
 
 
@@ -108,23 +108,12 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 # CONTATO
 
+- **E-mail: topverbs@gmail.com**
 
-
+---
 
 - [LINKEDIN](https://www.linkedin.com/in/devgbr)    
 - [GITHUB](https://github.com/devgbr86)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
