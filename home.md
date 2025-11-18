@@ -4,7 +4,7 @@
 
 
 
-<p align="center">
+<p align="left">
   <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
   width: 145px; height: 145px;">
 </p>
