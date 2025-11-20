@@ -70,7 +70,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 ### Produção de eBooks
 - Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**. Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
-- [eBook Shop](https://devgbr86.github.io/ebook)
+- [eBook Tutorial](https://devgbr86.github.io/ebook)
 
 
 
@@ -117,9 +117,9 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 ---
 
-- [LINKEDIN](https://www.linkedin.com/in/devgbr)    
 - [GITHUB](https://github.com/devgbr86)
-
+- [LINKEDIN](https://www.linkedin.com/in/devgbr)    
+- [INSTAGRAM](https://www.instagram.com/frontdevkit)
 
 
 
