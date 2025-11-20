@@ -1,4 +1,5 @@
 // marked.js - Processamento de Markdown e Highlight de código
+
 export function parseMarkdown(markdown) {
      marked.setOptions({
           breaks: true,

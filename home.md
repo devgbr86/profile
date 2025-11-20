@@ -6,7 +6,7 @@
 
 <p align="left">
   <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
-  width: 145px; height: 145px;">
+  max-width: 145px; max-height: 145px;">
 </p>
 
 
@@ -120,7 +120,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 - [GITHUB](https://github.com/devgbr86)
 - [LINKEDIN](https://www.linkedin.com/in/devgbr)    
 - [INSTAGRAM](https://www.instagram.com/frontdevkit)
-
 
 
 

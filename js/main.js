@@ -30,7 +30,7 @@ function createNavLinksFromHTML() {
 
 async function loadMarkdown() {
      try {
-          const res = await fetch("home.md");
+          const res = await fetch("./home.md");
           if (!res.ok) throw new Error('Arquivo home.md não encontrado');
 
           let md = await res.text();
@@ -41,13 +41,23 @@ async function loadMarkdown() {
 
           content.innerHTML = html;
 
-          highlightCode(content);
+          // Aguarda um pouco para garantir que o DOM foi atualizado
+          setTimeout(() => {
+               highlightCode(content);
+          }, 100);
+
           createNavLinksFromHTML();
 
           window.scrollTo({ top: 0, behavior: "smooth" });
      } catch (err) {
           content.innerHTML = "<h1>Erro ao carregar</h1><p>" + err.message + "</p>";
+          console.error('Erro completo:', err);
      }
 }
 
-loadMarkdown();
+// Aguarda o DOM estar pronto
+if (document.readyState === 'loading') {
+     document.addEventListener('DOMContentLoaded', loadMarkdown);
+} else {
+     loadMarkdown();
+}
