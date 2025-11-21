@@ -55,10 +55,10 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 ### Sites e Templates Estáticos
-- **Perfeito para Portfólios e Páginas de Serviços**
-- **Sites totalmente responsivos**  
-- **Projeto com Estrutura prática para modificações**
-- **Sites rápidos e seguros**
+- **Perfeito para Portfólios**
+- **Sites Totalmente Responsivos**  
+- **Otimizados para Manutenção**
+- **Rápidos e Seguros**
   - HTML/CSS
   - JavaScript
   - Marked.js
