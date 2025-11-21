@@ -54,14 +54,15 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-### Sites e Templates Estáticos 
-- **Criação de sites totalmente responsivos**  
-- **Projeto com Estrutura prática para Modificações**
-- **Sites rápidos, seguros e otimizados**
+### Sites e Templates Estáticos
+- **Perfeito para Portfólios e Páginas de Serviços**
+- **Sites totalmente responsivos**  
+- **Projeto com Estrutura prática para modificações**
+- **Sites rápidos e seguros**
   - HTML/CSS
   - JavaScript
   - Marked.js
-  - Bibliotecas e Frameworks para sites estáticos
+  - TailwindCSS e outras tecnologias para sites estáticos
 - [Site/Template Cafeteria](https://devgbr86.github.io/static-template)
 
 
