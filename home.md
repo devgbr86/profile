@@ -81,7 +81,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- Atendimento direto e envio rápido de arquivos **ZIP**.  
+- Atendimento direto e envio imediato de arquivos **ZIP**.  
 - Personalização de projetos conforme a necessidade do cliente.  
 - Experiência em versionamento e manutenção com **Git**.
 
