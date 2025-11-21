@@ -121,7 +121,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 - [github.com/devgbr86](https://github.com/devgbr86)
 - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
 - [LINKEDIN](https://www.linkedin.com/in/devgbr)    
-- [INSTAGRAM](https://www.instagram.com/liberdev)
 
 
 
