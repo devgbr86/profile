@@ -113,7 +113,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- [Formulário para Contato](./forms.html)
+- [Contato para Vendas](./forms.html)
 
 
 
