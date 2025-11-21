@@ -63,7 +63,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - JavaScript
   - Marked.js
   - TailwindCSS e outras tecnologias para sites estáticos
-- [Site/Template Cafeteria](https://devgbr86.github.io/static-template)
 
 
 
