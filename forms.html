@@ -22,7 +22,7 @@
 
      <main>
           <h1>Entre em Contato</h1>
-          <p>Preencha o formulário abaixo para enviar uma mensagem. Respondo assim que possível!</p>
+          <p>Preencha o formulário abaixo para enviar uma mensagem.</p>
 
           <div class="success-message" id="successMessage">
                ✓ Mensagem enviada com sucesso!
@@ -41,6 +41,17 @@
                <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required placeholder="seu@email.com">
+               </div>
+
+               <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <small style="display: block; margin-bottom: 8px; color: #888;">⚠ Escolha uma opção</small>
+                    <select id="subject" name="subject" required>
+                         <option value="">-- Selecione um assunto --</option>
+                         <option value="Dúvidas/Sugestões">01 - Dúvidas/Sugestões</option>
+                         <option value="Ebooks">02 - Ebooks</option>
+                         <option value="Sites e Templates Estáticos">03 - Sites e Templates Estáticos</option>
+                    </select>
                </div>
 
                <div class="form-group">
