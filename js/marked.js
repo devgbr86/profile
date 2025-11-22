@@ -1,4 +1,4 @@
-// marked.js - Processamento de Markdown e Highlight de código
+// marked.js - Processamento de Markdown
 
 export function parseMarkdown(markdown) {
      marked.setOptions({
@@ -9,10 +9,4 @@ export function parseMarkdown(markdown) {
      });
 
      return marked.parse(markdown);
-}
-
-export function highlightCode(container) {
-     container.querySelectorAll("pre code").forEach(el => {
-          hljs.highlightElement(el);
-     });
 }

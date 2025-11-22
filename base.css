@@ -1,0 +1,71 @@
+/* ========================================
+   BASE.CSS - Reset, Variáveis e Fundação
+   ======================================== */
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     /* Cores do projeto */
+     --bg: #f5f5f5;
+     --fg: #000;
+     --accent: #ff8c00;
+     --card-bg: #fff;
+
+     /* Sombras usando Open Props */
+     --shadow-sm: var(--shadow-2);
+     --shadow-md: var(--shadow-3);
+     --shadow-lg: var(--shadow-4);
+
+     /* Raios personalizados */
+     --radius: 10px;
+}
+
+body {
+     font-family: "Roboto Mono", monospace;
+     background: var(--bg);
+     color: var(--fg);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+}
+
+/* ========== TIPOGRAFIA BASE ========== */
+h1 {
+     font-size: var(--font-size-5);
+     font-weight: 700;
+     line-height: var(--font-lineheight-1);
+     letter-spacing: var(--font-letterspacing-0);
+}
+
+h2 {
+     font-size: var(--font-size-4);
+     font-weight: 700;
+     line-height: var(--font-lineheight-2);
+     letter-spacing: var(--font-letterspacing-1);
+}
+
+h3 {
+     font-size: var(--font-size-3);
+     font-weight: 700;
+     line-height: var(--font-lineheight-2);
+}
+
+p {
+     line-height: var(--font-lineheight-3);
+     font-size: var(--font-size-2);
+}
+
+a {
+     color: var(--accent);
+     text-decoration: none;
+     transition: opacity 0.15s ease;
+}
+
+/* ========== UTILITÁRIOS ========== */
+code {
+     font-family: "Roboto Mono", monospace;
+}

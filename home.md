@@ -113,14 +113,14 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- [Contato para Vendas](./forms.html)
+- [Envie uma mensagem ou solicite um orçamento](./forms.html)
 
 
 
 
 - [github.com/devgbr86](https://github.com/devgbr86)
 - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
-- [LINKEDIN](https://www.linkedin.com/in/devgbr)    
+- [LinkedIn](https://www.linkedin.com/in/devgbr)    
 
 
 

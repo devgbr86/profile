@@ -1,5 +1,5 @@
 // main.js - Arquivo principal que coordena tudo
-import { parseMarkdown, highlightCode } from './marked.js';
+import { parseMarkdown } from './marked.js';
 import { sanitizeHTML } from './purify.js';
 
 const content = document.getElementById("content");
@@ -40,11 +40,6 @@ async function loadMarkdown() {
           html = sanitizeHTML(html);
 
           content.innerHTML = html;
-
-          // Aguarda um pouco para garantir que o DOM foi atualizado
-          setTimeout(() => {
-               highlightCode(content);
-          }, 100);
 
           createNavLinksFromHTML();
 
