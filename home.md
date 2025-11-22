@@ -73,7 +73,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - OpenProps style
   - Tecnologias para sites estáticos
 - Personalização de projetos conforme a necessidade do cliente  
-- Experiência em versionamento e manutenção **Git**
+- Experiência em versionamento e manutenção Git
 
 
 
