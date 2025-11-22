@@ -91,7 +91,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-[**Informações e Preços**](https://github.com/devgbr86/profile/releases/download/tutorial/informacoes-precos.pdf)
+[**Informações e Preços**](./shop.html)
 
 
 
