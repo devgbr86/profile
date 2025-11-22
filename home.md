@@ -70,7 +70,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - JavaScript
   - Marked.js
   - TailwindCSS
-  - Open Props style
+  - OpenProps style
   - DOMPurify
   - Tecnologias para sites estáticos
 - Personalização de projetos conforme a necessidade do cliente  
@@ -83,7 +83,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 **Sites e Templates Estáticos Tutorial 2025** - Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
 
 
-**Produção de eBooks com Markdown e Pandoc Tutorial 2025** - Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.
+**Markdown e Pandoc Tutorial 2025** - Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.
 
 
 
