@@ -71,7 +71,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - Marked.js
   - TailwindCSS
   - OpenProps style
-  - DOMPurify
   - Tecnologias para sites estáticos
 - Personalização de projetos conforme a necessidade do cliente  
 - Experiência em versionamento e manutenção **Git**
@@ -92,7 +91,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-[**Informações e Preços**](https://github.com/devgbr86/profile/releases)
+[**Informações e Preços**](https://github.com/devgbr86/profile/releases/download/tutorial/informacoes-precos.pdf)
 
 
 
