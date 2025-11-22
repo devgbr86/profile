@@ -34,7 +34,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-# SERVIÇOS 
 
 
 
@@ -54,23 +53,31 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-### Sites e Templates Estáticos
-- **Perfeito para Portfólios**
-- **Sites Totalmente Responsivos**  
-- **Rápidos e Seguros**
+# TECHSTACK 
+- **Sites e Templates Estáticos**
+- **Totalmente Responsivos**  
 - **Otimizados para Manutenção**
+- [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
   - HTML/CSS
   - JavaScript
   - Marked.js
-  - TailwindCSS e outras tecnologias para sites estáticos
+  - TailwindCSS
+  - Open Props style
+  - DOMPurify
+  - Forms.js
+  - outras tecnologias para sites estáticos
 
 
 
 
+# EBOOK
 
-### Produção de eBooks
-- Conversão de documentos em **Markdown** para formatos como **EPUB, PDF ou MOBI**, usando **Pandoc**. Edição, padronização e formatação de conteúdos, garantindo consistência e legibilidade em diferentes dispositivos.
+**Sites e Templates Estáticos Tutorial 2025** - Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
+  - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
 
+
+**Produção de eBooks com Markdown e Pandoc Tutorial 2025** - Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.
+  - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
 
 
 
@@ -113,13 +120,12 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- [Envie uma mensagem ou solicite um orçamento](./forms.html)
+- [Contato para Vendas](./forms.html)
 
 
 
 
 - [github.com/devgbr86](https://github.com/devgbr86)
-- [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
 - [LinkedIn](https://www.linkedin.com/in/devgbr)    
 
 
