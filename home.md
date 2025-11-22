@@ -57,7 +57,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 - **Sites e Templates Estáticos**
 - **Totalmente Responsivos**  
 - **Otimizados para Manutenção**
-- [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
+- [Informações e Preços](https://github.com/devgbr86/profile/releases)
   - HTML/CSS
   - JavaScript
   - Marked.js
@@ -65,7 +65,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - Open Props style
   - DOMPurify
   - Forms.js
-  - outras tecnologias para sites estáticos
+  - tecnologias para sites estáticos
 
 
 
@@ -73,11 +73,11 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 # EBOOK
 
 **Sites e Templates Estáticos Tutorial 2025** - Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
-  - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
+  - [Informações e Preços](https://github.com/devgbr86/profile/releases)
 
 
 **Produção de eBooks com Markdown e Pandoc Tutorial 2025** - Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.
-  - [devgbr86/profile/releases](https://github.com/devgbr86/profile/releases)
+  - [Informações e Preços](https://github.com/devgbr86/profile/releases)
 
 
 
@@ -87,9 +87,9 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- Atendimento direto e envio imediato de arquivos.  
+- Envio imediato de arquivos.  
 - Personalização de projetos conforme a necessidade do cliente.  
-- Experiência em versionamento e manutenção com **Git**.
+- Experiência em versionamento e manutenção **Git**.
 
 
 
@@ -120,7 +120,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-- [Contato para Vendas](./forms.html)
+- [Enviar Mensagem](./forms.html)
 
 
 
