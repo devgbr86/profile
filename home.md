@@ -64,8 +64,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - TailwindCSS
   - Open Props style
   - DOMPurify
-  - Forms.js
-  - tecnologias para sites estáticos
+  - Tecnologias para sites estáticos
 
 
 
