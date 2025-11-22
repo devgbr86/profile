@@ -4,6 +4,8 @@
 
 
 
+
+
 <p align="left">
   <img src="./assets/goat.png" alt="Logo" style="border-radius: 50%;
   max-width: 145px; max-height: 145px;">
@@ -14,7 +16,14 @@
 
 
 
+
+
+
 Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência em **HTML/CSS, JavaScript, TailwindCSS, Bibliotecas e Frameworks Front-end para sites estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando Git**.    
+
+
+
+
 
 
 
@@ -57,7 +66,6 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 - **Sites e Templates Estáticos**
 - **Totalmente Responsivos**  
 - **Otimizados para Manutenção**
-- [Informações e Preços](https://github.com/devgbr86/profile/releases)
   - HTML/CSS
   - JavaScript
   - Marked.js
@@ -65,18 +73,17 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - Open Props style
   - DOMPurify
   - Tecnologias para sites estáticos
-
+- Personalização de projetos conforme a necessidade do cliente  
+- Experiência em versionamento e manutenção **Git**
 
 
 
 # EBOOK
 
 **Sites e Templates Estáticos Tutorial 2025** - Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
-  - [Informações e Preços](https://github.com/devgbr86/profile/releases)
 
 
 **Produção de eBooks com Markdown e Pandoc Tutorial 2025** - Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.
-  - [Informações e Preços](https://github.com/devgbr86/profile/releases)
 
 
 
@@ -85,17 +92,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-
-- Envio imediato de arquivos.  
-- Personalização de projetos conforme a necessidade do cliente.  
-- Experiência em versionamento e manutenção **Git**.
-
-
-
-
-
-
-
+[**Informações e Preços**](https://github.com/devgbr86/profile/releases)
 
 
 
