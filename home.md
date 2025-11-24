@@ -59,10 +59,9 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-# SERVIÇOS
+# TECHSTACK
 
-
-### Sites e Templates Estáticos 
+- **Sites e Templates Estáticos**
 - **Totalmente Responsivos**  
 - **Otimizados para Manutenção**
   - HTML/CSS
@@ -76,7 +75,7 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
-### eBooks
+# EBOOK
 
 **Sites e Templates Estáticos Tutorial 2025** - Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
 
