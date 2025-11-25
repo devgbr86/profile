@@ -56,10 +56,9 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
+# WEBSITE
 
 
-
-# TECHSTACK
 
 - **Sites e Templates Estáticos**
 - **Totalmente Responsivos**  
@@ -68,10 +67,14 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
   - JavaScript
   - Marked.js
   - TailwindCSS
-  - OpenProps style
-  - Tecnologias para sites estáticos
+  - DOMPurify   
 - Personalização de projetos conforme a necessidade do cliente  
-- Experiência em versionamento e manutenção Git
+- Experiência em versionamento Git/GitHub
+- Hospedagem Prática (Netlify/Vercel/Cloudflare)
+- Envio imediato de arquivos
+- [Contato para Vendas](./forms.html)
+
+
 
 
 
@@ -85,11 +88,10 @@ Meu nome é **Guilherme Ribeiro**, Programador e Desenvolvedor com experiência 
 
 
 
---- 
+- [Prévia dos eBooks 2025](https://github.com/devgbr86/profile/releases)
+- [Contato para Vendas](./forms.html)
 
 
-
-[**Informações e Preços**](./shop.html)
 
 
 
