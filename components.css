@@ -530,3 +530,73 @@ footer a {
           font-size: 0.76rem;
      }
 }
+
+
+
+
+
+
+/* Adiciona no components.css */
+
+section {
+     position: relative;
+     padding: 100px 40px;
+     margin-bottom: 100px;
+     background: linear-gradient(135deg,
+               transparent,
+               rgba(0, 255, 255, 0.02),
+               transparent);
+     border-left: 2px solid transparent;
+     border-right: 2px solid transparent;
+     transition: all 0.3s ease;
+}
+
+section:hover {
+     border-left-color: var(--cyan-6);
+     border-right-color: var(--cyan-6);
+     box-shadow:
+          inset 0 0 40px rgba(0, 255, 255, 0.1),
+          0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+section h1 {
+     position: relative;
+     display: inline-block;
+     padding-bottom: 15px;
+     margin-bottom: 30px;
+}
+
+section h1::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg,
+               var(--cyan-6),
+               var(--blue-6),
+               transparent);
+}
+
+/* Divisória entre seções */
+section::after {
+     content: '';
+     position: absolute;
+     bottom: -50px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 200px;
+     height: 2px;
+     background: linear-gradient(90deg,
+               transparent,
+               var(--cyan-6),
+               var(--blue-6),
+               var(--cyan-6),
+               transparent);
+     box-shadow: 0 0 20px var(--cyan-6);
+}
+
+section:last-child::after {
+     display: none;
+}
