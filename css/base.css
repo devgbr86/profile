@@ -24,6 +24,12 @@
      --radius: 10px;
 }
 
+html {
+     /* Previne scroll horizontal */
+     overflow-x: hidden;
+     width: 100%;
+}
+
 body {
      font-family: "Roboto Mono", monospace;
      background: var(--bg);
@@ -31,6 +37,9 @@ body {
      min-height: 100vh;
      display: flex;
      flex-direction: column;
+     overflow-x: hidden;
+     width: 100%;
+     position: relative;
 }
 
 /* ========== TIPOGRAFIA BASE ========== */
@@ -39,6 +48,8 @@ h1 {
      font-weight: 700;
      line-height: var(--font-lineheight-1);
      letter-spacing: var(--font-letterspacing-0);
+     word-wrap: break-word;
+     overflow-wrap: break-word;
 }
 
 h2 {
@@ -46,17 +57,23 @@ h2 {
      font-weight: 700;
      line-height: var(--font-lineheight-2);
      letter-spacing: var(--font-letterspacing-1);
+     word-wrap: break-word;
+     overflow-wrap: break-word;
 }
 
 h3 {
      font-size: var(--font-size-3);
      font-weight: 700;
      line-height: var(--font-lineheight-2);
+     word-wrap: break-word;
+     overflow-wrap: break-word;
 }
 
 p {
      line-height: var(--font-lineheight-3);
      font-size: var(--font-size-2);
+     word-wrap: break-word;
+     overflow-wrap: break-word;
 }
 
 a {
@@ -68,4 +85,33 @@ a {
 /* ========== UTILITÁRIOS ========== */
 code {
      font-family: "Roboto Mono", monospace;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+}
+
+/* Previne overflow em elementos de imagem */
+img,
+video {
+     max-width: 100%;
+     height: auto;
+}
+
+/* ========== RESPONSIVO BASE ========== */
+
+/* Tablet */
+@media (max-width: 768px) {
+     :root {
+          --radius: 8px;
+     }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+     :root {
+          --radius: 6px;
+     }
+
+     body {
+          font-size: 14px;
+     }
 }

@@ -1,0 +1,427 @@
+/* ========================================
+   RESPONSIVE.CSS - Toda a responsividade
+   NAVBAR CORRIGIDA - NÃO CORTA MAIS OS LINKS
+   ======================================== */
+
+/* ========== BASE RESPONSIVO ========== */
+
+/* Tablet */
+@media (max-width: 768px) {
+     :root {
+          --radius: 8px;
+     }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+     :root {
+          --radius: 6px;
+     }
+
+     body {
+          font-size: 14px;
+     }
+}
+
+/* ========== COMPONENTS RESPONSIVO ========== */
+
+/* Desktop grande - 1200px+ */
+@media (min-width: 1200px) {
+     main {
+          padding: 72px 88px;
+          max-width: 960px;
+     }
+
+     main h1 {
+          font-size: 2.7rem;
+     }
+
+     main h2 {
+          font-size: 2.1rem;
+     }
+
+     section {
+          padding: 140px 56px;
+     }
+}
+
+/* Laptop médio - 1024px */
+@media (max-width: 1024px) {
+     nav {
+          padding: 12px 20px;
+          gap: 12px;
+     }
+
+     .page-links {
+          gap: 10px;
+          padding: 4px 20px 4px 0;
+     }
+
+     main {
+          padding: 56px 60px;
+          width: calc(100% - 40px);
+     }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+     nav {
+          padding: 10px 14px;
+          gap: 10px;
+          min-height: 58px;
+     }
+
+     nav img {
+          width: 34px;
+          height: 34px;
+          padding: 5px;
+     }
+
+     .page-links {
+          gap: 8px;
+          padding: 3px 16px 3px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 9px 14px;
+          font-size: 0.88rem;
+     }
+
+     main {
+          padding: 40px 36px;
+          width: calc(100% - 32px);
+          margin-top: 78px;
+          margin-bottom: 40px;
+          border-radius: 10px;
+     }
+
+     main h1 {
+          font-size: 2rem;
+     }
+
+     main h2 {
+          font-size: 1.6rem;
+     }
+
+     main h3 {
+          font-size: 1.3rem;
+     }
+
+     main p,
+     main li {
+          font-size: 1rem;
+     }
+
+     main pre {
+          padding: 20px 22px;
+     }
+
+     section {
+          padding: 90px 32px;
+          margin-bottom: 110px;
+     }
+
+     section::after {
+          width: 240px;
+          bottom: -55px;
+     }
+
+     section::before {
+          bottom: -67px;
+     }
+}
+
+/* Mobile landscape - 640px */
+@media (max-width: 640px) {
+     nav {
+          padding: 10px 12px;
+          gap: 8px;
+     }
+
+     nav img {
+          width: 32px;
+          height: 32px;
+     }
+
+     .page-links {
+          gap: 7px;
+          padding: 3px 14px 3px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 8px 13px;
+          font-size: 0.86rem;
+     }
+
+     main {
+          padding: 36px 30px;
+          width: calc(100% - 28px);
+     }
+
+     main h1 {
+          font-size: 1.85rem;
+     }
+
+     main h2 {
+          font-size: 1.5rem;
+     }
+
+     section {
+          padding: 80px 28px;
+          margin-bottom: 100px;
+     }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+     nav {
+          padding: 9px 10px;
+          gap: 7px;
+          min-height: 54px;
+     }
+
+     nav img {
+          width: 30px;
+          height: 30px;
+          padding: 4px;
+     }
+
+     .page-links {
+          gap: 6px;
+          padding: 2px 12px 2px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 8px 12px;
+          font-size: 0.84rem;
+     }
+
+     main {
+          padding: 32px 24px;
+          width: calc(100% - 24px);
+          margin-top: 72px;
+          margin-bottom: 36px;
+          border-radius: 10px;
+     }
+
+     main h1 {
+          font-size: 1.7rem;
+          margin-bottom: 0.7em;
+          margin-top: 0.4em;
+     }
+
+     main h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+     }
+
+     main h3 {
+          font-size: 1.2rem;
+     }
+
+     main p,
+     main li {
+          font-size: 0.95rem;
+          line-height: 1.65;
+     }
+
+     main ul,
+     main ol {
+          padding-left: 1.8em;
+     }
+
+     main pre {
+          padding: 16px 18px;
+          border-radius: 8px;
+     }
+
+     main pre code {
+          font-size: 0.85rem;
+          line-height: 1.5;
+     }
+
+     main code {
+          font-size: 0.87em;
+          padding: 3px 8px;
+     }
+
+     main blockquote {
+          padding-left: 1.2em;
+          margin: 1.2em 0;
+          padding-top: 0.6em;
+          padding-bottom: 0.6em;
+     }
+
+     main img {
+          margin: 1.5em 0;
+          border-radius: 8px;
+     }
+
+     section {
+          padding: 70px 20px;
+          margin-bottom: 90px;
+     }
+
+     section h1::after {
+          height: 2px;
+     }
+
+     section::after {
+          width: 180px;
+          max-width: 85%;
+          height: 2px;
+          bottom: -45px;
+     }
+
+     section::before {
+          bottom: -55px;
+          font-size: 1rem;
+          padding: 0 14px;
+     }
+
+     footer {
+          padding: 36px 18px;
+          font-size: 0.8rem;
+     }
+
+     input[type="email"],
+     input[type="text"],
+     textarea {
+          padding: 12px 16px;
+          font-size: 0.92rem;
+     }
+
+     button[type="submit"] {
+          padding: 14px 24px;
+          font-size: 0.98rem;
+     }
+
+     .form-group {
+          margin-bottom: 22px;
+     }
+}
+
+/* Mobile pequeno - 360px */
+@media (max-width: 360px) {
+     nav {
+          padding: 8px 8px;
+          gap: 6px;
+          min-height: 52px;
+     }
+
+     nav img {
+          width: 28px;
+          height: 28px;
+          padding: 3px;
+     }
+
+     .page-links {
+          gap: 5px;
+          padding: 2px 10px 2px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 7px 10px;
+          font-size: 0.8rem;
+     }
+
+     main {
+          padding: 28px 20px;
+          width: calc(100% - 20px);
+          margin-top: 68px;
+     }
+
+     main h1 {
+          font-size: 1.5rem;
+     }
+
+     main h2 {
+          font-size: 1.3rem;
+     }
+
+     main h3 {
+          font-size: 1.15rem;
+     }
+
+     main p,
+     main li {
+          font-size: 0.92rem;
+     }
+
+     main ul,
+     main ol {
+          padding-left: 1.6em;
+     }
+
+     main pre {
+          padding: 14px 16px;
+     }
+
+     main pre code {
+          font-size: 0.82rem;
+     }
+
+     section {
+          padding: 60px 18px;
+          margin-bottom: 80px;
+     }
+
+     section::after {
+          width: 160px;
+          max-width: 90%;
+          bottom: -40px;
+     }
+
+     section::before {
+          bottom: -50px;
+          font-size: 0.95rem;
+          padding: 0 12px;
+     }
+
+     footer {
+          padding: 32px 16px;
+          font-size: 0.78rem;
+     }
+}
+
+/* Mobile muito pequeno - 320px */
+@media (max-width: 320px) {
+     nav {
+          padding: 7px 6px;
+          gap: 5px;
+     }
+
+     nav img {
+          width: 26px;
+          height: 26px;
+     }
+
+     .page-links {
+          gap: 4px;
+          padding: 2px 8px 2px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 6px 9px;
+          font-size: 0.78rem;
+     }
+
+     main {
+          padding: 24px 16px;
+          width: calc(100% - 16px);
+     }
+
+     section {
+          padding: 50px 16px;
+          margin-bottom: 70px;
+     }
+
+     section::after {
+          width: 140px;
+     }
+}
