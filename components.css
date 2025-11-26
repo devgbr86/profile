@@ -1,5 +1,5 @@
 /* ========================================
-   COMPONENTS.CSS - Todos os Componentes + Responsivo
+   COMPONENTS.CSS - Orange/Black Premium Theme
    ======================================== */
 
 /* ========== NAVEGAÇÃO ========== */
@@ -12,27 +12,27 @@ nav {
      color: #fff;
      display: flex;
      align-items: center;
-     gap: 14px;
-     padding: 12px 24px;
-     border-bottom: 2px solid var(--accent);
+     gap: 16px;
+     padding: 14px 28px;
+     border-bottom: 2px solid #ff8c00;
      z-index: 100;
-     min-height: 60px;
-     box-shadow: var(--shadow-md);
+     min-height: 64px;
+     box-shadow: 0 4px 20px rgba(255, 140, 0, 0.15);
 }
 
 nav img {
-     border-radius: var(--radius-2);
+     border-radius: 6px;
      background: #fff;
-     padding: 5px;
-     box-shadow: var(--shadow-sm);
+     padding: 6px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
      flex-shrink: 0;
-     width: 36px;
-     height: 36px;
+     width: 38px;
+     height: 38px;
 }
 
 .page-links {
      display: flex;
-     gap: 10px;
+     gap: 12px;
      align-items: center;
      flex-wrap: nowrap;
      overflow-x: auto;
@@ -50,134 +50,218 @@ nav img {
 
 .page-link,
 nav a {
-     padding: var(--size-2) var(--size-3);
+     padding: 10px 18px;
      background: #fff;
      color: #000;
-     border-radius: var(--radius-2);
+     border-radius: 6px;
      font-weight: 500;
      text-decoration: none;
      cursor: pointer;
      display: inline-block;
-     box-shadow: var(--shadow-sm);
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
      white-space: nowrap;
      flex-shrink: 0;
-     font-size: 0.9rem;
-     border: 1px solid transparent;
-     transition: all 0.15s ease;
+     font-size: 0.92rem;
+     border: 1px solid #e0e0e0;
+     transition: none;
 }
 
 /* ========== MAIN CONTENT ========== */
 main {
-     max-width: 880px;
+     max-width: 900px;
      margin: 0 auto;
-     background: var(--card-bg);
-     border-radius: var(--radius-3);
-     box-shadow: var(--shadow-md);
-     padding: var(--size-8) var(--size-9);
-     margin-top: 84px;
-     margin-bottom: var(--size-8);
-     width: calc(100% - 40px);
+     background: #fff;
+     border-radius: 12px;
+     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+     padding: 64px 72px;
+     margin-top: 92px;
+     margin-bottom: 48px;
+     width: calc(100% - 48px);
      flex: 1;
 }
 
 main h1 {
-     font-size: var(--font-size-5);
+     font-size: 2.5rem;
      font-weight: 700;
-     margin-bottom: 0.7em;
+     margin-bottom: 0.8em;
      margin-top: 0.5em;
-     line-height: var(--font-lineheight-1);
-     letter-spacing: var(--font-letterspacing-0);
+     line-height: 1.2;
+     letter-spacing: -0.02em;
+     color: #000;
 }
 
 main h2 {
-     font-size: var(--font-size-4);
+     font-size: 1.9rem;
      font-weight: 700;
-     margin-bottom: 0.7em;
-     margin-top: 1.3em;
-     line-height: var(--font-lineheight-2);
-     letter-spacing: var(--font-letterspacing-1);
+     margin-bottom: 0.8em;
+     margin-top: 1.4em;
+     line-height: 1.3;
+     letter-spacing: -0.01em;
+     color: #1a1a1a;
 }
 
 main h3 {
-     font-size: var(--font-size-3);
+     font-size: 1.5rem;
      font-weight: 700;
-     margin-bottom: 0.65em;
-     margin-top: 1em;
-     line-height: var(--font-lineheight-2);
+     margin-bottom: 0.7em;
+     margin-top: 1.2em;
+     line-height: 1.4;
+     color: #2a2a2a;
 }
 
 main p {
-     margin-bottom: 1.2em;
-     line-height: var(--font-lineheight-3);
-     font-size: var(--font-size-2);
+     margin-bottom: 1.3em;
+     line-height: 1.7;
+     font-size: 1.05rem;
+     color: #333;
 }
 
 main ul,
 main ol {
-     margin-bottom: 1.3em;
-     padding-left: 2em;
+     margin-bottom: 1.4em;
+     padding-left: 2.2em;
 }
 
 main li {
-     margin-bottom: 0.65em;
-     line-height: var(--font-lineheight-3);
+     margin-bottom: 0.7em;
+     line-height: 1.7;
+     color: #333;
 }
 
 main a {
-     color: var(--accent);
+     color: #ff8c00;
      text-decoration: none;
-     transition: opacity 0.15s ease;
+     border-bottom: 1px solid rgba(255, 140, 0, 0.3);
+     transition: none;
 }
 
 main blockquote {
-     border-left: 4px solid var(--accent);
-     padding-left: 1.2em;
-     margin: 1.3em 0;
-     color: var(--gray-6);
+     border-left: 4px solid #ff8c00;
+     padding-left: 1.5em;
+     margin: 1.5em 0;
+     color: #555;
      font-style: italic;
+     background: #f9f9f9;
+     padding-top: 0.8em;
+     padding-bottom: 0.8em;
+     border-radius: 4px;
 }
 
 main hr {
      border: none;
-     border-top: 1px solid var(--gray-3);
-     margin: 2.5em 0;
+     border-top: 2px solid #e5e5e5;
+     margin: 3em 0;
 }
 
 main pre {
-     background: var(--gray-12) !important;
-     padding: var(--size-4) var(--size-5);
-     border-radius: var(--radius);
+     background: #1a1a1a !important;
+     padding: 24px 28px;
+     border-radius: 8px;
      overflow-x: auto;
-     margin: 1.3em 0;
-     box-shadow: var(--shadow-md);
-     border: 1px solid var(--gray-11);
+     margin: 1.5em 0;
+     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+     border: 1px solid #2a2a2a;
 }
 
 main pre code {
      background: transparent !important;
      padding: 0 !important;
-     color: var(--gray-0) !important;
-     font-size: 0.9rem;
-     line-height: var(--font-lineheight-3);
+     color: #f5f5f5 !important;
+     font-size: 0.92rem;
+     line-height: 1.6;
 }
 
 main code {
-     background: var(--gray-1);
-     padding: 3px 8px;
-     border-radius: var(--radius-2);
+     background: #f5f5f5;
+     padding: 4px 10px;
+     border-radius: 4px;
      font-family: "Roboto Mono", monospace;
-     font-size: 0.88em;
-     border: 1px solid var(--gray-3);
+     font-size: 0.9em;
+     border: 1px solid #e0e0e0;
+     color: #1a1a1a;
 }
 
 main img {
      max-width: 100%;
      height: auto;
      display: block;
-     margin: 1.5em 0;
-     border-radius: var(--radius);
-     box-shadow: var(--shadow-sm);
-     border: 1px solid var(--gray-2);
+     margin: 2em 0;
+     border-radius: 8px;
+     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+     border: 1px solid #e5e5e5;
+}
+
+/* ========== SEÇÕES COM DIVISÓRIAS ========== */
+section {
+     position: relative;
+     padding: 120px 48px;
+     margin-bottom: 140px;
+}
+
+section h1 {
+     position: relative;
+     display: inline-block;
+     padding-bottom: 20px;
+     margin-bottom: 40px;
+}
+
+section h1::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background: linear-gradient(90deg,
+               #ff8c00 0%,
+               #ff6600 50%,
+               transparent 100%);
+     border-radius: 2px;
+}
+
+/* Divisória entre seções - Premium Orange */
+section::after {
+     content: '';
+     position: absolute;
+     bottom: -70px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 300px;
+     height: 3px;
+     background: linear-gradient(90deg,
+               transparent 0%,
+               #ff8c00 25%,
+               #ff6600 50%,
+               #ff8c00 75%,
+               transparent 100%);
+     box-shadow:
+          0 0 30px rgba(255, 140, 0, 0.4),
+          0 0 60px rgba(255, 140, 0, 0.2);
+     border-radius: 2px;
+}
+
+section:last-child::after {
+     display: none;
+}
+
+/* Ícone decorativo na divisória */
+section::before {
+     content: '◆';
+     position: absolute;
+     bottom: -82px;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 1.2rem;
+     color: #ff8c00;
+     background: #fff;
+     padding: 0 18px;
+     z-index: 1;
+     text-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+     letter-spacing: 0.2em;
+}
+
+section:last-child::before {
+     display: none;
 }
 
 /* ========== FORMULÁRIO ========== */
@@ -186,98 +270,99 @@ form {
 }
 
 .form-group {
-     margin-bottom: var(--size-5);
+     margin-bottom: 28px;
 }
 
 label {
      display: block;
-     margin-bottom: var(--size-2);
+     margin-bottom: 10px;
      font-weight: 500;
-     color: var(--fg);
-     font-size: 0.92rem;
+     color: #1a1a1a;
+     font-size: 0.95rem;
 }
 
 input[type="email"],
 input[type="text"],
 textarea {
      width: 100%;
-     padding: var(--size-3) var(--size-4);
-     border: 1px solid var(--gray-3);
-     border-radius: var(--radius-2);
+     padding: 14px 18px;
+     border: 2px solid #e0e0e0;
+     border-radius: 6px;
      font-family: "Roboto Mono", monospace;
-     font-size: 0.92rem;
+     font-size: 0.95rem;
      background: #fff;
-     color: var(--fg);
-     transition: all 0.2s ease;
+     color: #1a1a1a;
+     transition: border-color 0.2s ease;
 }
 
 input[type="email"]:focus,
 input[type="text"]:focus,
 textarea:focus {
      outline: none;
-     border-color: var(--accent);
-     box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.08);
+     border-color: #ff8c00;
+     box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.1);
 }
 
 textarea {
      resize: vertical;
-     min-height: 140px;
+     min-height: 160px;
 }
 
 button[type="submit"] {
      width: 100%;
-     padding: var(--size-3) var(--size-5);
-     background: var(--accent);
+     padding: 16px 32px;
+     background: #ff8c00;
      color: #fff;
      border: none;
-     border-radius: var(--radius-2);
+     border-radius: 6px;
      font-family: "Roboto Mono", monospace;
-     font-weight: 500;
-     font-size: 1rem;
+     font-weight: 600;
+     font-size: 1.05rem;
      cursor: pointer;
-     box-shadow: 0 2px 8px rgba(255, 140, 0, 0.25);
-     transition: all 0.2s ease;
+     box-shadow: 0 4px 16px rgba(255, 140, 0, 0.3);
+     transition: none;
 }
 
 .success-message {
      display: none;
-     padding: var(--size-4);
-     background: var(--green-6);
+     padding: 18px 24px;
+     background: #28a745;
      color: #fff;
-     border-radius: var(--radius-2);
-     margin-bottom: var(--size-5);
+     border-radius: 6px;
+     margin-bottom: 28px;
      text-align: center;
      font-weight: 500;
-     box-shadow: var(--shadow-sm);
+     box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
 }
 
 .error-message {
      display: none;
-     padding: var(--size-4);
-     background: var(--red-6);
+     padding: 18px 24px;
+     background: #dc3545;
      color: #fff;
-     border-radius: var(--radius-2);
-     margin-bottom: var(--size-5);
+     border-radius: 6px;
+     margin-bottom: 28px;
      text-align: center;
      font-weight: 500;
-     box-shadow: var(--shadow-sm);
+     box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
 }
 
 /* ========== FOOTER ========== */
 footer {
      text-align: center;
-     padding: var(--size-7) var(--size-5);
-     font-size: var(--font-size-0);
-     color: var(--gray-6);
+     padding: 48px 24px;
+     font-size: 0.85rem;
+     color: #666;
      text-transform: uppercase;
-     letter-spacing: 0.5px;
+     letter-spacing: 1px;
+     font-weight: 500;
 }
 
 footer a {
-     color: var(--gray-6);
+     color: #ff8c00;
      text-decoration: none;
+     border-bottom: 1px solid rgba(255, 140, 0, 0.3);
 }
-
 
 /* ========================================
    RESPONSIVO - Media Queries
@@ -286,58 +371,130 @@ footer a {
 /* Desktop grande - 1200px+ */
 @media (min-width: 1200px) {
      main {
-          padding: var(--size-9) var(--size-10);
-          max-width: 920px;
+          padding: 72px 88px;
+          max-width: 960px;
      }
 
      main h1 {
-          font-size: 2.2rem;
+          font-size: 2.7rem;
      }
 
      main h2 {
-          font-size: 1.7rem;
+          font-size: 2.1rem;
+     }
+
+     section {
+          padding: 140px 56px;
      }
 }
 
 /* Tablet - 768px */
 @media (max-width: 768px) {
      nav {
-          padding: 8px 16px;
-          gap: 10px;
-          min-height: 56px;
+          padding: 10px 18px;
+          gap: 12px;
+          min-height: 58px;
      }
 
      nav img {
-          width: 32px;
-          height: 32px;
-          padding: 4px;
+          width: 34px;
+          height: 34px;
+          padding: 5px;
      }
 
      .page-links {
-          gap: 7px;
+          gap: 8px;
           padding: 3px 0;
      }
 
      .page-link,
      nav a {
-          padding: 8px 13px;
-          font-size: 0.87rem;
+          padding: 9px 15px;
+          font-size: 0.88rem;
      }
 
      main {
-          padding: 32px 36px;
-          width: calc(100% - 32px);
+          padding: 40px 44px;
+          width: calc(100% - 36px);
+          margin-top: 78px;
+          margin-bottom: 40px;
+          border-radius: 10px;
+     }
+
+     main h1 {
+          font-size: 2rem;
+     }
+
+     main h2 {
+          font-size: 1.6rem;
+     }
+
+     main h3 {
+          font-size: 1.3rem;
+     }
+
+     main p,
+     main li {
+          font-size: 1rem;
+     }
+
+     section {
+          padding: 90px 36px;
+          margin-bottom: 110px;
+     }
+
+     section::after {
+          width: 240px;
+          bottom: -55px;
+     }
+
+     section::before {
+          bottom: -67px;
+     }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+     nav {
+          padding: 9px 14px;
+          gap: 10px;
+          min-height: 54px;
+     }
+
+     nav img {
+          width: 30px;
+          height: 30px;
+          padding: 4px;
+     }
+
+     .page-links {
+          gap: 7px;
+          padding: 2px 0;
+     }
+
+     .page-link,
+     nav a {
+          padding: 8px 13px;
+          font-size: 0.84rem;
+     }
+
+     main {
+          padding: 32px 28px;
+          width: calc(100% - 28px);
           margin-top: 72px;
           margin-bottom: 36px;
           border-radius: 10px;
      }
 
      main h1 {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
+          margin-bottom: 0.7em;
+          margin-top: 0.4em;
      }
 
      main h2 {
-          font-size: 1.45rem;
+          font-size: 1.4rem;
+          margin-top: 1.2em;
      }
 
      main h3 {
@@ -347,19 +504,86 @@ footer a {
      main p,
      main li {
           font-size: 0.95rem;
+          line-height: 1.65;
+     }
+
+     main ul,
+     main ol {
+          padding-left: 1.8em;
      }
 
      main pre {
-          padding: 16px 18px;
+          padding: 18px 20px;
+          border-radius: 8px;
      }
 
      main pre code {
-          font-size: 0.86rem;
+          font-size: 0.85rem;
+          line-height: 1.5;
+     }
+
+     main code {
+          font-size: 0.87em;
+          padding: 3px 8px;
+     }
+
+     main blockquote {
+          padding-left: 1.2em;
+          margin: 1.2em 0;
+          padding-top: 0.6em;
+          padding-bottom: 0.6em;
+     }
+
+     main img {
+          margin: 1.5em 0;
+          border-radius: 8px;
+     }
+
+     section {
+          padding: 70px 24px;
+          margin-bottom: 90px;
+     }
+
+     section h1::after {
+          height: 2px;
+     }
+
+     section::after {
+          width: 180px;
+          height: 2px;
+          bottom: -45px;
+     }
+
+     section::before {
+          bottom: -55px;
+          font-size: 1rem;
+          padding: 0 14px;
+     }
+
+     footer {
+          padding: 36px 18px;
+          font-size: 0.8rem;
+     }
+
+     input[type="email"],
+     input[type="text"],
+     textarea {
+          padding: 12px 16px;
+          font-size: 0.92rem;
+     }
+
+     button[type="submit"] {
+          padding: 14px 24px;
+          font-size: 0.98rem;
+     }
+
+     .form-group {
+          margin-bottom: 22px;
      }
 }
 
-/* Mobile - 480px */
-@media (max-width: 480px) {
+/* Mobile pequeno - 360px */
+@media (max-width: 360px) {
      nav {
           padding: 8px 12px;
           gap: 8px;
@@ -380,26 +604,21 @@ footer a {
      .page-link,
      nav a {
           padding: 7px 11px;
-          font-size: 0.82rem;
+          font-size: 0.8rem;
      }
 
      main {
-          padding: 28px 24px;
-          width: calc(100% - 24px);
+          padding: 28px 22px;
+          width: calc(100% - 22px);
           margin-top: 68px;
-          margin-bottom: 32px;
-          border-radius: 10px;
      }
 
      main h1 {
-          font-size: 1.6rem;
-          margin-bottom: 0.6em;
-          margin-top: 0.4em;
+          font-size: 1.5rem;
      }
 
      main h2 {
-          font-size: 1.35rem;
-          margin-top: 1.1em;
+          font-size: 1.3rem;
      }
 
      main h3 {
@@ -409,7 +628,6 @@ footer a {
      main p,
      main li {
           font-size: 0.92rem;
-          line-height: 1.7;
      }
 
      main ul,
@@ -418,185 +636,31 @@ footer a {
      }
 
      main pre {
-          padding: 14px 16px;
-          border-radius: 8px;
+          padding: 16px 18px;
      }
 
      main pre code {
           font-size: 0.82rem;
-          line-height: 1.5;
      }
 
-     main code {
-          font-size: 0.86em;
-          padding: 2px 6px;
+     section {
+          padding: 60px 20px;
+          margin-bottom: 80px;
      }
 
-     main blockquote {
-          padding-left: 1em;
-          margin: 1.1em 0;
+     section::after {
+          width: 160px;
+          bottom: -40px;
      }
 
-     main img {
-          margin: 1.3em 0;
-          border-radius: 8px;
-     }
-
-     footer {
-          padding: 28px 16px;
-          font-size: 0.78rem;
-     }
-
-     input[type="email"],
-     input[type="text"],
-     textarea {
-          padding: 11px 14px;
-          font-size: 0.9rem;
-     }
-
-     button[type="submit"] {
-          padding: 13px 20px;
-          font-size: 0.94rem;
-     }
-
-     .form-group {
-          margin-bottom: 20px;
-     }
-}
-
-/* Mobile pequeno - 360px */
-@media (max-width: 360px) {
-     nav {
-          padding: 7px 10px;
-          gap: 6px;
-          min-height: 50px;
-     }
-
-     nav img {
-          width: 26px;
-          height: 26px;
-          padding: 3px;
-     }
-
-     .page-links {
-          gap: 5px;
-          padding: 2px 0;
-     }
-
-     .page-link,
-     nav a {
-          padding: 6px 9px;
-          font-size: 0.78rem;
-     }
-
-     main {
-          padding: 24px 20px;
-          width: calc(100% - 20px);
-          margin-top: 64px;
-     }
-
-     main h1 {
-          font-size: 1.4rem;
-     }
-
-     main h2 {
-          font-size: 1.25rem;
-     }
-
-     main h3 {
-          font-size: 1.1rem;
-     }
-
-     main p,
-     main li {
-          font-size: 0.9rem;
-     }
-
-     main ul,
-     main ol {
-          padding-left: 1.5em;
-     }
-
-     main pre {
-          padding: 12px 14px;
-     }
-
-     main pre code {
-          font-size: 0.8rem;
+     section::before {
+          bottom: -50px;
+          font-size: 0.95rem;
+          padding: 0 12px;
      }
 
      footer {
-          padding: 24px 14px;
-          font-size: 0.76rem;
+          padding: 32px 16px;
+          font-size: 0.78rem;
      }
-}
-
-
-
-
-
-
-/* Adiciona no components.css */
-
-section {
-     position: relative;
-     padding: 100px 40px;
-     margin-bottom: 100px;
-     background: linear-gradient(135deg,
-               transparent,
-               rgba(0, 255, 255, 0.02),
-               transparent);
-     border-left: 2px solid transparent;
-     border-right: 2px solid transparent;
-     transition: all 0.3s ease;
-}
-
-section:hover {
-     border-left-color: var(--cyan-6);
-     border-right-color: var(--cyan-6);
-     box-shadow:
-          inset 0 0 40px rgba(0, 255, 255, 0.1),
-          0 0 40px rgba(0, 255, 255, 0.1);
-}
-
-section h1 {
-     position: relative;
-     display: inline-block;
-     padding-bottom: 15px;
-     margin-bottom: 30px;
-}
-
-section h1::after {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 2px;
-     background: linear-gradient(90deg,
-               var(--cyan-6),
-               var(--blue-6),
-               transparent);
-}
-
-/* Divisória entre seções */
-section::after {
-     content: '';
-     position: absolute;
-     bottom: -50px;
-     left: 50%;
-     transform: translateX(-50%);
-     width: 200px;
-     height: 2px;
-     background: linear-gradient(90deg,
-               transparent,
-               var(--cyan-6),
-               var(--blue-6),
-               var(--cyan-6),
-               transparent);
-     box-shadow: 0 0 20px var(--cyan-6);
-}
-
-section:last-child::after {
-     display: none;
 }
