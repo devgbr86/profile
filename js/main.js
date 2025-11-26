@@ -1,25 +1,29 @@
-// main.js - Arquivo principal que coordena tudo
-import { parseMarkdown } from './marked.js';
-import { sanitizeHTML } from './purify.js';
+// main.js - Gerencia navegação e animações
 
 const content = document.getElementById("content");
 const linksContainer = document.getElementById("pageLinks");
 
-function removeEmojis(text) {
-     return text.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|\uD83E[\uDD00-\uDDFF])/g, "");
+// Inicializa AOS
+if (typeof AOS !== 'undefined') {
+     AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+          easing: 'ease-out'
+     });
 }
 
-function createNavLinksFromHTML() {
+// Gera links de navegação baseado nos H1
+function createNavLinks() {
      linksContainer.innerHTML = '';
      const h1Elements = content.querySelectorAll("h1");
 
-     h1Elements.forEach((h1, i) => {
+     h1Elements.forEach((h1) => {
           const a = document.createElement("a");
           a.textContent = h1.textContent;
           a.className = "page-link";
           a.onclick = e => {
                e.preventDefault();
-
                const navHeight = 80;
                const targetPosition = h1.getBoundingClientRect().top + window.pageYOffset - navHeight;
                window.scrollTo({ top: targetPosition, behavior: "smooth" });
@@ -28,31 +32,9 @@ function createNavLinksFromHTML() {
      });
 }
 
-async function loadMarkdown() {
-     try {
-          const res = await fetch("./home.md");
-          if (!res.ok) throw new Error('Arquivo home.md não encontrado');
-
-          let md = await res.text();
-          md = removeEmojis(md);
-
-          let html = parseMarkdown(md);
-          html = sanitizeHTML(html);
-
-          content.innerHTML = html;
-
-          createNavLinksFromHTML();
-
-          window.scrollTo({ top: 0, behavior: "smooth" });
-     } catch (err) {
-          content.innerHTML = "<h1>Erro ao carregar</h1><p>" + err.message + "</p>";
-          console.error('Erro completo:', err);
-     }
-}
-
-// Aguarda o DOM estar pronto
+// Executa quando o DOM estiver pronto
 if (document.readyState === 'loading') {
-     document.addEventListener('DOMContentLoaded', loadMarkdown);
+     document.addEventListener('DOMContentLoaded', createNavLinks);
 } else {
-     loadMarkdown();
+     createNavLinks();
 }

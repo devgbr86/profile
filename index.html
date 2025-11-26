@@ -6,17 +6,12 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>@liberdev</title>
      <link rel="icon" href="./assets/favcode.svg" type="image/svg+xml">
+
+     <!-- CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
      <link rel="stylesheet" href="base.css">
      <link rel="stylesheet" href="components.css">
-
-     <!-- OPEN PROPS -->
-     <link rel="stylesheet" href="https://unpkg.com/open-props">
-
-     <!-- Marked.js -->
-     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-     <!-- DOMPurify -->
-     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
 
      <!-- Roboto Mono Font -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -31,14 +26,82 @@
      </nav>
 
      <main id="content">
-          <h1>Carregando...</h1>
+
+          <section data-aos="fade-up">
+               <img src="./assets/goat.png" style="width: 125px; height: 125px; border-radius: 50%;">
+               <h1>SOBRE</h1>
+               <p>Meu nome é <strong>Guilherme Ribeiro</strong>, Programador e Desenvolvedor Front-end com experiência
+                    em <strong>HTML/CSS,
+                         JavaScript, React.js, TailwindCSS, Bibliotecas e Frameworks para sites estáticos, Markdown e
+                         Pandoc
+                         para
+                         produção de eBooks, além de versionamento utilizando Git</strong>.
+
+               </p>
+          </section>
+
+          <section data-aos="fade-up" data-aos-delay="100">
+               <h1>TECHSTACK</h1>
+               <ul>Sites e Templates Estáticos</ul>
+               <ul>Totalmente Responsivos</ul>
+               <ul>Otimizados para Manutenção</ul>
+               <ul>- HTML/CSS</ul>
+               <ul>- JavaScript</ul>
+               <ul>- TailwindCSS</ul>
+               <ul>- AOS.js</ul>
+               <ul>Personalização de projetos conforme a necessidade do cliente</ul>
+               <ul>Experiência em versionamento Git/GitHub</ul>
+               <ul>Hospedagem Prática (Netlify/Vercel/Cloudflare)</ul>
+               <ul>Envio imediato de arquivos</ul>
+               <p>
+                    <a href="./forms.html">Contato par Vendas</a>
+               </p>
+          </section>
+
+          <section data-aos="fade-up" data-aos-delay="200">
+               <h1>EBOOK</h1>
+               <p>Sites e Templates Estáticos Tutorial 2025 - Este eBook ensina como criar sites estáticos profissionais
+                    usando ferramentas modernas e gratuitas. Ideal para portfólios pessoais, landing pages e projetos
+                    simples que não requerem backend.</p>
+               <p>
+                    Markdown e Pandoc Tutorial 2025 - Este eBook apresenta um fluxo de trabalho completo para produção
+                    de ebooks utilizando Markdown como formato de escrita e Pandoc como ferramenta de conversão. Você
+                    aprenderá desde os fundamentos até técnicas avançadas de exportação para diversos formatos.</p>
+
+               <p>
+                    <a href="https://github.com/devgbr86/profile/releases/">Prévia eBooks 2025</a>
+               </p>
+
+               <p>
+                    <a href="./forms.html">Contato para Vendas</a>
+               </p>
+
+          </section>
+
+          <section data-aos="fade-up" data-aos-delay="300">
+               <h1>CONTATO</h1>
+               <p>
+                    <a href="./forms.html">Enviar Mensagem</a>
+               </p>
+               <p>
+                    <a href="https://github.com/devgbr86/">GITHUB</a>
+               </p>
+               <p>
+                    <a href="https://www.linkedin.com/in/devgbr/">LINKEDIN</a>
+               </p>
+          </section>
+
      </main>
 
      <footer>
           <p>devgbr86.github.io/profile</p>
      </footer>
 
-     <script type="module" src="./js/main.js"></script>
+     <!-- JS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="./js/main.js"></script>
+     <script src="./js/forms.js"></script>
+
 
 </body>
 
