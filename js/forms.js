@@ -1,9 +1,9 @@
 // ========================================
 // FORMS.JS - Gerenciamento de Formulário
-// Com Alpine.js e Vanilla JS
+// STACK: Alpine.js + AOS.js
 // ========================================
 
-// Inicializar AOS (Animações)
+// Inicializar AOS
 AOS.init({
      duration: 800,
      once: true,
@@ -34,6 +34,7 @@ function contactForm() {
                const formData = new FormData(form);
 
                try {
+                    // Substitua 'YOUR_FORM_ID' no HTML pelo seu ID do Formspree
                     const response = await fetch(form.action, {
                          method: 'POST',
                          body: formData,
@@ -44,6 +45,7 @@ function contactForm() {
 
                     if (response.ok) {
                          this.showSuccess = true;
+                         
                          // Limpar formulário
                          this.formData = {
                               name: '',
@@ -83,9 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
      // Verificar se Alpine.js está carregado
      if (typeof Alpine === 'undefined') {
           console.log('Alpine.js não detectado, usando Vanilla JS...');
-          
-          const successMessage = document.getElementById('successMessage');
-          const errorMessage = document.getElementById('errorMessage');
 
           form.addEventListener('submit', async (e) => {
                e.preventDefault();
@@ -107,28 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     if (response.ok) {
-                         successMessage.style.display = 'block';
-                         errorMessage.style.display = 'none';
+                         alert('Mensagem enviada com sucesso!');
                          form.reset();
-
-                         setTimeout(() => {
-                              successMessage.style.display = 'none';
-                         }, 5000);
                     } else {
                          throw new Error('Erro no envio');
                     }
                } catch (error) {
                     console.error('Erro:', error);
-                    errorMessage.style.display = 'block';
-                    successMessage.style.display = 'none';
-
-                    setTimeout(() => {
-                         errorMessage.style.display = 'none';
-                    }, 5000);
+                    alert('Erro ao enviar. Tente novamente.');
                } finally {
                     // Reabilitar botão
                     submitButton.disabled = false;
-                    submitButton.textContent = '📨 Enviar Mensagem';
+                    submitButton.textContent = 'Enviar Mensagem';
                }
           });
      }

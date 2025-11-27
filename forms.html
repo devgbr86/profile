@@ -8,105 +8,76 @@
      <title>Contato - @liberdev</title>
      <link rel="icon" href="./assets/favcode.svg" type="image/svg+xml">
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css">
+     <!-- AOS -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-     <!-- TailwindCSS via CDN (v3) - APENAS PARA DESENVOLVIMENTO -->
-     <!-- Para produção: npm install tailwindcss -->
-     <script src="https://cdn.tailwindcss.com"></script>
-
-     <!-- Custom CSS -->
-     <link rel="stylesheet" href="./css/base.css">
-     <link rel="stylesheet" href="./css/responsive.css">
 
      <!-- Roboto Mono Font -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-     <!-- Alpine.js (v3) -->
+     <!-- Alpine.js -->
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-     <!-- Tailwind Config Inline -->
-     <script>
-          tailwind.config = {
-               theme: {
-                    extend: {
-                         colors: {
-                              primary: '#ff8c00',
-                              secondary: '#ff6600',
-                         }
-                    }
-               }
-          }
-     </script>
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="./css/base.css">
+     <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body x-data="contactForm()">
 
-     <!-- Navegação -->
      <nav>
           <img src="./assets/goat.png" alt="Logo" loading="lazy">
-          <a href="index.html" class="flex items-center gap-2">
-               <span>←</span> Voltar
+          <a href="index.html" class="page-link">
+               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+               </svg>
+               Voltar
           </a>
      </nav>
 
      <main>
-          <div data-aos="fade-up">
-               <h1>📬 Contato</h1>
-               <p class="text-lg text-gray-600 mb-8">Preencha o formulário abaixo e entrarei em contato o mais breve
-                    possível.</p>
+          <section data-aos="fade-up">
+               <h1>CONTATO</h1>
 
-               <!-- Mensagem de Sucesso -->
-               <div x-show="showSuccess" x-transition class="success-message flex items-center justify-center gap-3"
-                    style="display: none;">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                         <path fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clip-rule="evenodd" />
+               <p class="form-intro">Preencha o formulário abaixo e entrarei em contato o mais breve possível.</p>
+
+               <div x-show="showSuccess" x-transition class="success-message" style="display: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                         <path d="M20 6L9 17l-5-5" />
                     </svg>
-                    <span>✓ Mensagem enviada com sucesso!</span>
+                    Mensagem enviada com sucesso!
                </div>
 
-               <!-- Mensagem de Erro -->
-               <div x-show="showError" x-transition class="error-message flex items-center justify-center gap-3"
-                    style="display: none;">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                         <path fill-rule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                              clip-rule="evenodd" />
+               <div x-show="showError" x-transition class="error-message" style="display: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                         <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
-                    <span>✗ Erro ao enviar. Tente novamente.</span>
+                    Erro ao enviar. Tente novamente.
                </div>
 
-               <!-- Formulário -->
-               <form @submit.prevent="submitForm" id="contactForm">
+               <form @submit.prevent="submitForm" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST">
 
-                    <!-- Nome -->
                     <div class="form-group">
                          <label for="name">
-                              Nome Completo <span class="text-red-500">*</span>
+                              Nome Completo <span class="required">*</span>
                          </label>
                          <input type="text" id="name" name="name" x-model="formData.name" required
-                              placeholder="Seu nome completo" class="w-full">
+                              placeholder="Seu nome completo">
                     </div>
 
-                    <!-- Email -->
                     <div class="form-group">
                          <label for="email">
-                              Email <span class="text-red-500">*</span>
+                              Email <span class="required">*</span>
                          </label>
                          <input type="email" id="email" name="email" x-model="formData.email" required
-                              placeholder="seu@email.com" class="w-full">
+                              placeholder="seu@email.com">
                     </div>
 
-                    <!-- Assunto -->
                     <div class="form-group">
                          <label for="subject">
-                              Assunto <span class="text-red-500">*</span>
+                              Assunto <span class="required">*</span>
                          </label>
-                         <select id="subject" name="subject" x-model="formData.subject" required
-                              class="w-full p-4 border-2 border-gray-300 rounded-lg font-mono focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/10 transition-all">
+                         <select id="subject" name="subject" x-model="formData.subject" required>
                               <option value="">-- Selecione um assunto --</option>
                               <option value="Dúvidas/Sugestões">01 - Dúvidas/Sugestões</option>
                               <option value="eBooks">02 - eBooks</option>
@@ -115,75 +86,69 @@
                               <option value="Orçamento">05 - Orçamento</option>
                               <option value="Outros">06 - Outros</option>
                          </select>
-                         <small class="block mt-2 text-sm text-gray-500">
-                              💡 Escolha a opção que melhor descreve seu contato
-                         </small>
+                         <small class="field-hint">Escolha a opção que melhor descreve seu contato</small>
                     </div>
 
-                    <!-- Mensagem -->
                     <div class="form-group">
                          <label for="message">
-                              Mensagem <span class="text-red-500">*</span>
+                              Mensagem <span class="required">*</span>
                          </label>
                          <textarea id="message" name="message" x-model="formData.message" required
-                              placeholder="Digite sua mensagem aqui... Quanto mais detalhes, melhor!" rows="6"
-                              class="w-full"></textarea>
-                         <small class="block mt-2 text-sm text-gray-500">
-                              <span x-text="formData.message.length"></span> caracteres
+                              placeholder="Digite sua mensagem aqui... Quanto mais detalhes, melhor!"
+                              rows="12"></textarea>
+                         <small class="field-hint">
+                              <span class="char-counter" x-text="formData.message.length"></span> caracteres
                          </small>
                     </div>
 
-                    <!-- Botão Submit -->
-                    <button type="submit" :disabled="isSubmitting"
-                         class="w-full btn-primary flex items-center justify-center gap-3"
-                         :class="isSubmitting ? 'opacity-50 cursor-not-allowed' : ''">
-
-                         <!-- Loading Spinner -->
-                         <svg x-show="isSubmitting" class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg"
-                              fill="none" viewBox="0 0 24 24">
-                              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                              </circle>
-                              <path class="opacity-75" fill="currentColor"
-                                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                              </path>
+                    <button type="submit" :disabled="isSubmitting" class="btn-primary">
+                         <svg x-show="isSubmitting" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                              stroke="currentColor" stroke-width="2" class="spinner">
+                              <circle cx="12" cy="12" r="10" opacity="0.25" />
+                              <path d="M12 2a10 10 0 0110 10" opacity="0.75" />
                          </svg>
-
-                         <!-- Texto do Botão -->
-                         <span x-text="isSubmitting ? 'Enviando...' : '📨 Enviar Mensagem'"></span>
+                         <span x-text="isSubmitting ? 'Enviando...' : 'Enviar Mensagem'"></span>
                     </button>
                </form>
 
-               <!-- Informações de Contato Alternativas -->
-               <div class="mt-12 pt-8 border-t-2 border-gray-200">
-                    <h3 class="text-xl font-bold mb-4">📞 Ou entre em contato por:</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+               <div class="contact-alt-section">
+                    <h3 class="contact-alt-title">Ou entre em contato por:</h3>
+                    <div class="contact-grid-alt">
                          <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
-                              class="flex items-center gap-3 p-4 border-2 border-gray-800 rounded-lg">
-                              <span class="text-2xl">💻</span>
+                              class="contact-card-alt">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="2">
+                                   <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                              </svg>
                               <div>
-                                   <p class="font-bold">GitHub</p>
-                                   <p class="text-sm text-gray-600">@devgbr86</p>
+                                   <p class="contact-card-alt-title">GitHub</p>
+                                   <p class="contact-card-alt-text">@devgbr86</p>
                               </div>
                          </a>
 
                          <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
-                              class="flex items-center gap-3 p-4 border-2 border-blue-600 rounded-lg">
-                              <span class="text-2xl">💼</span>
+                              class="contact-card-alt">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="2">
+                                   <path
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                   <circle cx="4" cy="4" r="2" />
+                              </svg>
                               <div>
-                                   <p class="font-bold">LinkedIn</p>
-                                   <p class="text-sm text-gray-600">@devgbr</p>
+                                   <p class="contact-card-alt-title">LinkedIn</p>
+                                   <p class="contact-card-alt-text">@devgbr</p>
                               </div>
                          </a>
                     </div>
                </div>
-          </div>
+          </section>
      </main>
 
      <footer>
-          <p>devgbr86.github.io/profile</p>
+          <p>&copy; 2025 devgbr86.github.io/profile</p>
      </footer>
 
-     <!-- JS -->
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script src="./js/forms.js"></script>
 
