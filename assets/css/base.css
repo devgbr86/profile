@@ -1,0 +1,350 @@
+/* =========================================
+   BASE.CSS – CLEAN LIGHT / 2025
+   ========================================= */
+
+/* --------------------------
+   ROOT VARIABLES
+--------------------------- */
+:root {
+     --bg: whitesmoke;
+     --bg-content: white;
+     --text: black;
+     --text-light: #555;
+
+     --brand: #ff8800;
+     --brand-hover: #e67700;
+
+     --border: #ddd;
+
+     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+     --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+     --radius: 8px;
+     --transition: 0.2s ease;
+}
+
+/* --------------------------
+   RESET & TYPOGRAPHY
+--------------------------- */
+* {
+     box-sizing: border-box;
+}
+
+body {
+     font-family: "Roboto Mono", monospace;
+     background: var(--bg);
+     color: var(--text);
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+}
+
+p {
+     margin: 1rem 0;
+}
+
+/* --------------------------
+   HEADER / NAV
+--------------------------- */
+header {
+     width: 100%;
+     padding: 1rem 0;
+     position: sticky;
+     top: 0;
+     background-color: #000000 !important;
+     z-index: 999;
+     box-shadow: var(--shadow-md);
+}
+
+nav {
+     max-width: 1100px;
+     margin: auto;
+     padding: 0 1.6rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1rem;
+}
+
+nav img {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+}
+
+nav .page-links {
+     display: flex;
+     gap: 1rem;
+     flex-wrap: wrap;
+}
+
+nav a {
+     background: var(--brand);
+     color: white;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 0.9rem;
+     padding: 0.6rem 1.2rem;
+     border-radius: var(--radius);
+     transition: var(--transition);
+     display: inline-block;
+}
+
+nav a:hover {
+     background: var(--brand-hover);
+}
+
+/* --------------------------
+   SECTIONS
+--------------------------- */
+section {
+     max-width: 1100px;
+     margin: 3rem auto;
+     padding: 2rem 1.6rem;
+     background: var(--bg-content);
+     border-radius: var(--radius);
+     box-shadow: var(--shadow-md);
+}
+
+.section-avatar {
+     width: 80px;
+     height: 80px;
+     margin: 0 auto 1rem;
+     display: block;
+     border-radius: 50%;
+}
+
+h1 {
+     text-align: center;
+     font-size: 2.3rem;
+     margin: 1rem 0;
+     font-weight: 700;
+}
+
+h3 {
+     font-size: 1.3rem;
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+     font-weight: 600;
+}
+
+/* --------------------------
+   TECH BADGES
+--------------------------- */
+.tech-badges {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0.6rem;
+     margin-top: 1rem;
+}
+
+.badge {
+     background: var(--bg);
+     padding: 0.5rem 1rem;
+     border-radius: var(--radius);
+     border: 1px solid var(--border);
+     font-size: 0.9rem;
+}
+
+/* --------------------------
+   SERVICES LIST
+--------------------------- */
+.services-list {
+     margin-top: 1.2rem;
+     padding: 0;
+     list-style: none;
+}
+
+.services-list li {
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+     padding: 0.6rem 0;
+     font-size: 1rem;
+}
+
+/* --------------------------
+   EBOOK ACCORDION
+--------------------------- */
+.accordion {
+     margin-top: 2rem;
+}
+
+.accordion-item {
+     border: 1px solid var(--border);
+     border-radius: var(--radius);
+     margin-bottom: 1rem;
+     overflow: hidden;
+     background: white;
+}
+
+.accordion-header {
+     width: 100%;
+     background: transparent;
+     padding: 1rem 1.2rem;
+     cursor: pointer;
+     border: none;
+     text-align: left;
+     font-size: 1.1rem;
+     font-family: inherit;
+     color: var(--text);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     transition: var(--transition);
+}
+
+.accordion-header:hover {
+     background: var(--bg);
+}
+
+.accordion-header span {
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+}
+
+.accordion-content {
+     padding: 0 1.2rem 1.2rem;
+     background: var(--bg);
+}
+
+.accordion-content p {
+     margin: 0.8rem 0;
+}
+
+.accordion-content ul {
+     margin: 0.8rem 0;
+     padding-left: 1.5rem;
+}
+
+.accordion-content li {
+     margin: 0.4rem 0;
+}
+
+.content-title {
+     font-weight: 600;
+     margin-top: 1.2rem;
+}
+
+/* --------------------------
+   CONTACT / SOCIAL LINKS
+--------------------------- */
+.form-intro {
+     text-align: center;
+     margin: 1.5rem 0 2rem;
+     color: var(--text-light);
+}
+
+.social-links {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     max-width: 500px;
+     margin: 0 auto;
+}
+
+.social-link {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     padding: 1rem 1.2rem;
+     background: var(--bg);
+     border: 1px solid var(--border);
+     border-radius: var(--radius);
+     text-decoration: none;
+     color: var(--text);
+     transition: var(--transition);
+}
+
+.social-link:hover {
+     border-color: var(--brand);
+}
+
+/* --------------------------
+   CTA BUTTONS
+--------------------------- */
+.cta-container {
+     margin-top: 2rem;
+     display: flex;
+     gap: 1rem;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.btn-primary {
+     background: var(--brand);
+     padding: 0.9rem 1.5rem;
+     border-radius: var(--radius);
+     color: white;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 1rem;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.6rem;
+     transition: var(--transition);
+     border: none;
+     cursor: pointer;
+}
+
+.btn-primary:hover {
+     background: var(--brand-hover);
+}
+
+/* --------------------------
+   SCROLL TO TOP BUTTON
+--------------------------- */
+.scroll-top {
+     position: fixed;
+     bottom: 2rem;
+     right: 2rem;
+     width: 50px;
+     height: 50px;
+     background: var(--brand);
+     border: none;
+     border-radius: 50%;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: var(--shadow-md);
+     transition: var(--transition);
+     z-index: 1000;
+     color: white;
+}
+
+.scroll-top:hover {
+     background: var(--brand-hover);
+}
+
+.scroll-top svg {
+     width: 24px;
+     height: 24px;
+}
+
+/* --------------------------
+   FOOTER
+--------------------------- */
+footer {
+     text-align: center;
+     padding: 2rem 1.6rem;
+     border-top: 1px solid var(--border);
+     color: var(--text-light);
+     font-size: 0.9rem;
+     margin-top: 3rem;
+}
+
+footer p {
+     margin: 0;
+}
+
+/* --------------------------
+   ICONS
+--------------------------- */
+.icon {
+     width: 22px;
+     height: 22px;
+     object-fit: contain;
+     flex-shrink: 0;
+}
