@@ -1,40 +1,48 @@
-// main.js - Gerencia navegação e animações
+// ========================================
+// MAIN.JS - Inicialização
+// STACK: Alpine.js + AOS.js + SVG inline
+// ========================================
 
-const content = document.getElementById("content");
-const linksContainer = document.getElementById("pageLinks");
+document.addEventListener('DOMContentLoaded', function () {
 
-// Inicializa AOS
-if (typeof AOS !== 'undefined') {
+     // Inicializa AOS
      AOS.init({
           duration: 800,
+          easing: 'ease-out-cubic',
           once: true,
-          offset: 100,
-          easing: 'ease-out'
+          offset: 100
      });
-}
 
-// Gera links de navegação baseado nos H1
-function createNavLinks() {
-     linksContainer.innerHTML = '';
-     const h1Elements = content.querySelectorAll("h1");
+     // Gera links de navegação
+     const sections = document.querySelectorAll('section');
+     const pageLinks = document.getElementById('pageLinks');
 
-     h1Elements.forEach((h1) => {
-          const a = document.createElement("a");
-          a.textContent = h1.textContent;
-          a.className = "page-link";
-          a.onclick = e => {
-               e.preventDefault();
-               const navHeight = 80;
-               const targetPosition = h1.getBoundingClientRect().top + window.pageYOffset - navHeight;
-               window.scrollTo({ top: targetPosition, behavior: "smooth" });
-          };
-          linksContainer.appendChild(a);
-     });
-}
+     if (pageLinks && sections.length > 0) {
+          sections.forEach(section => {
+               const heading = section.querySelector('h1');
+               if (heading) {
+                    const text = heading.textContent.trim();
+                    const id = text.toLowerCase().replace(/\s+/g, '-');
 
-// Executa quando o DOM estiver pronto
-if (document.readyState === 'loading') {
-     document.addEventListener('DOMContentLoaded', createNavLinks);
-} else {
-     createNavLinks();
-}
+                    section.id = id;
+
+                    const link = document.createElement('a');
+                    link.href = `#${id}`;
+                    link.textContent = text;
+                    link.className = 'page-link';
+
+                    link.addEventListener('click', function (e) {
+                         e.preventDefault();
+                         section.scrollIntoView({
+                              behavior: 'smooth',
+                              block: 'start'
+                         });
+                    });
+
+                    pageLinks.appendChild(link);
+               }
+          });
+     }
+
+     console.log('Portfolio inicializado');
+});

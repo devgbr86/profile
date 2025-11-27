@@ -9,57 +9,33 @@
      <title>@liberdev - Portfolio</title>
      <link rel="icon" href="./assets/favcode.svg" type="image/svg+xml">
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css">
+     <!-- AOS -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-     <!-- TailwindCSS via CDN (v3) - APENAS PARA DESENVOLVIMENTO -->
-     <!-- Para produção: npm install tailwindcss -->
-     <script src="https://cdn.tailwindcss.com"></script>
-
-     <!-- Custom CSS -->
-     <link rel="stylesheet" href="./css/base.css">
-     <link rel="stylesheet" href="./css/responsive.css">
 
      <!-- Roboto Mono Font -->
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-     <!-- Alpine.js (v3) com Plugin Collapse -->
+     <!-- Alpine.js -->
      <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-     <!-- Tailwind Config Inline -->
-     <script>
-          tailwind.config = {
-               theme: {
-                    extend: {
-                         colors: {
-                              primary: '#ff8c00',
-                              secondary: '#ff6600',
-                         }
-                    }
-               }
-          }
-     </script>
+     <link rel="stylesheet" href="./css/base.css">
+     <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
-<body x-data="{ mobileMenuOpen: false, showScrollTop: false }"
-     @scroll.window="showScrollTop = (window.pageYOffset > 300)">
+<body x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300)">
 
-     <!-- Navegação com Alpine.js -->
+     <!-- Navegação -->
      <nav>
           <img src="./assets/goat.png" alt="Logo" loading="lazy">
-          <div class="page-links" id="pageLinks">
-               <!-- Links gerados via JS -->
-          </div>
+          <div class="page-links" id="pageLinks"></div>
      </nav>
 
-     <!-- Botão Scroll to Top (Alpine.js + Tailwind) -->
+     <!-- Botão Scroll to Top -->
      <button x-show="showScrollTop" x-transition @click="window.scrollTo({top: 0, behavior: 'smooth'})"
-          class="fixed bottom-8 right-8 z-50 bg-primary hover:bg-secondary text-white p-4 rounded-full shadow-lg transition-colors duration-300"
-          aria-label="Voltar ao topo">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          class="scroll-top" aria-label="Voltar ao topo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+               <path d="M12 19V5M5 12l7-7 7 7" />
           </svg>
      </button>
 
@@ -67,125 +43,183 @@
 
           <!-- Seção SOBRE -->
           <section data-aos="fade-up">
-               <img src="./assets/goat.png" style="width: 125px; height: 125px; border-radius: 50%;" alt="Profile"
-                    loading="lazy">
+               <img src="./assets/goat.png" class="section-avatar" alt="Profile" loading="lazy">
                <h1>SOBRE</h1>
 
                <p>Meu nome é <strong>Guilherme Ribeiro</strong>, Programador e Desenvolvedor Front-end com experiência
-                    em <strong>HTML/CSS, JavaScript, React.js, TailwindCSS, Alpine.js, Bibliotecas e Frameworks para
-                         sites estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando
+                    em <strong>HTML/CSS, JavaScript, React.js, Alpine.js, AOS.js, Bibliotecas e Frameworks para sites
+                         estáticos, Markdown e Pandoc para produção de eBooks, além de versionamento utilizando
                          Git</strong>.</p>
-
           </section>
 
-          <!-- Seção TECHSTACK com badges dinâmicos (Alpine) -->
+          <!-- Seção TECHSTACK -->
           <section data-aos="fade-up" data-aos-delay="100" x-data="{ 
-                        techs: [
-                             'HTML5', 'CSS3', 'JavaScript ES6+', 'TailwindCSS', 
-                             'Alpine.js', 'React.js', 'AOS.js', 'Open Props',
-                             'Git/GitHub', 'Responsive Design', 'SEO', 'Performance'
-                        ]
-                   }">
-               <img src="./assets/goat-hub.png" style="width: 125px; height: 125px; border-radius: 50%;"
-                    alt="Tech Stack" loading="lazy">
+               techs: [
+                    'HTML5', 'CSS3', 'JavaScript ES6+', 'Alpine.js', 
+                    'React.js', 'AOS.js', 'SVG', 'Git/GitHub', 
+                    'Responsive Design', 'SEO', 'Performance'
+               ]
+          }">
+               <img src="./assets/goat-hub.png" class="section-avatar" alt="Tech Stack" loading="lazy">
 
                <h1>TECHSTACK</h1>
 
-               <h3 class="text-2xl font-bold mb-4">Tecnologias</h3>
+               <h3>Tecnologias</h3>
 
-               <!-- Badges dinâmicos com Tailwind + Alpine -->
-               <div class="flex flex-wrap gap-3 mb-6">
+               <div class="tech-badges">
                     <template x-for="tech in techs" :key="tech">
-                         <span class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all cursor-default"
-                              x-text="tech">
-                         </span>
+                         <span class="badge" x-text="tech"></span>
                     </template>
                </div>
 
-               <h3 class="text-2xl font-bold mb-3">Serviços</h3>
-               <ul class="space-y-2">
-                    <li>✅ Sites e Templates Estáticos</li>
-                    <li>✅ Totalmente Responsivos (Mobile-First)</li>
-                    <li>✅ Otimizados para Performance e SEO</li>
-                    <li>✅ Personalização Total</li>
-                    <li>✅ Hospedagem Prática (Netlify/Vercel/Cloudflare)</li>
-                    <li>✅ Versionamento Git/GitHub</li>
-                    <li>✅ Entrega Rápida</li>
+               <h3>Serviços</h3>
+               <ul class="services-list">
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Sites e Templates Estáticos
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Totalmente Responsivos (Mobile-First)
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Otimizados para Performance e SEO
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Personalização Total
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Hospedagem Prática (Netlify/Vercel/Cloudflare)
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Versionamento Git/GitHub
+                    </li>
+                    <li>
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M20 6L9 17l-5-5" />
+                         </svg>
+                         Entrega Rápida
+                    </li>
                </ul>
 
-               <p class="mt-6">
-                    <a href="./forms.html"
-                         class="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors shadow-md">
-                         💬 Contato para Vendas
+               <p class="cta-container">
+                    <a href="./forms.html" class="btn-primary">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                         </svg>
+                         Contato para Vendas
                     </a>
                </p>
           </section>
 
-          <!-- Seção EBOOK com accordion (Alpine) -->
+          <!-- Seção EBOOK -->
           <section data-aos="fade-up" data-aos-delay="200">
-               <img src="./assets/goat-map.png" style="width: 125px; height: 125px; border-radius: 50%;" alt="eBooks"
-                    loading="lazy">
+               <img src="./assets/goat-map.png" class="section-avatar" alt="eBooks" loading="lazy">
 
                <h1>EBOOKS</h1>
 
-               <!-- Accordion com Alpine.js -->
-               <div x-data="{ activeBook: 1 }" class="space-y-4">
+               <div x-data="{ activeBook: 1 }" class="accordion">
 
                     <!-- eBook 1 -->
-                    <div class="border-2 border-gray-200 rounded-lg overflow-hidden">
-                         <button @click="activeBook = activeBook === 1 ? null : 1"
-                              class="w-full px-6 py-4 text-left font-bold text-lg flex justify-between items-center hover:bg-gray-50 transition-colors">
-                              <span>📘 Sites Estáticos Tutorial 2025</span>
+                    <div class="accordion-item">
+                         <button @click="activeBook = activeBook === 1 ? null : 1" class="accordion-header">
+                              <span>
+                                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                                   </svg>
+                                   Sites Estáticos Tutorial 2025
+                              </span>
                               <span x-text="activeBook === 1 ? '−' : '+'"></span>
                          </button>
-                         <div x-show="activeBook === 1" x-collapse class="px-6 py-4 bg-gray-50">
+                         <div x-show="activeBook === 1" x-collapse class="accordion-content">
                               <p>Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas
                                    e gratuitas. Ideal para portfólios pessoais, landing pages e projetos simples que não
                                    requerem backend.</p>
 
-                              <p class="mt-3 font-semibold">📋 Conteúdo:</p>
-                              <ul class="mt-2 space-y-1 text-sm">
-                                   <li>• HTML5 Semântico</li>
-                                   <li>• CSS Moderno (Flexbox, Grid, Custom Properties)</li>
-                                   <li>• JavaScript Vanilla e Alpine.js</li>
-                                   <li>• TailwindCSS na prática</li>
-                                   <li>• Deploy e hospedagem gratuita</li>
+                              <p class="content-title">Conteúdo:</p>
+                              <ul>
+                                   <li>HTML5 Semântico</li>
+                                   <li>CSS Moderno (Flexbox, Grid, Custom Properties)</li>
+                                   <li>JavaScript Vanilla e Alpine.js</li>
+                                   <li>Deploy e hospedagem gratuita</li>
                               </ul>
                          </div>
                     </div>
 
                     <!-- eBook 2 -->
-                    <div class="border-2 border-gray-200 rounded-lg overflow-hidden">
-                         <button @click="activeBook = activeBook === 2 ? null : 2"
-                              class="w-full px-6 py-4 text-left font-bold text-lg flex justify-between items-center hover:bg-gray-50 transition-colors">
-                              <span>📗 Markdown e Pandoc Tutorial 2025</span>
+                    <div class="accordion-item">
+                         <button @click="activeBook = activeBook === 2 ? null : 2" class="accordion-header">
+                              <span>
+                                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                                   </svg>
+                                   Markdown e Pandoc Tutorial 2025
+                              </span>
                               <span x-text="activeBook === 2 ? '−' : '+'"></span>
                          </button>
-                         <div x-show="activeBook === 2" x-collapse class="px-6 py-4 bg-gray-50">
+                         <div x-show="activeBook === 2" x-collapse class="accordion-content">
                               <p>Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando
                                    Markdown como formato de escrita e Pandoc como ferramenta de conversão.</p>
 
-                              <p class="mt-3 font-semibold">📋 Conteúdo:</p>
-                              <ul class="mt-2 space-y-1 text-sm">
-                                   <li>• Sintaxe Markdown completa</li>
-                                   <li>• Pandoc: instalação e configuração</li>
-                                   <li>• Conversão para PDF, EPUB, DOCX</li>
-                                   <li>• Templates personalizados</li>
-                                   <li>• Automação do workflow</li>
+                              <p class="content-title">Conteúdo:</p>
+                              <ul>
+                                   <li>Sintaxe Markdown completa</li>
+                                   <li>Pandoc: instalação e configuração</li>
+                                   <li>Conversão para PDF, EPUB, DOCX</li>
+                                   <li>Templates personalizados</li>
+                                   <li>Automação do workflow</li>
                               </ul>
                          </div>
                     </div>
                </div>
 
-               <div class="mt-8 flex flex-col sm:flex-row gap-4">
+               <div class="cta-container dual">
                     <a href="https://github.com/devgbr86/profile/releases/" target="_blank" rel="noopener noreferrer"
-                         class="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition-colors shadow-md text-center">
-                         👀 Prévia eBooks 2025
+                         class="btn-primary">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                              <circle cx="12" cy="12" r="3" />
+                         </svg>
+                         Prévia eBooks 2025
                     </a>
 
-                    <a href="./forms.html"
-                         class="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-secondary transition-colors shadow-md text-center">
-                         💰 Comprar eBooks
+                    <a href="./forms.html" class="btn-primary">
+                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2">
+                              <circle cx="9" cy="21" r="1" />
+                              <circle cx="20" cy="21" r="1" />
+                              <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+                         </svg>
+                         Comprar eBooks
                     </a>
                </div>
           </section>
@@ -194,30 +228,39 @@
           <section data-aos="fade-up" data-aos-delay="300">
                <h1>CONTATO</h1>
 
-               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+               <div class="contact-grid">
 
-                    <!-- Mensagem -->
-                    <a href="./forms.html"
-                         class="group block p-8 border-2 border-primary rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-secondary">
-                         <div class="text-5xl mb-4 text-center">✉️</div>
-                         <h3 class="font-bold text-xl text-gray-900 text-center mb-2">Enviar Mensagem</h3>
-                         <p class="text-sm text-gray-600 text-center">Entre em contato direto comigo</p>
+                    <a href="./forms.html" class="contact-card">
+                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2" class="contact-icon">
+                              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                              <polyline points="22,6 12,13 2,6" />
+                         </svg>
+                         <h3>Enviar Mensagem</h3>
+                         <p>Entre em contato direto comigo</p>
                     </a>
 
-                    <!-- GitHub -->
                     <a href="https://github.com/devgbr86/" target="_blank" rel="noopener noreferrer"
-                         class="group block p-8 border-2 border-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-gray-600">
-                         <div class="text-5xl mb-4 text-center">💻</div>
-                         <h3 class="font-bold text-xl text-gray-900 text-center mb-2">GitHub</h3>
-                         <p class="text-sm text-gray-600 text-center">Veja meus projetos e código</p>
+                         class="contact-card">
+                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2" class="contact-icon">
+                              <path
+                                   d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                         </svg>
+                         <h3>GitHub</h3>
+                         <p>Veja meus projetos e código</p>
                     </a>
 
-                    <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/devgbr/" target="_blank" rel="noopener noreferrer"
-                         class="group block p-8 border-2 border-blue-600 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:border-blue-400">
-                         <div class="text-5xl mb-4 text-center">💼</div>
-                         <h3 class="font-bold text-xl text-gray-900 text-center mb-2">LinkedIn</h3>
-                         <p class="text-sm text-gray-600 text-center">Conecte-se</p>
+                         class="contact-card">
+                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2" class="contact-icon">
+                              <path
+                                   d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                              <circle cx="4" cy="4" r="2" />
+                         </svg>
+                         <h3>LinkedIn</h3>
+                         <p>Conecte-se</p>
                     </a>
                </div>
           </section>
@@ -225,13 +268,12 @@
      </main>
 
      <footer>
-          <p>© 2025 devgbr86.github.io/profile</p>
+          <p>&copy; 2025 devgbr86.github.io/profile</p>
      </footer>
 
-     <!-- JS -->
+     <!-- Scripts -->
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script src="./js/main.js"></script>
-     <script src="./js/forms.js"></script>
 
 </body>
 
