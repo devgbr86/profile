@@ -11,6 +11,9 @@
 
      <p>
 
+
+
+
      <ul class="services-list">
           <li>
                <img src="./assets/icons/check.svg" class="icon" alt="">
@@ -30,18 +33,86 @@
           </li>
           <li>
                <img src="./assets/icons/check.svg" class="icon" alt="">
-               <span>Envio imediato de Arquivos</span>
+               <span>Contato direto e Envio imediato de Arquivos</span>
           </li>
      </ul>
 
-
-
      </p>
 
-     <div class="cta-container">
-          <a href="https://techbooks.pages.dev" target="_blank" rel="noopener noreferrer" class="btn-primary">
-               <img src="./assets/icons/shop.svg" class="icon" alt="">
-               eBook Shop
-          </a>
+
+
+     <div x-data="{ activeBook: 1 }" class="accordion">
+
+          <!-- eBook 1 -->
+          <div class="accordion-item">
+               <button @click="activeBook = activeBook === 1 ? null : 1" class="accordion-header">
+                    <span>
+                         <img src="./assets/icons/book.svg" class="icon" alt="">
+                         VSCode e Frontend Tutorial 2025
+                    </span>
+                    <span x-text="activeBook === 1 ? '−' : '+'"></span>
+               </button>
+               <div x-show="activeBook === 1" x-collapse class="accordion-content">
+                    <p>
+                         Este eBook ensina como criar sites estáticos profissionais usando ferramentas modernas e
+                         gratuitas.
+                         Ideal para portfólios pessoais, landing pages e projetos simples que não requerem backend.
+                    </p>
+
+                    <p class="content-title">Conteúdo:</p>
+                    <ul>
+                         <li>HTML5 Semântico</li>
+                         <li>CSS Moderno (Flexbox, Grid, Custom Properties)</li>
+                         <li>JavaScript Vanilla e Alpine.js</li>
+                         <li>Deploy e hospedagem gratuita</li>
+                         <li>PREÇO: 59,00 REAIS</li>
+                    </ul>
+               </div>
+          </div>
+
+          <!-- eBook 2 -->
+          <div class="accordion-item">
+               <button @click="activeBook = activeBook === 2 ? null : 2" class="accordion-header">
+                    <span>
+                         <img src="./assets/icons/book.svg" class="icon" alt="">
+                         Markdown e Pandoc Tutorial 2025
+                    </span>
+                    <span x-text="activeBook === 2 ? '−' : '+'"></span>
+               </button>
+               <div x-show="activeBook === 2" x-collapse class="accordion-content">
+                    <p>
+                         Este eBook apresenta um fluxo de trabalho completo para produção de ebooks utilizando Markdown
+                         como formato de escrita e Pandoc como ferramenta de conversão.
+                    </p>
+
+                    <p class="content-title">Conteúdo:</p>
+                    <ul>
+                         <li>Sintaxe Markdown completa</li>
+                         <li>Pandoc: instalação e configuração</li>
+                         <li>Conversão para PDF, EPUB, DOCX</li>
+                         <li>Templates personalizados</li>
+                         <li>Automação do workflow</li>
+                         <li>PREÇO: 59,00 REAIS</li>
+                    </ul>
+               </div>
+          </div>
      </div>
+
+     <div class="cta-container dual">
+          <a href="https://github.com/devgbr86/profile/releases/" target="_blank" rel="noopener noreferrer"
+               class="btn-primary">
+               <img src="./assets/icons/preview.svg" class="icon" alt="">
+               Prévia eBooks 2025
+          </a>
+
+
+     </div>
+
+
+
+
+
+
+
+
 </section>
