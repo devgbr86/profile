@@ -1,281 +1,128 @@
-// ========================================
-// LOADER.JS - Carrega sections HTML
-// REVISADO: Melhor tratamento de erros + Performance
-// ========================================
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+     duration: 800,
+     once: true,
+     offset: 100
+});
 
+// Load HTML sections dynamically
+async function loadSections() {
+     const sections = [
+          { selector: '[data-section="hero"]', file: './sections/hero.html' },
+          { selector: '[data-section="contact"]', file: './sections/contact.html' },
+          { selector: '[data-section="footer"]', file: './sections/footer.html' }
+     ];
+
+     for (const section of sections) {
+          try {
+               const response = await fetch(section.file);
+               const html = await response.text();
+               const element = document.querySelector(section.selector);
+               if (element) {
+                    element.innerHTML = html;
+               }
+          } catch (error) {
+               console.error(`Error loading ${section.file}:`, error);
+          }
+     }
+}
+
+// Generate navigation links
+function generateNavLinks() {
+     const links = [
+          { text: 'Início', href: '#hero' },
+          { text: 'Contato', href: '#contato' }
+     ];
+
+     const navContainer = document.getElementById('pageLinks');
+     if (navContainer) {
+          links.forEach(link => {
+               const a = document.createElement('a');
+               a.href = link.href;
+               a.textContent = link.text;
+               navContainer.appendChild(a);
+          });
+     }
+}
+
+// Initialize Lucide Icons with custom styling
+function initLucideIcons() {
+     if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+          
+          // Apply custom styles after icons are created
+          setTimeout(() => {
+               // WhatsApp icons - Verde forte
+               const whatsappIcons = document.querySelectorAll('.whatsapp-icon-large svg, .whatsapp-float svg');
+               whatsappIcons.forEach(icon => {
+                    icon.style.color = '#25D366';
+                    icon.style.stroke = '#25D366';
+                    icon.style.fill = 'none';
+                    icon.style.strokeWidth = '2.5';
+               });
+               
+               // Contact channel icons - Brancos
+               const emailIcon = document.querySelector('.contact-channel-card:nth-child(1) .channel-icon svg');
+               if (emailIcon) {
+                    emailIcon.style.color = '#ffffff';
+                    emailIcon.style.stroke = '#ffffff';
+                    emailIcon.style.fill = 'none';
+                    emailIcon.style.strokeWidth = '2.5';
+               }
+               
+               const githubIcon = document.querySelector('.contact-channel-card:nth-child(2) .channel-icon svg');
+               if (githubIcon) {
+                    githubIcon.style.color = '#ffffff';
+                    githubIcon.style.stroke = '#ffffff';
+                    githubIcon.style.fill = 'none';
+                    githubIcon.style.strokeWidth = '2.5';
+               }
+               
+               const linkedinIcon = document.querySelector('.contact-channel-card:nth-child(3) .channel-icon svg');
+               if (linkedinIcon) {
+                    linkedinIcon.style.color = '#ffffff';
+                    linkedinIcon.style.stroke = '#ffffff';
+                    linkedinIcon.style.fill = 'none';
+                    linkedinIcon.style.strokeWidth = '2.5';
+               }
+          }, 50);
+     }
+}
+
+// Smooth scroll for anchor links
+function initSmoothScroll() {
+     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+               e.preventDefault();
+               const target = document.querySelector(this.getAttribute('href'));
+               if (target) {
+                    target.scrollIntoView({
+                         behavior: 'smooth',
+                         block: 'start'
+                    });
+               }
+          });
+     });
+}
+
+// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log('📄 Iniciando carregamento de sections...');
-  
-  const sections = document.querySelectorAll('[data-section]');
-  
-  if (sections.length === 0) {
-    console.warn('⚠️ Nenhuma section encontrada com [data-section]');
-    return;
-  }
-  
-  // Carrega todas as sections em paralelo (mais rápido)
-  const promises = Array.from(sections).map(async (element) => {
-    const sectionName = element.getAttribute('data-section');
-    
-    if (!sectionName) {
-      console.error('✗ Elemento sem atributo data-section válido');
-      return { success: false, name: 'unknown' };
-    }
-    
-    try {
-      const response = await fetch(`sections/${sectionName}.html`);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} - ${response.statusText}`);
-      }
-      
-      const html = await response.text();
-      
-      // Validação básica do HTML retornado
-      if (!html || html.trim().length === 0) {
-        throw new Error('Conteúdo vazio retornado');
-      }
-      
-      // Insere o HTML (sem SVG inline para evitar problemas)
-      element.innerHTML = html;
-      
-      console.log(`✓ Section carregada: ${sectionName}`);
-      return { success: true, name: sectionName };
-      
-    } catch (error) {
-      console.error(`✗ Erro ao carregar "${sectionName}":`, error.message);
-      
-      // Mensagem de erro mais amigável
-      element.innerHTML = `
-        <div style="padding: 2rem; text-align: center; color: #dc2626; border: 2px solid #dc2626; border-radius: 8px; background: #fee;">
-          <p style="margin: 0; font-weight: 600;">⚠️ Erro ao carregar seção: ${sectionName}</p>
-          <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">${error.message}</p>
-        </div>
-      `;
-      
-      return { success: false, name: sectionName, error: error.message };
-    }
-  });
-  
-  // Aguarda todas carregarem
-  const results = await Promise.all(promises);
-  
-  // Estatísticas de carregamento
-  const sucessos = results.filter(r => r.success).length;
-  const falhas = results.filter(r => !r.success).length;
-  const total = results.length;
-  
-  console.log(`✓ Carregamento concluído: ${sucessos}/${total} sections carregadas`);
-  
-  if (falhas > 0) {
-    console.warn(`⚠️ ${falhas} section(s) falharam:`, 
-      results.filter(r => !r.success).map(r => r.name)
-    );
-  }
-  
-  // Dispara evento customizado para main.js saber que terminou
-  window.dispatchEvent(new CustomEvent('sectionsLoaded', {
-    detail: {
-      total,
-      sucessos,
-      falhas,
-      results
-    }
-  }));
-  
-  console.log('🎉 Loader finalizado, evento "sectionsLoaded" disparado');
+     await loadSections();
+     generateNavLinks();
+     initSmoothScroll();
+     
+     // Initialize Lucide icons after content is loaded
+     setTimeout(() => {
+          initLucideIcons();
+          AOS.refresh();
+     }, 100);
 });
 
-// ========================================
-// FUNÇÃO UTILITÁRIA: Recarregar uma section específica
-// ========================================
-window.reloadSection = async function(sectionName) {
-  console.log(`🔄 Recarregando section: ${sectionName}`);
-  
-  const element = document.querySelector(`[data-section="${sectionName}"]`);
-  
-  if (!element) {
-    console.error(`✗ Section "${sectionName}" não encontrada`);
-    return false;
-  }
-  
-  try {
-    const response = await fetch(`sections/${sectionName}.html?t=${Date.now()}`);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    
-    const html = await response.text();
-    element.innerHTML = html;
-    
-    console.log(`✓ Section "${sectionName}" recarregada com sucesso`);
-    
-    // Re-inicializa AOS se disponível
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
-    
-    return true;
-    
-  } catch (error) {
-    console.error(`✗ Erro ao recarregar "${sectionName}":`, error);
-    return false;
-  }
-};
-
-// ========================================
-// MAIN.JS - Inicialização Global
-// STACK: Alpine.js + AOS.js
-// ========================================
-
-// Aguarda as sections serem carregadas antes de inicializar
-window.addEventListener('sectionsLoaded', () => {
-  console.log('🚀 Main.js inicializado após sections carregarem');
-  initializeApp();
-});
-
-// ========================================
-// INICIALIZAÇÃO PRINCIPAL
-// ========================================
-function initializeApp() {
-  console.log('✓ Sections carregadas, inicializando componentes...');
-  
-  // Pequeno delay para garantir que o DOM está totalmente renderizado
-  setTimeout(() => {
-    // 1. Inicializar AOS (animações)
-    initAOS();
-    
-    // 2. Gerar navegação automática
-    generateNavigation();
-    
-    // 3. Smooth scroll para âncoras
-    setupSmoothScroll();
-    
-    console.log('✓ App totalmente inicializado');
-  }, 100);
-}
-
-// ========================================
-// INICIALIZAR AOS
-// ========================================
-function initAOS() {
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 100,
-      disable: 'mobile' // desabilita em mobile para performance
-    });
-    console.log('✓ AOS inicializado');
-  } else {
-    console.warn('⚠️ AOS não está disponível');
-  }
-}
-
-// ========================================
-// GERAR NAVEGAÇÃO AUTOMÁTICA
-// ========================================
-function generateNavigation() {
-  const sections = document.querySelectorAll('section[id]');
-  const pageLinks = document.getElementById('pageLinks');
-  
-  console.log('🔍 Buscando sections com ID...', sections.length);
-  console.log('🔍 PageLinks container:', pageLinks);
-  
-  if (!pageLinks) {
-    console.error('✖ Elemento #pageLinks não encontrado!');
-    return;
-  }
-  
-  if (sections.length === 0) {
-    console.warn('⚠️ Nenhuma section com ID encontrada');
-    return;
-  }
-  
-  // Limpa links existentes
-  pageLinks.innerHTML = '';
-  
-  sections.forEach(section => {
-    const heading = section.querySelector('h1, h2');
-    
-    if (heading) {
-      const text = heading.textContent.trim();
-      const id = section.id;
-      
-      console.log(`✓ Criando link para: ${text} (#${id})`);
-      
-      // Cria o link
-      const link = document.createElement('a');
-      link.href = `#${id}`;
-      link.textContent = text;
-      link.className = 'page-link';
-      
-      pageLinks.appendChild(link);
-    }
-  });
-  
-  console.log(`✓ ${pageLinks.children.length} links de navegação gerados`);
-}
-
-// ========================================
-// SMOOTH SCROLL PARA ÂNCORAS
-// ========================================
-function setupSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      
-      // Ignora href="#" vazio
-      if (href === '#' || href === null) return;
-      
-      e.preventDefault();
-      
-      const target = document.querySelector(href);
-      
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        
-        console.log(`✓ Scroll suave para: ${href}`);
-        
-        // Fecha menu mobile se estiver aberto (Alpine.js)
-        if (window.Alpine) {
-          window.dispatchEvent(new CustomEvent('close-mobile-menu'));
-        }
-      } else {
-        console.warn(`⚠️ Target não encontrado: ${href}`);
-      }
-    });
-  });
-  
-  console.log('✓ Smooth scroll configurado');
-}
-
-// ========================================
-// UTILIDADES GLOBAIS
-// ========================================
-
-// Refresh AOS (útil quando adiciona conteúdo dinamicamente)
-window.refreshAOS = function() {
-  if (typeof AOS !== 'undefined') {
-    AOS.refresh();
-    console.log('✓ AOS atualizado');
-  }
-};
-
-// Refresh Navigation (útil se adicionar sections dinamicamente)
-window.refreshNavigation = function() {
-  generateNavigation();
-  setupSmoothScroll();
-  console.log('✓ Navegação atualizada');
-};
-
-// Log de performance
-window.addEventListener('load', () => {
-  const loadTime = (performance.now() / 1000).toFixed(2);
-  console.log(`⚡ Página carregada em ${loadTime}s`);
+// Handle window resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+     clearTimeout(resizeTimer);
+     resizeTimer = setTimeout(() => {
+          AOS.refresh();
+     }, 250);
 });

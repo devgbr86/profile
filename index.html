@@ -7,86 +7,81 @@
 
      <!-- SEO -->
      <meta name="description"
-          content="Guilherme Ribeiro - Desenvolvedor Front-end especializado em sites estáticos modernos, responsivos e landing pages de alta conversão" />
+          content="Landing pages profissionais de alta conversão. Entrega em 7 dias, preço fixo. Responsivo, otimizado e hospedagem inclusa." />
      <meta name="keywords"
-          content="desenvolvedor frontend, landing pages, sites estáticos, HTML, CSS, JavaScript, Alpine.js" />
+          content="landing page, site profissional, desenvolvimento web, html, css, javascript, react" />
      <meta name="author" content="Guilherme Ribeiro" />
 
-     <!-- Open Graph (compartilhamento redes sociais) -->
-     <meta property="og:title" content="@liberdev - Desenvolvedor Front-end" />
-     <meta property="og:description" content="Sites estáticos modernos e landing pages de alta conversão" />
+     <!-- Open Graph -->
+     <meta property="og:title" content="LANDKIT - Landing Pages Profissionais" />
+     <meta property="og:description" content="Site profissional em 7 dias. R$ 997. Hospedagem inclusa." />
      <meta property="og:type" content="website" />
-     <meta property="og:url" content="https://seusite.com" />
-     <meta property="og:image" content="https://seusite.com/assets/img/og-image.jpg" />
+     <meta property="og:url" content="https://devgbr86.github.io/profile" />
 
-     <!-- Twitter Card -->
-     <meta name="twitter:card" content="summary_large_image" />
-     <meta name="twitter:title" content="@liberdev - Desenvolvedor Front-end" />
-     <meta name="twitter:description" content="Sites estáticos modernos e landing pages de alta conversão" />
+     <title>LANDKIT - Landing Pages</title>
+     <link rel="icon" href="./assets/favweb.svg" type="image/svg+xml" />
 
-     <title>@landkit</title>
-     <link rel="icon" href="./assets/portal.svg" type="image/svg+xml" />
-
-     <!-- Preconnect (melhora performance) -->
+     <!-- Preconnect -->
      <link rel="preconnect" href="https://fonts.googleapis.com" />
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
      <link rel="preconnect" href="https://unpkg.com" />
 
      <!-- Roboto Mono Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700;900&display=swap"
+          rel="stylesheet" />
 
      <!-- AOS Animations -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-     <!-- Alpine.js (defer para não bloquear renderização) -->
+     <!-- Lucide Icons -->
+     <script src="https://unpkg.com/lucide@latest"></script>
+
+     <!-- Alpine.js -->
      <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-     <!-- CSS customizado -->
+     <!-- CSS -->
      <link rel="stylesheet" href="./css/base.css" />
      <link rel="stylesheet" href="./css/responsive.css" />
 </head>
 
 <body x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.scrollY > 300)">
 
-     <!-- ==================== -->
-     <!-- Botão Scroll to Top -->
-     <!-- ==================== -->
-
-
-     <!-- ==================== -->
-     <!-- Header / Navbar DIRETO -->
-     <!-- ==================== -->
+     <!-- Header -->
      <header>
           <nav x-data="{ mobileMenuOpen: false }">
-               <img src="./assets/goat.png" alt="Logo @liberdev" />
+               <img src="./assets/goat.png" alt="LANDKIT Logo" />
                <div id="pageLinks" class="page-links"></div>
           </nav>
      </header>
 
-     <!-- ==================== -->
      <!-- Main Content -->
-     <!-- ==================== -->
      <main id="content">
           <div data-section="hero"></div>
-          <div data-section="about"></div>
-          <div data-section="mail"></div>
+          <div data-section="contact"></div>
      </main>
 
-     <!-- ==================== -->
-     <!-- Footer -->
-     <!-- ==================== -->
-     <div data-section="footer"></div>
 
-     <!-- ==================== -->
+
+     <!-- WhatsApp Flutuante -->
+     <a href="https://wa.me/5531996981103?text=Oi!%20Vim%20do%20site%20LANDKIT%20e%20quero%20um%20or%C3%A7amento"
+          class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i data-lucide="message-circle" class="lucide-icon"></i>
+     </a>
+
      <!-- Scripts -->
-     <!-- ==================== -->
-     <!-- AOS Library -->
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-     <!-- App Scripts (ordem importa!) -->
      <script src="./js/script.js"></script>
 
 </body>
+
+
+<footer>
+     <p>© 2025 LANDKIT - Landing Pages</p>
+     <p>Desenvolvido por <a href="https://github.com/devgbr86" target="_blank">Guilherme Ribeiro</a></p>
+     <p><a href="https://devgbr86.github.io/profile" target="_blank">devgbr86.github.io/profile</a></p>
+</footer>
+
+
 
 </html>
