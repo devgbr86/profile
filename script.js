@@ -5,28 +5,6 @@ AOS.init({
      offset: 100
 });
 
-// Load HTML sections dynamically
-async function loadSections() {
-     const sections = [
-          { selector: '[data-section="hero"]', file: './sections/hero.html' },
-          { selector: '[data-section="contact"]', file: './sections/contact.html' },
-          { selector: '[data-section="footer"]', file: './sections/footer.html' }
-     ];
-
-     for (const section of sections) {
-          try {
-               const response = await fetch(section.file);
-               const html = await response.text();
-               const element = document.querySelector(section.selector);
-               if (element) {
-                    element.innerHTML = html;
-               }
-          } catch (error) {
-               console.error(`Error loading ${section.file}:`, error);
-          }
-     }
-}
-
 // Generate navigation links
 function generateNavLinks() {
      const links = [
@@ -106,8 +84,7 @@ function initSmoothScroll() {
 }
 
 // Initialize everything when DOM is ready
-document.addEventListener('DOMContentLoaded', async () => {
-     await loadSections();
+document.addEventListener('DOMContentLoaded', () => {
      generateNavLinks();
      initSmoothScroll();
      
