@@ -864,3 +864,48 @@ footer a:hover {
           padding: 1.5rem;
      }
 }
+
+
+
+
+.icon {
+     width: 24px;
+     height: 24px;
+     object-fit: contain;
+     flex-shrink: 0;
+}
+
+.icon-tiny {
+     width: 18px;
+     height: 18px;
+     object-fit: contain;
+     flex-shrink: 0;
+}
+
+/* Ícones nos Benefit Cards - SEM FILTROS */
+.icon-benefit {
+     width: 32px;
+     height: 32px;
+     object-fit: contain;
+}
+
+/* Ícone WhatsApp Grande - SEM FILTROS */
+.icon-whatsapp-large {
+     width: 48px;
+     height: 48px;
+     object-fit: contain;
+}
+
+/* Ícones dos Canais de Contato - SEM FILTROS */
+.icon-channel {
+     width: 32px;
+     height: 32px;
+     object-fit: contain;
+}
+
+/* Ícone WhatsApp Flutuante - SEM FILTROS */
+.icon-whatsapp-float {
+     width: 32px;
+     height: 32px;
+     object-fit: contain;
+}
