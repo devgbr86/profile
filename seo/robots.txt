@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://landkit.pages.dev/sitemap.xml

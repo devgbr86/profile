@@ -15,7 +15,18 @@
      <meta property="og:title" content="LANDKIT - Landing Pages Profissionais" />
      <meta property="og:description" content="Site profissional em 7 dias." />
      <meta property="og:type" content="website" />
-     <meta property="og:url" content="https://devgbr86.github.io/profile" />
+     <meta property="og:url" content="https://landkit.pages.dev" />
+
+     <!-- Schema.org -->
+     <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "name": "LandKit",
+       "description": "Landing page estática pronta para SEO e conversão",
+       "url": "https://landkit.pages.dev"
+     }
+     </script>
 
      <title>LANDKIT - Landing Pages</title>
      <link rel="icon" href="./assets/icons/portal.svg" type="image/svg+xml" />
@@ -32,19 +43,15 @@
      <!-- AOS Animations -->
      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-     <!-- Alpine.js -->
-     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
      <!-- CSS -->
      <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.scrollY > 300)">
+<body>
 
      <!-- Header -->
      <header>
-          <nav x-data="{ mobileMenuOpen: false }">
+          <nav>
                <img src="./assets/img/goat.png" alt="LANDKIT Logo" />
                <div id="pageLinks" class="page-links">
                     <a href="#hero">Início</a>
@@ -72,8 +79,6 @@
                     Landing pages desenvolvidas do zero com HTML, CSS e JavaScript<br>
                     <strong>Entrega em 7 dias</strong>, arquivos pronto para hospedar em qualquer servidor
                </p>
-
-
 
                <!-- Benefícios Grid -->
                <div class="benefits-grid">
@@ -213,8 +218,7 @@
 
                <!-- Features Comuns -->
                <ul class="demo-features-global">
-                    <li><img src="./assets/icons/check.svg" class="icon-tiny" alt=""> Carregamento rápido
-                    </li>
+                    <li><img src="./assets/icons/check.svg" class="icon-tiny" alt=""> Carregamento rápido</li>
                     <li><img src="./assets/icons/check.svg" class="icon-tiny" alt=""> Responsivo em todos dispositivos
                     </li>
                     <li><img src="./assets/icons/check.svg" class="icon-tiny" alt=""> Animações suaves</li>
@@ -339,7 +343,6 @@
           <p><a href="https://www.linkedin.com/in/devgbr/">LinkedIn</a></p>
           <p><a href="https://github.com/devgbr86">GitHub</a></p>
           <p>© 2025 LANDKIT - Landing Pages</p>
-
      </footer>
 
      <!-- Scripts -->
